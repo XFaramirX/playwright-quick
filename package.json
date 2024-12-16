@@ -1,0 +1,23 @@
+{
+  "name": "playwrightframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:smoke": "npx playwright test -g @smoke",
+    "test:failed": "npx playwright test --last-failed --update-snapshots"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2",
+    "lighthouse": "^12.3.0",
+    "playwright": "^1.49.1",
+    "playwright-lighthouse": "^4.0.0"
+  }
+}
