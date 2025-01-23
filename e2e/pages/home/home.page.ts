@@ -12,7 +12,7 @@ export class HomePage extends BasePage {
 
     @step
     async checkH1(): Promise<void> {
-        // await expect(this.$headingH1).toHaveText('Welcome to Carrier AEM Project!');
+        // await expect(this.$headingH1).toHaveText('');
     }
 
 }

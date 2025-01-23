@@ -15,7 +15,7 @@ const defaultConfig: TestConfig = {
   outputDir: './e2e/reports/test-results',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 3,
+  retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: process.env.CI ? 'blob' : 'html',
   baseUrl: 'http://localhost:8080',
