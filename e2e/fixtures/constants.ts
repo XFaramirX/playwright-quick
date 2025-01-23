@@ -1,6 +1,6 @@
 import { devices } from '@playwright/test';
 
-export const lightHouseThresholds = {
+const lightHouseThresholds = {
     performance: 50,
     accessibility: 50,
     'best-practices': 50,
@@ -8,9 +8,9 @@ export const lightHouseThresholds = {
     pwa: 50,
 };
 
-export const screenshotOptions = { maxDiffPixelRatio: 0.15, };
+const screenshotOptions = { maxDiffPixelRatio: 0.15, };
 
-export const deviceMatrix = [
+const deviceMatrix = [
     {
         name: 'chromium',
         use: { ...devices['Desktop Chrome'] },
@@ -48,7 +48,7 @@ export const deviceMatrix = [
 ];
 
 
-export const geolocationUsers = {
+const geolocationUsers = {
     eastCoast: {
         username: "eastCoastUser",
         geolocation: {
@@ -141,3 +141,5 @@ export const geolocationUsers = {
         timezoneId: "America/Toronto",
     },
 };
+
+export { lightHouseThresholds, screenshotOptions, deviceMatrix, geolocationUsers };
