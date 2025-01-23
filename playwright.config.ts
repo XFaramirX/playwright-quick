@@ -17,7 +17,7 @@ const defaultConfig: TestConfig = {
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 3,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  reporter: process.env.CI ? 'blob' : 'html',
   baseUrl: 'http://localhost:8080',
   snapshotDir: './e2e/reports/snapshots',
   use: {
