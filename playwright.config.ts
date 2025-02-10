@@ -1,6 +1,17 @@
 import { PlaywrightTestConfig } from '@playwright/test';
 import { deviceMatrix } from './e2e/fixtures/constants';
 import { environments } from './e2e/fixtures/environments';
+import {
+  CurrentsConfig,
+  currentsReporter
+} from "@currents/playwright";
+
+
+const currentsConfig: CurrentsConfig = {
+  recordKey: "secret record key", // 📖 https://currents.dev/readme/guides/record-key
+  projectId: "project id", // get one at https://app.currents.dev
+};
+
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
@@ -17,12 +28,14 @@ const defaultConfig: TestConfig = {
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: process.env.CI ? 'blob' : 'html',
+  reporter: process.env.CI ? [["blob"], ["list"], ["html"]] : [currentsReporter(currentsConfig)],
   baseUrl: 'http://localhost:8080',
   snapshotDir: './e2e/reports/snapshots',
   use: {
     storageState: "./e2e/fixtures/auth.json",
-    trace: 'on-first-retry',
+    trace: "on",
+    video: "on",
+    screenshot: "on",
   },
   projects: [...deviceMatrix],
 

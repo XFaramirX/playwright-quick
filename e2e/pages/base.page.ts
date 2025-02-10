@@ -27,7 +27,7 @@ export class BasePage {
 
     @step
     async goto(url: string): Promise<void> {
-        await this.page.goto(url);
+        await this.page.goto(url, { waitUntil: "load" });
     }
 
     @step
