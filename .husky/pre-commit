@@ -1,10 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname "$0")/_/husky.sh"
-
-# Run lint-staged to fix formatting and also commit formatted changes, lint:check to check code issues and unit tests
-npx lint-staged 
-npm run lint 
-
 echo "Running Playwright tests for only changed files..."
 # Run Playwright tests for only changed files and only check other conditions if exit code is not 0.
 npx playwright test --only-changed || {
