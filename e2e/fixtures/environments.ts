@@ -1,7 +1,7 @@
 //update the environments object with the correct URLs for your environments
 export const environments = {
     local: {
-        baseUrl: 'https://www.yahoo.com/',
+        baseUrl: 'https://www.google.com/',
     },
     dev: {
         baseUrl: 'http://localhost:8080',

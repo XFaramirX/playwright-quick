@@ -19,6 +19,7 @@ const currentsConfig: CurrentsConfig = {
 interface TestConfig extends PlaywrightTestConfig {
   baseUrl: string;
   lighthouseAudit: boolean;
+  componentSnapshots: boolean;
 }
 
 const defaultConfig: TestConfig = {
@@ -28,7 +29,7 @@ const defaultConfig: TestConfig = {
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: process.env.CI ? [["blob"], ["list"], ["html"]] : [currentsReporter(currentsConfig)],
+  reporter: process.env.CI ? [["blob"], ["list"], ["html"], ["github"], ["./state-reporter.js"]] : [["blob"], ["list"], ["html"], ["github"], ["./state-reporter.js"]],
   baseUrl: 'http://localhost:8080',
   snapshotDir: './e2e/reports/snapshots',
   use: {
@@ -46,6 +47,7 @@ const defaultConfig: TestConfig = {
   // },
   timeout: 45000,
   lighthouseAudit: false,
+  componentSnapshots: true,
 
 };
 // get the environment type from command line. If none, set it to local
