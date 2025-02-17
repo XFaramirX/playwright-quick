@@ -1,6 +1,6 @@
 {
-  "[chromium] › accesibility\\lighthouse.spec.ts:25:7 › Lighthouse Audit › lighthouse audit": 3745,
-  "[chromium] › home\\home-layout.spec.ts:33:7 › Home Layout › Check for console errors on the page": 3460,
-  "[chromium] › accesibility\\a11y.spec.ts:14:7 › A11y › Accessibility Testing": 4765,
-  "[chromium] › accesibility\\a11y.spec.ts:24:7 › A11y › The docs have no 404s": 9288
+  "[chromium] › accesibility\\lighthouse.spec.ts:25:7 › Lighthouse Audit › lighthouse audit": 2412,
+  "[chromium] › home\\home-layout.spec.ts:33:7 › Home Layout › Check for console errors on the page": 2284,
+  "[chromium] › accesibility\\a11y.spec.ts:14:7 › A11y › Accessibility Testing": 3478,
+  "[chromium] › accesibility\\a11y.spec.ts:24:7 › A11y › The docs have no 404s": 7451
 }
