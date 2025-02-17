@@ -1,5 +1,5 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+#!/usr/bin/env sh
+. "$(dirname "$0")/h"
 
 # Run lint-staged to fix formatting and also commit formatted changes, lint:check to check code issues and unit tests
 npx lint-staged 
