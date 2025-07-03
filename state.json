@@ -1,6 +1,23 @@
 {
-  "[chromium] › accesibility/lighthouse.spec.ts:25:7 › Lighthouse Audit › lighthouse audit": 2554,
-  "[chromium] › home/home-layout.spec.ts:33:7 › Home Layout › Check for console errors on the page": 2317,
-  "[chromium] › accesibility/a11y.spec.ts:14:7 › A11y › Accessibility Testing": 3996,
-  "[chromium] › accesibility/a11y.spec.ts:24:7 › A11y › The docs have no 404s": 7707
+  "[chromium] › accesibility/lighthouse.spec.ts:25:7 › Lighthouse Audit › lighthouse audit": 34543,
+  "[chromium] › home/home-layout.spec.ts:33:7 › Home Layout › Check for console errors on the page": 1473,
+  "[chromium] › accesibility/a11y.spec.ts:14:7 › A11y › Accessibility Testing": 40317,
+  "[chromium] › accesibility/a11y.spec.ts:24:7 › A11y › The docs have no 404s": 40573,
+  "[chromium] › test.spec.ts:7:5 › Open example.com and trigger the popup form": 446,
+  "[chromium] › api/api.spec.ts:11:9 › API Tests for https://jsonplaceholder.typicode.com › Testing API Endpoints - Perform Single Call for Each CRUD Operation (GET, HEAD, POST, PUT, PATCH, DELETE)": 7935,
+  "[chromium] › home/home-layout.spec.ts:30:8 › Home Layout › quick login": 0,
+  "[chromium] › home/home-layout.spec.ts:19:7 › Home Layout › Check for console errors on the page": 6345,
+  "[chromium] › api/api.spec.ts:77:9 › API Tests for https://jsonplaceholder.typicode.com › Verify Single API Call Using apiFetch with Default GET Method": 7053,
+  "[chromium] › contentModel/system-library.spec.ts:16:7 › Component Library › Contact Us": 40043,
+  "[chromium] › contentModel/visual-testing.spec.ts:16:7 › Visual Assertions › Component Snapshots": 41201,
+  "[chromium] › google.spec.ts:3:5 › open google": 6880,
+  "[chromium] › accesibility/lighthouse.spec.ts:27:9 › Lighthouse Audit › Generate Lighthouse audit report for pdpPage": 4,
+  "[chromium] › accesibility/lighthouse.spec.ts:27:9 › Lighthouse Audit › Generate Lighthouse audit report for homePage": 10,
+  "[chromium] › home/home-layout.spec.ts:29:8 › Home Layout › quick login": 0,
+  "[chromium] › home/home-layout.spec.ts:42:8 › Home Layout › Handling Visibility in Playwright: getByText vs. getByRole": 0,
+  "[chromium] › home/google-screenshot.spec.ts:5:9 › Google Screenshot › take screenshot of Google homepage": 2059,
+  "[chromium] › home/home-layout.spec.ts:18:7 › Home Layout › Check for console errors on the page": 9701,
+  "[chromium] › home/yahoo-navigation.spec.ts:4:9 › Yahoo Navigation › navigate to Yahoo homepage": 21221,
+  "[chromium] › api/chirpy-fixture.spec.ts:25:5 › Create new user": 7564,
+  "[chromium] › api/chirpy-fixture.spec.ts:3:5 › Create new user and log in via UI": 6642
 }

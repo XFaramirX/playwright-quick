@@ -5,3 +5,7 @@ node_modules/
 /playwright/.cache/
 /e2e/reports/
 /e2e/tsc/
+/e2e/tmp-profile/
+/playwright/.cache/
+
+.env

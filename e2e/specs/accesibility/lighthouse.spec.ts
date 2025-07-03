@@ -3,31 +3,42 @@ import { BasePage } from '../../pages/base.page';
 import config from '../../../playwright.config';
 import playwright from 'playwright';
 
-const siteUrls = config.baseUrl;
+const siteUrls = {
+  homePage: config.baseUrl + "/content/carrier/us/en/Huge/HomePage.html",
+  pdpPage: config.baseUrl + "/content/carrier/us/en/Huge/PdpPage.html"
+};
+
+const debugPort = "--remote-debugging-port=9222";
 
 test.describe("Lighthouse Audit", { tag: ['@lighthouse'] }, () => {
-  let basePage: BasePage;
   let browser: any;
-  test.beforeEach(async () => {
-    browser = await playwright['chromium'].launch({
-      args: ['--remote-debugging-port=9222'],
-    });
-    const page = await browser.newPage();
-    basePage = new BasePage(page);
-    await page.goto(siteUrls);
 
+  test.beforeAll(async () => {
+    browser = await playwright['chromium'].launch({
+      args: [debugPort],
+    });
   });
 
-  test.afterEach(async () => {
+  test.afterAll(async () => {
     await browser.close();
   });
 
-  test('lighthouse audit', async ({ }, testInfo) => {
-    test.skip(!config.lighthouseAudit, 'Lighthouse audit is disabled');
-    const lighthouseAudit = await basePage.checkLighthouse();
-    await testInfo.attach('Lighthouse audit results', {
-      body: JSON.stringify(lighthouseAudit, null, 2),
-      contentType: 'application/json'
+  for (const [pageName, url] of Object.entries(siteUrls)) {
+    test(`Generate Lighthouse audit report for ${pageName}`, async ({ }, testInfo) => {
+      if (!config.lighthouseAudit) {
+        console.log(`Skipping Lighthouse audit for ${pageName} as it is disabled in config.`);
+        return;
+      }
+
+      const page = await browser.newPage();
+      await page.goto(url);
+      const basePage = new BasePage(page);
+      const lighthouseAudit = await basePage.checkLighthouse();
+      await testInfo.attach(`Lighthouse audit results for ${pageName}`, {
+        body: JSON.stringify(lighthouseAudit, null, 2),
+        contentType: 'application/json'
+      });
+      await page.close();
     });
-  });
+  }
 });

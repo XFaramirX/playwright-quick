@@ -91,3 +91,9 @@ To execute the LightHouse tests for current sites, use the following command:
 ```bash
 npx playwright test -g "@lighthouse"
 ```
+
+To simulate the test on CI/CD
+
+```bash
+npx playwright test -g "@smoke" --repeat-each=100 --workers=10 -x
+```

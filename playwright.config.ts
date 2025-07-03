@@ -1,17 +1,8 @@
 import { PlaywrightTestConfig } from '@playwright/test';
 import { deviceMatrix } from './e2e/fixtures/constants';
 import { environments } from './e2e/fixtures/environments';
-import {
-  CurrentsConfig,
-  currentsReporter
-} from "@currents/playwright";
-
-
-const currentsConfig: CurrentsConfig = {
-  recordKey: "secret record key", // 📖 https://currents.dev/readme/guides/record-key
-  projectId: "project id", // get one at https://app.currents.dev
-};
-
+import * as dotenv from "dotenv";
+import { getEnvVariable } from "./e2e/helpers/env-variables";
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
@@ -22,6 +13,12 @@ interface TestConfig extends PlaywrightTestConfig {
   componentSnapshots: boolean;
 }
 
+dotenv.config({ override: true });
+export const BASE_URL = getEnvVariable("BASE_URL");
+export const CHIRPY_LOGIN = getEnvVariable("CHIRPY_LOGIN");
+export const CHIRPY_PASSWORD = getEnvVariable("CHIRPY_PASSWORD");
+
+
 const defaultConfig: TestConfig = {
   testDir: './e2e/specs',
   outputDir: './e2e/reports/test-results',
@@ -29,7 +26,7 @@ const defaultConfig: TestConfig = {
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: process.env.CI ? [["blob"], ["list"], ["html"], ["github"], ["./state-reporter.js"]] : [["blob"], ["list"], ["html"], ["github"], ["./state-reporter.js"]],
+  reporter: process.env.CI ? [["blob"], ["list"], ["html", { title: 'Custom test' }], ["github"], ["./state-reporter.js"]] : [["blob"], ["list"], ["html", { title: 'Custom test' }], ["github"], ["./state-reporter.js"]],
   baseUrl: 'http://localhost:8080',
   snapshotDir: './e2e/reports/snapshots',
   use: {
@@ -39,13 +36,14 @@ const defaultConfig: TestConfig = {
     screenshot: "on",
   },
   projects: [...deviceMatrix],
-
   // webServer: {
   //   command: 'npm run start',
   //   url: 'http://localhost:8080',
   //   reuseExistingServer: !process.env.CI,
   // },
-  timeout: 45000,
+
+  timeout: 20000,
+  captureGitInfo: { diff: true },
   lighthouseAudit: false,
   componentSnapshots: true,
 
