@@ -1,4 +1,4 @@
-import { testNewUser as test } from "../../fixtures/chirpy-api.fixture";
+import { testNewUser as test } from "../../fixtures/api.fixture";
 import { expect } from "@playwright/test";
 test("Create new user and log in via UI", async ({ newUser, page }) => {
   const { email, password } = newUser;

@@ -3,7 +3,7 @@ import {
   FetchOptions,
   FetchResponse,
   fetchWithConfig,
-} from "../api/fetch-helper";
+} from "./fetch-helper";
 import { APIRequestContext } from "@playwright/test";
 
 export type RequestParams<TData = unknown> = Omit<

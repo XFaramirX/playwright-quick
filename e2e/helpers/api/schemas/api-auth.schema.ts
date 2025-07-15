@@ -4,14 +4,14 @@ import { z as schema } from "zod";
 
 // Define a Zod schema for the login request payload.
 // This schema expects an object with two string properties: 'email' and 'password'.
-export const ChirpyLoginSchema = schema.object({
+export const ApiLoginSchema = schema.object({
   email: schema.string(), // The user's email address as a string
   password: schema.string(), // The user's password as a string
 });
 
 // Define a Zod schema for the login response payload.
 // This schema describes the expected structure of the response returned after a successful login.
-export const ChirpyLoginResponseSchema = schema.object({
+export const ApiLoginResponseSchema = schema.object({
   created_at: schema.string(), // Timestamp when the user was created (as an ISO string)
   email: schema.string(), // The user's email address
   id: schema.string(), // The user's unique identifier
@@ -21,7 +21,7 @@ export const ChirpyLoginResponseSchema = schema.object({
   updated_at: schema.string(), // Timestamp when the user was last updated (as an ISO string)
 });
 
-export const ChirpyCreateUserResponseSchema = schema.object({
+export const ApiCreateUserResponseSchema = schema.object({
   id: schema.string(), // Matches the UUID format as a string
   created_at: schema.string(), // Matches the ISO timestamp format as a string
   updated_at: schema.string(), // Matches the ISO timestamp format as a string
@@ -30,13 +30,13 @@ export const ChirpyCreateUserResponseSchema = schema.object({
   is_chirpy_red: schema.boolean() // Matches the boolean value
 });
 
-// TypeScript type inferred from the ChirpyLoginResponseSchema.
+// TypeScript type inferred from the ApiLoginResponseSchema.
 // This type represents the shape of a successful login response.
-export type ChirpyLoginResponse = schema.infer<
-  typeof ChirpyLoginResponseSchema
+export type ApiLoginResponse = schema.infer<
+  typeof ApiLoginResponseSchema
 >;
 
-// TypeScript type inferred from the ChirpyLoginSchema.
+// TypeScript type inferred from the ApiLoginSchema.
 // This type represents the shape of the login request payload.
-export type ChirpyLogin = schema.infer<typeof ChirpyLoginSchema>;
-export type ChirpyCreateUserResponse = schema.infer<typeof ChirpyCreateUserResponseSchema>;
+export type ApiLogin = schema.infer<typeof ApiLoginSchema>;
+export type ApiCreateUserResponse = schema.infer<typeof ApiCreateUserResponseSchema>;

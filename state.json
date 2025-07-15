@@ -19,5 +19,6 @@
   "[chromium] › home/home-layout.spec.ts:18:7 › Home Layout › Check for console errors on the page": 6904,
   "[chromium] › home/yahoo-navigation.spec.ts:4:9 › Yahoo Navigation › navigate to Yahoo homepage": 21188,
   "[chromium] › api/chirpy-fixture.spec.ts:25:5 › Create new user": 7564,
-  "[chromium] › api/chirpy-fixture.spec.ts:3:5 › Create new user and log in via UI": 30784
+  "[chromium] › api/chirpy-fixture.spec.ts:3:5 › Create new user and log in via UI": 30784,
+  "[chromium] › api/api-fixture.spec.ts:3:5 › Create new user and log in via UI": 6170
 }

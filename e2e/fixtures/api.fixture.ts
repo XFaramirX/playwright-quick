@@ -1,27 +1,27 @@
-import { ChirpyApiClient, createChirpyApiClient } from "../specs/api/chirpy-client";
+import { ApiClient, createApiClient } from "../helpers/api/api-client";
 import { test as base } from "@playwright/test";
 import { CHIRPY_LOGIN, CHIRPY_PASSWORD } from "../../playwright.config"
 
 /**
- * Provides an authenticated chirpyApi client using CHIRPY_LOGIN & CHIRPY_PASSWORD from config.
+ * Provides an authenticated api client using CHIRPY_LOGIN & CHIRPY_PASSWORD from config.
  */
-interface ChirpyApiFixtures {
-  chirpyApi: ChirpyApiClient;
+interface ApiFixtures {
+  api: ApiClient;
 }
 
-export const test = base.extend<ChirpyApiFixtures>({
-  chirpyApi: async ({ playwright }, use) => {
+export const test = base.extend<ApiFixtures>({
+  api: async ({ playwright }, use) => {
     const request = await playwright.request.newContext();
     const login = CHIRPY_LOGIN;
     const password = CHIRPY_PASSWORD;
 
-    const chirpyApi = createChirpyApiClient(request);
-    await chirpyApi.authenticate({
+    const api = createApiClient(request);
+    await api.authenticate({
       email: login,
       password,
     });
 
-    await use(chirpyApi);
+    await use(api);
   },
 });
 
@@ -33,13 +33,13 @@ interface NewUserInfo {
   email: string;
   password: string;
   name: string;
-  chirpyApi: ChirpyApiClient;
+  api: ApiClient;
 }
 
 export const testNewUser = base.extend<{ newUser: NewUserInfo }>({
   newUser: async ({ playwright }, use) => {
     const request = await playwright.request.newContext();
-    const chirpyApi = createChirpyApiClient(request);
+    const api = createApiClient(request);
 
     // Generate random credentials
     const randomStr = Math.random().toString(36).substring(2, 8);
@@ -48,18 +48,18 @@ export const testNewUser = base.extend<{ newUser: NewUserInfo }>({
     const name = `name_${randomStr}`;
 
     // Create new user
-    const response = await chirpyApi.createNewUser({ email, password, name });
+    const response = await api.createNewUser({ email, password, name });
     console.log(response)
     const userInfo: NewUserInfo = {
       email,
       password,
       name,
-      chirpyApi,
+      api,
     };
 
     await use(userInfo);
 
     // Optional: delete the user if your API supports cleanup
-    // await chirpyApi.deleteUser(response.id);
+    // await api.deleteUser(response.id);
   },
 });
