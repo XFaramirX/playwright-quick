@@ -23,5 +23,8 @@
   "[chromium] › api/api-fixture.spec.ts:3:5 › Create new user and log in via UI": 6170,
   "[chromium] › agentSpecGenerated.spec.ts:4:1 › Fill out and submit the form on example.com": 14669,
   "[chromium] › home/google-screenshot.spec.ts:4:7 › W3Schools Form › fill out and submit the form": 4882,
-  "[chromium] › google.spec.ts:13:5 › monitor google": 1484
+  "[chromium] › google.spec.ts:13:5 › monitor google": 1484,
+  "[chromium] › google.spec.ts:14:5 › create and test new user": 5458,
+  "[chromium] › google.spec.ts:5:5 › authenticated API works": 6415,
+  "[chromium] › google.spec.ts:19:5 › monitoring and new user together": 6401
 }
