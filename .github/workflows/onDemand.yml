@@ -1,4 +1,4 @@
-name: 🔘 Run tests on demand
+name: 🔘 onDemand
 
 on:
   # Allows us to run this workflow manually from the Actions tab
@@ -13,7 +13,7 @@ on:
       pw-command-to-execute:
         description: 'playwright command to run'
         required: true
-        default: "npx playwright test --project='chromium'"
+        default: "npx playwright test -g 'open google' --project='chromium'"
         type: string
 
 jobs:

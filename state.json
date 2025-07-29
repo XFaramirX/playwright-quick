@@ -10,7 +10,7 @@
   "[chromium] › api/api.spec.ts:77:9 › API Tests for https://jsonplaceholder.typicode.com › Verify Single API Call Using apiFetch with Default GET Method": 1923,
   "[chromium] › contentModel/system-library.spec.ts:16:7 › Component Library › Contact Us": 36022,
   "[chromium] › contentModel/visual-testing.spec.ts:16:7 › Visual Assertions › Component Snapshots": 31017,
-  "[chromium] › google.spec.ts:3:5 › open google": 29811,
+  "[chromium] › google.spec.ts:3:5 › open google": 1624,
   "[chromium] › accesibility/lighthouse.spec.ts:27:9 › Lighthouse Audit › Generate Lighthouse audit report for pdpPage": 3,
   "[chromium] › accesibility/lighthouse.spec.ts:27:9 › Lighthouse Audit › Generate Lighthouse audit report for homePage": 4,
   "[chromium] › home/home-layout.spec.ts:29:8 › Home Layout › quick login": 0,
@@ -20,5 +20,8 @@
   "[chromium] › home/yahoo-navigation.spec.ts:4:9 › Yahoo Navigation › navigate to Yahoo homepage": 21188,
   "[chromium] › api/chirpy-fixture.spec.ts:25:5 › Create new user": 7564,
   "[chromium] › api/chirpy-fixture.spec.ts:3:5 › Create new user and log in via UI": 30784,
-  "[chromium] › api/api-fixture.spec.ts:3:5 › Create new user and log in via UI": 6170
+  "[chromium] › api/api-fixture.spec.ts:3:5 › Create new user and log in via UI": 6170,
+  "[chromium] › agentSpecGenerated.spec.ts:4:1 › Fill out and submit the form on example.com": 14669,
+  "[chromium] › home/google-screenshot.spec.ts:4:7 › W3Schools Form › fill out and submit the form": 4882,
+  "[chromium] › google.spec.ts:13:5 › monitor google": 1484
 }

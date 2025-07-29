@@ -1,9 +1,21 @@
 import { test } from '@playwright/test';
-import { BasePage } from '../../pages/base.page';
 
-test.describe('Google Screenshot', () => {
-    test('take screenshot of Google homepage', async ({ page }) => {
-        await page.goto('https://www.google.com');
-        await page.screenshot({ path: 'e2e/reports/snapshots/home/google-homepage.png', fullPage: true });
-    });
+test.describe('W3Schools Form', () => {
+  test('fill out and submit the form', async ({ page }) => {
+    await page.goto('https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit');
+
+    // Switch to the iframe containing the form
+    const frame = await page.frame({ name: 'iframeResult' });
+    if (!frame) throw new Error('iframeResult not found');
+
+    // Fill the form fields
+    await frame.fill('input[name="fname"]', 'Alice');
+    await frame.fill('input[name="lname"]', 'Smith');
+
+    // Submit the form
+    await frame.click('input[type="submit"]');
+
+    // Optionally, wait for the result or assert something
+    await page.waitForTimeout(2000);
+  });
 });
