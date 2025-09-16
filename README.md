@@ -1,3 +1,6 @@
+# EXAMPLES OF PROMPTS
+https://github.com/debs-obrien/playwright-mcp-prompts/tree/main/.github 
+
 # End to End suite
 
 This is a general overview of what is inside the End to end suite.
