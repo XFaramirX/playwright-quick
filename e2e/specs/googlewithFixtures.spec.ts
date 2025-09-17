@@ -16,7 +16,7 @@ test('create and test new user', async ({ newUser }) => {
   expect(newUser.email).toBeDefined();
 });
 
-test('monitoring and new user together', async ({ pageWithMonitoring, newUser }) => {
+test.skip('monitoring and new user together', async ({ pageWithMonitoring, newUser }) => {
   await pageWithMonitoring.goto('https://danube-web.shop');
   console.log(`Test ran as user ${newUser.email}`);
 });

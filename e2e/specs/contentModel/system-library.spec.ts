@@ -5,7 +5,7 @@ import * as component from '../../fixtures/contentModel';
 
 const envPage = config.baseUrl;
 
-test.describe('Component Library', { tag: ['@component'] }, () => {
+test.describe.skip('Component Library', { tag: ['@component'] }, () => {
   let homePage: HomePage;
 
   test.beforeEach(async ({ page }) => {

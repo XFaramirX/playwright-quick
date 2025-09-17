@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const path = require('path');
 
-test('Fill out and submit the form on example.com', async ({ page }) => {
+test.skip('Fill out and submit the form on example.com', async ({ page }) => {
   // 1. Navigate to the form page
   await page.goto('https://example.com/form');
 

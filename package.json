@@ -22,9 +22,13 @@
     "lighthouse": "^12.3.0",
     "playwright": "^1.49.1",
     "playwright-lighthouse": "^4.0.0",
-    "pw-api-plugin": "^1.1.0"
+    "pw-api-plugin": "^1.1.0",
+    "@types/bun": "latest"
   },
   "dependencies": {
     "dotenv": "^17.0.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }

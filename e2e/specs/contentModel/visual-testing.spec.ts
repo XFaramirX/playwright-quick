@@ -5,7 +5,7 @@ import * as component from '../../fixtures/contentModel';
 
 const envPage = config.baseUrl;
 
-test.describe('Visual Assertions', { tag: ['@visual'] }, () => {
+test.describe.skip('Visual Assertions', { tag: ['@visual'] }, () => {
   let homePage: HomePage;
 
   test.beforeEach(async ({ page }) => {

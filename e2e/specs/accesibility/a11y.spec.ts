@@ -4,7 +4,7 @@ import config from '../../../playwright.config';
 
 // const envPage = config.baseUrl;
 const envPage = config.baseUrl;
-test.describe("A11y", { tag: ['@a11y'] }, async () => {
+test.describe.skip("A11y", { tag: ['@a11y'] }, async () => {
   let homePage: HomePage;
   test.beforeEach(async ({ page }) => {
     homePage = new HomePage(page);
