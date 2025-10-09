@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 
 test.describe('W3Schools Form', () => {
   test('fill out and submit the form', async ({ page }) => {
-    await page.goto('https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit');
+    await page.goto('https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit', { waitUntil: "domcontentloaded" });
 
     // Switch to the iframe containing the form
     const frame = await page.frame({ name: 'iframeResult' });
@@ -14,8 +14,5 @@ test.describe('W3Schools Form', () => {
 
     // Submit the form
     await frame.click('input[type="submit"]');
-
-    // Optionally, wait for the result or assert something
-    await page.waitForTimeout(2000);
   });
 });
