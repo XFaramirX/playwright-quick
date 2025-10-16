@@ -11,6 +11,7 @@ For the purpose of this guide here are some clarifications:
 
 - The "end-to-end" is the `./e2e` directory
 - The "root directory" is the directory that contains the "end-to-end directory"
+- The "test"
 -
 
 ## Install dependencies
