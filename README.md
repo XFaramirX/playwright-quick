@@ -79,22 +79,44 @@ To run the Playwrigth code generation tool, run the the following command from t
 npx playwright e2e-codegen
 ```
 
-## Run Accesibility Test
 
-To run the A11y accessibility testing report, use the checkA11y() method from the BasePage class.
+## Accessibility Testing
+
+To run the A11y accessibility testing report, use the `checkA11y()` method from the `BasePage` class:
 
 ```bash
 checkA11y()
 ```
 
-To execute the LightHouse tests for current sites, use the following command:
+## Simulate CI/CD Test Runs
 
-```bash
-npx playwright test -g "@lighthouse"
-```
-
-To simulate the test on CI/CD
+To simulate the test on CI/CD:
 
 ```bash
 npx playwright test -g "@smoke" --repeat-each=100 --workers=10 -x
 ```
+
+## Chrome DevTools MCP for Lighthouse-like Audits
+
+Lighthouse tests are no longer supported directly in this project. Instead, use the [mcp chrome-devtools](https://www.npmjs.com/package/chrome-devtools-mcp) server for automated site audits and reporting.
+
+### How to use chrome-devtools MCP
+
+1. Ensure the `chrome-devtools` MCP server is configured in `.vscode/mcp.json`:
+
+		```jsonc
+		"chrome-devtools": {
+			"command": "npx",
+			"args": ["-y", "chrome-devtools-mcp@latest"]
+		}
+		```
+
+2. Start the MCP server:
+
+		```bash
+		npx chrome-devtools-mcp
+		```
+
+3. Use the MCP API or CLI to run audits and generate reports for your site. Refer to the [chrome-devtools-mcp documentation](https://www.npmjs.com/package/chrome-devtools-mcp) for usage details.
+
+This replaces the previous Lighthouse integration for site performance and accessibility reporting.
