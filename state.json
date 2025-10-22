@@ -35,11 +35,11 @@
   "[chromium] › home/home-layout.spec.ts:11:7 › Home Layout › Home - should not have console errors": 7512,
   "[chromium] › agentSpecGenerated.spec.ts:4:6 › Fill out and submit the form on example.com": 0,
   "[chromium] › googlewithFixtures.spec.ts:19:6 › monitoring and new user together": 0,
-  "[chromium] › codemifyAIChatmodes.spec.ts:42:9 › Codemify Homepage › Verify \"Start Here\" Button": 6762,
-  "[chromium] › codemifyAIChatmodes.spec.ts:25:9 › Codemify Homepage › Verify Submenu Functionality": 6883,
-  "[chromium] › codemifyAIChatmodes.spec.ts:50:9 › Codemify Homepage › Verify Hero Text Content": 5607,
-  "[chromium] › codemifyAIChatmodes.spec.ts:5:9 › Codemify Homepage › Verify Navigation Links": 10189,
-  "[chromium] › codemifyAIChatmodes.spec.ts:57:9 › Codemify Homepage › Verify \"Try Free Lesson\" Button": 5751,
-  "[chromium] › codemifyAIChatmodes.spec.ts:65:9 › Codemify Homepage › Verify \"Learn More\" Buttons for Courses": 5599,
-  "[chromium] › seed.spec.ts:4:7 › Test group › seed": 3423
+  "[chromium] › codemifyAIChatmodes.spec.ts:42:9 › Codemify Homepage › Verify \"Start Here\" Button": 6713,
+  "[chromium] › codemifyAIChatmodes.spec.ts:25:9 › Codemify Homepage › Verify Submenu Functionality": 8307,
+  "[chromium] › codemifyAIChatmodes.spec.ts:50:9 › Codemify Homepage › Verify Hero Text Content": 7792,
+  "[chromium] › codemifyAIChatmodes.spec.ts:5:9 › Codemify Homepage › Verify Navigation Links": 10989,
+  "[chromium] › codemifyAIChatmodes.spec.ts:57:9 › Codemify Homepage › Verify \"Try Free Lesson\" Button": 8852,
+  "[chromium] › codemifyAIChatmodes.spec.ts:65:9 › Codemify Homepage › Verify \"Learn More\" Buttons for Courses": 8841,
+  "[chromium] › seed.spec.ts:4:7 › Test group › seed": 3298
 }
