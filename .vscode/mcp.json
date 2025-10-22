@@ -1,0 +1,31 @@
+{
+  "servers": {
+    "microsoft/playwright-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"],
+      "gallery": "https://api.mcp.github.com/2025-09-15/v0/servers/41b79849-7e6c-4fc7-82c0-5a611ea21523",
+      "version": "0.0.1-seed"
+    },
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp",
+        "--api-key",
+        "ctx7sk-f269a6a9-7903-4e25-97ee-df7ad5c99114"
+      ]
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"]
+    },
+    "playwright-test": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["playwright", "run-test-mcp-server"]
+    }
+  },
+  "inputs": []
+}

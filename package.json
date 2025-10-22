@@ -16,17 +16,14 @@
   "license": "ISC",
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
-    "@playwright/test": "^1.53.2",
+    "@playwright/test": "^1.56.1",
     "@types/node": "^22.10.2",
     "husky": "^9.0.7",
-    "lighthouse": "^12.3.0",
-    "playwright": "^1.49.1",
-    "playwright-lighthouse": "^4.0.0",
-    "pw-api-plugin": "^1.1.0",
-    "@types/bun": "latest"
+    "pw-api-plugin": "^1.1.0"
   },
   "dependencies": {
-    "dotenv": "^17.0.1"
+    "dotenv": "^17.0.1",
+    "zod": "^4.1.12"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
