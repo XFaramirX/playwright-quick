@@ -1,7 +1,8 @@
-import { Page, expect, Locator } from "@playwright/test";
+import { Page, expect, Locator, request } from "@playwright/test";
 import { AxeBuilder } from "@axe-core/playwright";
 import step from "../helpers/steps.helper";
-import { lightHouseThresholds, screenshotOptions } from '../fixtures/constants';
+import { screenshotOptions } from '../fixtures/constants';
+import { CsvFormatterStream, FormatterRow } from "fast-csv";
 
 export class BasePage {
     readonly page: Page;
@@ -37,24 +38,6 @@ export class BasePage {
             .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
             .analyze();
         return accessibilityScanResults.violations;
-    }
-
-    @step
-    async checkLighthouse(): Promise<any> {
-        const { playAudit } = await import('playwright-lighthouse');
-        const lighthouseAudit = await playAudit({
-            page: this.page,
-            port: 9222,
-            thresholds: lightHouseThresholds,
-            reports: {
-                formats: {
-                    html: true,
-                },
-                directory: `${process.cwd()}/e2e/reports/lighthouse`,
-            },
-        });
-
-        return lighthouseAudit;
     }
 
     @step
@@ -101,6 +84,105 @@ export class BasePage {
         return validHrefs;
     }
 
+    @step
+    async loadingTimeWidget(locator: Locator) {
+        const startTime = Date.now()
+        let endTime
+
+        if (expect(locator.isVisible())) {
+            endTime = Date.now()
+            const responseTime = endTime - startTime
+            console.log(`Oly widget loaded and visible in ${responseTime} ms`)
+        }
+    }
+
+    @step
+    async getApiResponse() {
+        const responsePromise = this.page.waitForResponse(
+            "https://proxy-dot-nbcu-growth-1342710.uc.r.appspot.com/"
+        )
+        const response = await responsePromise
+        const responseBody = await response.json()
+        return responseBody
+    }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    async waitForOlyApiResponseFE(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        query: { [x: string]: any; Query: any },
+        csvStream: CsvFormatterStream<FormatterRow, FormatterRow>,
+        timezone: string,
+        randomEventDate: string
+    ) {
+        const responsePromise = this.page.waitForResponse(
+            "https://proxy-dot-nbcu-growth-1342710.uc.r.appspot.com/"
+        )
+        const response = await responsePromise
+        const responseBody = await response.json()
+        csvStream.write({
+            id: query.Id,
+            query: query.Query,
+            expectedAnswer: query["Expected Answers"],
+            LLMResponse: responseBody.response_text,
+            schedule_cards:
+                responseBody.schedule_cards && responseBody.schedule_cards.length
+                    ? responseBody.schedule_cards.length
+                    : 0,
+            ApiStatus: responseBody.status ? responseBody.status : "No response",
+            timeZone: timezone,
+            eventDate: randomEventDate,
+        })
+        csvStream.end()
+    }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    async goldenQueryAPI(query: any, csvStream: any) {
+        console.log(query.Query)
+        const apiContext = await request.newContext({
+            baseURL: "https://proxy-dot-nbcu-growth-1342710.uc.r.appspot.com/",
+            extraHTTPHeaders: {
+                accept: "*/*",
+                "accept-language": "en-US,en;q=0.9,es;q=0.8",
+                "cache-control": "no-cache",
+                "content-type": "application/json",
+                origin: "https://storage.googleapis.com",
+                pragma: "no-cache",
+                priority: "u=1, i",
+                referer: "https://storage.googleapis.com/",
+                "sec-ch-ua":
+                    '"Google Chrome";v="125", "Chromium";v="125", "Not.A/Brand";v="24"',
+                "sec-ch-ua-mobile": "?1",
+                "sec-ch-ua-platform": '"Android"',
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "cross-site",
+                "user-agent":
+                    "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Mobile Safari/537.36",
+            },
+        })
+        const response = await apiContext.post("/", {
+            data: {
+                history: [],
+                query: query.Query,
+                turn_id: 1,
+                session_id: "b34d5553-050d-4678-a580-e5d7e7ae8f6e",
+                timezone: "America/New_York",
+            },
+        })
+
+        const responseBody = await response.json()
+        csvStream.write({
+            query: query.Query,
+            primaryTopic: query["Primary Query Topic"],
+            queryType: query["Query Type"],
+            sensitive: query["Sensitive"],
+            adaptive: query["Adaptive"],
+            goldenAnswer: query["Golden Answers"],
+            LLMResponse: responseBody.response_text,
+            schedule_cards: responseBody.schedule_cards.length,
+            ApiStatus: responseBody.status,
+        })
+        csvStream.end()
+        await apiContext.dispose()
+    }
 }
 
 

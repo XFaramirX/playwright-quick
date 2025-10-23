@@ -1,4 +1,4 @@
-import { test as base, Page } from "@playwright/test";
+import { test as base, Page, request } from "@playwright/test";
 import { ApiClient, createApiClient } from "../helpers/api/api-client";
 import { CHIRPY_LOGIN, CHIRPY_PASSWORD } from "../../playwright.config";
 
