@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../fixtures/base';
 
-test.describe('Codemify Homepage', () => {
+test.describe('Codemify Homepage', { tag: ['@smoke'] }, () => {
 
     test('Verify Navigation Links', async ({ page }) => {
         await page.goto('https://codemify.com');

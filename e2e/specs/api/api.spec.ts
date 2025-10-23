@@ -1,6 +1,4 @@
-// tests/example.spec.ts
-
-import { test, expect } from '@playwright/test';
+import { test, expect } from '../../fixtures/base';
 import { apiFetch, apiGet, apiPost, apiPut, apiDelete, apiPatch, apiHead } from 'pw-api-plugin';
 
 

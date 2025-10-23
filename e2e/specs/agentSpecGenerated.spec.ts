@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+import { test, expect } from '../fixtures/base';
 const path = require('path');
 
 test.skip('Fill out and submit the form on example.com', async ({ page }) => {

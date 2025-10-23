@@ -1,8 +1,7 @@
-import { test } from "../../fixtures/api.fixture";
-import { expect } from "@playwright/test";
+import { test, expect } from '../../fixtures/base';
 test("Create new user and log in via UI", async ({ newUser, page }) => {
   const { email, password } = newUser;
-
+  
   await test.step("Visit login page and log in", async () => {
     await page.goto("https://chirpy.bieda.it/login");
     await page.fill('input[name="email"]', email);

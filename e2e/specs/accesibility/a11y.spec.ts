@@ -1,17 +1,14 @@
-import { test, expect } from '@playwright/test';
-import { HomePage } from '../../pages/home/home.page';
+import { test, expect } from '../../fixtures/base';
 import config from '../../../playwright.config';
 
 // const envPage = config.baseUrl;
 const envPage = config.baseUrl;
 test.describe.skip("A11y", { tag: ['@a11y'] }, async () => {
-  let homePage: HomePage;
-  test.beforeEach(async ({ page }) => {
-    homePage = new HomePage(page);
+  test.beforeEach(async ({ homePage }) => {
     await homePage.goto(envPage);
   });
 
-  test('Accessibility Testing', async ({ }, testInfo) => {
+  test('Accessibility Testing', async ({ homePage }, testInfo) => {
     const accessibilityScanResults = await homePage.checkA11y();
     await testInfo.attach('accessibility-scan-results', {
       body: JSON.stringify(accessibilityScanResults, null, 2),
@@ -21,7 +18,7 @@ test.describe.skip("A11y", { tag: ['@a11y'] }, async () => {
     // expect(accessibilityScanResults.violations).toEqual([]);
   });
 
-  test(`The docs have no 404s`, async ({ page }, testInfo) => {
+  test(`The docs have no 404s`, async ({ homePage, page }, testInfo) => {
     const linkUrls = await homePage.getAllLinksFromPage(page);
 
     for (const url of linkUrls) {

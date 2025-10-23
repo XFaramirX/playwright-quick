@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx playwright test",
     "test:ui": "npx playwright test --ui",
-    "test:smoke": "npx playwright test -g @smoke",
+    "test:smoke": "npx playwright test --project smoke",
     "test:failed": "npx playwright test --last-failed --update-snapshots",
     "test:auth": "npx playwright codegen --save-storage=fixtures/auth.json",
     "prepare": "husky install"

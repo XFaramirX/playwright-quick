@@ -1,19 +1,15 @@
-import { test, expect, Locator } from '@playwright/test';
-import { HomePage } from '../../pages/home/home.page';
+import { test, expect } from '../../fixtures/base';
 import config from '../../../playwright.config';
 import * as component from '../../fixtures/contentModel';
 
 const envPage = config.baseUrl;
 
 test.describe.skip('Visual Assertions', { tag: ['@visual'] }, () => {
-  let homePage: HomePage;
-
-  test.beforeEach(async ({ page }) => {
-    homePage = new HomePage(page);
+  test.beforeEach(async ({ page, homePage }) => {
     await homePage.goto(envPage);
   });
 
-  test('Component Snapshots', async ({ page }) => {
+  test('Component Snapshots', async ({ page, homePage }) => {
     for (const [name, selector] of Object.entries(component)) {
       if (config.componentSnapshots) {
         if (name !== "nav" && name !== "utilityNav") {

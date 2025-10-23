@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { test } from '../../fixtures/base'
 
 test.describe('W3Schools Form', () => {
   test('fill out and submit the form', async ({ page }) => {

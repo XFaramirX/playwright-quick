@@ -1,5 +1,4 @@
-import { expect } from '@playwright/test';
-import { test } from '../fixtures/api.fixture';
+import { test, expect } from '../fixtures/base';
 import { CHIRPY_LOGIN } from '../../playwright.config';
 
 test('authenticated API works', async ({ api }) => {

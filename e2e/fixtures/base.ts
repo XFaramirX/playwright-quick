@@ -1,4 +1,4 @@
-import { test as base } from '@playwright/test';
+import { test as base } from './api.fixture';
 import { BasePage } from '../pages/base.page';
 import { HomePage } from '../pages/home/home.page';
 

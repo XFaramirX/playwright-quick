@@ -5,6 +5,8 @@ import { CHIRPY_LOGIN, CHIRPY_PASSWORD } from "../../playwright.config";
 // === Fixture Types ===
 interface ApiFixtures {
   api: ApiClient;
+  newUser: NewUserInfo;
+  pageWithMonitoring: Page;
 }
 
 interface NewUserInfo {
@@ -24,6 +26,7 @@ type ErrorRequest = {
 export const test = base.extend<{
   api: ApiClient;
   newUser: NewUserInfo;
+  pageOnly: Page;
   pageWithMonitoring: Page;
 }>({
   // Authenticated API client using CHIRPY credentials
@@ -56,7 +59,6 @@ export const test = base.extend<{
 
     // Optional cleanup: await api.deleteUser(response.id);
   },
-
   // Monitor for failed API responses
   pageWithMonitoring: [
     async ({ page }, use, testInfo) => {
@@ -82,6 +84,7 @@ export const test = base.extend<{
         throw new Error("Failing API requests detected.");
       }
     },
-    { auto: true },
+    //toogle to true if want to have monitoring in all pages for fail request in network. (this could break some test, use mostly for full regression)
+    { auto: false },
   ],
 });

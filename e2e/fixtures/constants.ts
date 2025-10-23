@@ -16,6 +16,12 @@ const deviceMatrix = [
         use: { ...devices['Desktop Chrome'] },
     },
 
+    {
+        name: 'smoke',
+        use: { ...devices['Desktop Chrome'] },
+        grep: /@smoke/
+    },
+
     // {
     //     name: 'firefox',
     //     use: { ...devices['Desktop Firefox'] },

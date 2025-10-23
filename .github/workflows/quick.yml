@@ -23,4 +23,4 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: "Run open google Playwright test"
-        run: npx playwright test -g "open google"
+        run: npx playwright test -g "@quick"
