@@ -31,6 +31,10 @@ const defaultConfig: TestConfig = {
   snapshotDir: './e2e/reports/snapshots',
   use: {
     storageState: "./e2e/fixtures/auth.json",
+    extraHTTPHeaders: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${process.env.AUTH_TOKEN || ''}`,
+    },
     trace: "on",
     video: "on",
     screenshot: "on",
