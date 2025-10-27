@@ -1,6 +1,7 @@
 import { test, expect } from '../../fixtures/base'
 import config from '../../../playwright.config';
 import * as component from '../../fixtures/contentModel';
+import { contact } from "../../pages/home/selectors"
 
 const envPage = config.baseUrl;
 
@@ -22,6 +23,9 @@ test.describe.skip('Component Library', { tag: ['@component'] }, () => {
       - heading [level=3]
       - paragraph
       `);
+
+    //Captures a “snapshot” of the entire state of a component
+    await expect(page.locator(contact.locator)).toMatchAriaSnapshot(contact.snapshot);
 
     // Check functionality for Cta
     const button = await page.locator(component.contactUs.container).nth(0);

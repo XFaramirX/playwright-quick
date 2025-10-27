@@ -2,18 +2,11 @@ import { test as base, Page, request } from "@playwright/test";
 import { ApiClient, createApiClient } from "../helpers/api/api-client";
 import { CHIRPY_LOGIN, CHIRPY_PASSWORD } from "../../playwright.config";
 
-// === Fixture Types ===
-interface ApiFixtures {
-  api: ApiClient;
-  newUser: NewUserInfo;
-  pageWithMonitoring: Page;
-}
-
+// === Fixture Types ==
 interface NewUserInfo {
   email: string;
   password: string;
   name: string;
-  api: ApiClient;
 }
 
 type ErrorRequest = {
@@ -54,7 +47,7 @@ export const test = base.extend<{
 
     await api.createNewUser({ email, password, name });
 
-    const userInfo: NewUserInfo = { email, password, name, api };
+    const userInfo: NewUserInfo = { email, password, name };
     await use(userInfo);
 
     // Optional cleanup: await api.deleteUser(response.id);
