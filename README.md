@@ -88,7 +88,7 @@ checkA11y()
 
 ---
 
-## Simulate CI/CD Test Runs
+## Simulate CI/CD Test Run
 
 Run smoke tests in CI/CD simulation:
 
