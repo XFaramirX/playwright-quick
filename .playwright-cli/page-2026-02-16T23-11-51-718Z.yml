@@ -1,0 +1,337 @@
+- generic [ref=e2]:
+  - region "Skip to main content":
+    - link "Skip to main content" [ref=e183] [cursor=pointer]:
+      - /url: "#__docusaurus_skipToContent_fallback"
+  - navigation "Main" [ref=e184]:
+    - generic [ref=e185]:
+      - generic [ref=e186]:
+        - link "Playwright logo Playwright" [ref=e187] [cursor=pointer]:
+          - /url: /
+          - img "Playwright logo" [ref=e189]
+          - generic [ref=e190]: Playwright
+        - link "Docs" [ref=e191] [cursor=pointer]:
+          - /url: /docs/intro
+        - link "API" [ref=e192] [cursor=pointer]:
+          - /url: /docs/api/class-playwright
+        - button "Node.js" [ref=e194] [cursor=pointer]
+        - link "Community" [ref=e195] [cursor=pointer]:
+          - /url: /community/welcome
+      - generic [ref=e196]:
+        - link "GitHub repository" [ref=e197] [cursor=pointer]:
+          - /url: https://github.com/microsoft/playwright
+        - link "Discord server" [ref=e198] [cursor=pointer]:
+          - /url: https://aka.ms/playwright/discord
+        - button "Switch between dark and light mode (currently system mode)" [ref=e200] [cursor=pointer]:
+          - img [ref=e201]
+        - button "Search (Ctrl+K)" [ref=e204] [cursor=pointer]:
+          - generic [ref=e205]:
+            - img [ref=e206]
+            - generic [ref=e208]: Search
+          - generic [ref=e209]:
+            - img [ref=e211]
+            - generic [ref=e213]: K
+  - generic [ref=e216]:
+    - complementary [ref=e217]:
+      - navigation "Docs sidebar" [ref=e220]:
+        - list [ref=e221]:
+          - listitem [ref=e222]:
+            - link "Welcome" [ref=e223] [cursor=pointer]:
+              - /url: /community/welcome
+          - listitem [ref=e224]:
+            - link "Ambassadors" [ref=e225] [cursor=pointer]:
+              - /url: /community/ambassadors
+          - listitem [ref=e226]:
+            - button "Videos" [expanded] [ref=e228] [cursor=pointer]
+            - list [ref=e229]:
+              - listitem [ref=e230]:
+                - link "Conference Videos" [ref=e231] [cursor=pointer]:
+                  - /url: /community/conference-videos
+              - listitem [ref=e232]:
+                - link "Release Videos" [ref=e233] [cursor=pointer]:
+                  - /url: /community/release-videos
+              - listitem [ref=e234]:
+                - link "Live Streams" [ref=e235] [cursor=pointer]:
+                  - /url: /community/live-streams
+              - listitem [ref=e236]:
+                - link "Feature Videos" [ref=e237] [cursor=pointer]:
+                  - /url: /community/feature-videos
+              - listitem [ref=e238]:
+                - link "Learn Videos" [ref=e239] [cursor=pointer]:
+                  - /url: /community/learn-videos
+              - listitem [ref=e240]:
+                - link "MCP & Agent Videos" [ref=e241] [cursor=pointer]:
+                  - /url: /community/mcp-videos
+          - listitem [ref=e242]:
+            - link "Learn Playwright" [ref=e243] [cursor=pointer]:
+              - /url: https://learn.microsoft.com/en-us/training/modules/build-with-playwright/
+              - text: Learn Playwright
+              - img [ref=e244]
+          - listitem [ref=e246]:
+            - link "Playwright Samples" [ref=e247] [cursor=pointer]:
+              - /url: https://learn.microsoft.com/en-us/samples/browse/?products=playwright
+              - text: Playwright Samples
+              - img [ref=e248]
+          - listitem [ref=e250]:
+            - link "Blog" [ref=e251] [cursor=pointer]:
+              - /url: https://dev.to/playwright
+              - text: Blog
+              - img [ref=e252]
+          - listitem [ref=e254]:
+            - link "Join our Community Discord" [ref=e255] [cursor=pointer]:
+              - /url: https://aka.ms/playwright/discord
+              - text: Join our Community Discord
+              - img [ref=e256]
+    - main [ref=e258]:
+      - generic [ref=e260]:
+        - generic [ref=e262]:
+          - article [ref=e263]:
+            - navigation "Breadcrumbs" [ref=e264]:
+              - list [ref=e265]:
+                - listitem [ref=e266]:
+                  - link "Home page" [ref=e267] [cursor=pointer]:
+                    - /url: /
+                    - img [ref=e268]
+                - listitem [ref=e270]:
+                  - generic [ref=e271]: Welcome
+            - generic [ref=e272]:
+              - heading "Welcome" [level=1] [ref=e274]
+              - paragraph [ref=e275]:
+                - text: Welcome to the Playwright Community. We are so glad to have you here. In our community section take a look at our videos section to see videos on
+                - link "conference talks" [ref=e276] [cursor=pointer]:
+                  - /url: /community/conference-videos
+                - text: ","
+                - link "live streams" [ref=e277] [cursor=pointer]:
+                  - /url: /community/live-streams
+                - text: ","
+                - link "feature videos" [ref=e278] [cursor=pointer]:
+                  - /url: /community/feature-videos
+                - text: and
+                - link "release videos" [ref=e279] [cursor=pointer]:
+                  - /url: /community/release-videos
+                - text: .
+              - heading "AmbassadorsDirect link to Ambassadors" [level=2] [ref=e280]:
+                - text: Ambassadors
+                - link "Direct link to Ambassadors" [ref=e281] [cursor=pointer]:
+                  - /url: "#ambassadors"
+                  - text: "#"
+              - paragraph [ref=e282]:
+                - text: Check out our
+                - link "Ambassador page" [ref=e283] [cursor=pointer]:
+                  - /url: /community/ambassadors
+                - text: to the see the awesome people creating Playwright content and sharing it with the community.
+              - heading "GitHubDirect link to GitHub" [level=2] [ref=e284]:
+                - text: GitHub
+                - link "Direct link to GitHub" [ref=e285] [cursor=pointer]:
+                  - /url: "#github"
+                  - text: "#"
+              - paragraph [ref=e286]:
+                - text: We love stars so make sure you
+                - link "star us on GitHub" [ref=e287] [cursor=pointer]:
+                  - /url: https://github.com/microsoft/playwright
+                - text: .
+              - paragraph [ref=e288]: "Please create an issue for the following:"
+              - list [ref=e289]:
+                - listitem [ref=e290]:
+                  - link "Bug Reports" [ref=e291] [cursor=pointer]:
+                    - /url: https://github.com/microsoft/playwright/issues/new?assignees=&labels=&template=bug.md&title=%5BBUG%5D
+                - listitem [ref=e292]:
+                  - link "Feature Requests" [ref=e293] [cursor=pointer]:
+                    - /url: https://github.com/microsoft/playwright/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature%5D
+                - listitem [ref=e294]:
+                  - link "Report Regression" [ref=e295] [cursor=pointer]:
+                    - /url: https://github.com/microsoft/playwright/issues/new?assignees=&labels=&template=regression.md&title=%5BREGRESSION%5D%3A+
+                - listitem [ref=e296]:
+                  - link "Report a security vulnerability" [ref=e297] [cursor=pointer]:
+                    - /url: https://github.com/microsoft/playwright/security/policy
+              - heading "ContributingDirect link to Contributing" [level=2] [ref=e298]:
+                - text: Contributing
+                - link "Direct link to Contributing" [ref=e299] [cursor=pointer]:
+                  - /url: "#contributing"
+                  - text: "#"
+              - paragraph [ref=e300]:
+                - text: Check out our
+                - link "contributing guide" [ref=e301] [cursor=pointer]:
+                  - /url: https://github.com/microsoft/playwright/blob/main/CONTRIBUTING.md
+                - text: if you would like to contribute to Playwright.
+              - heading "Community DiscordDirect link to Community Discord" [level=2] [ref=e302]:
+                - text: Community Discord
+                - link "Direct link to Community Discord" [ref=e303] [cursor=pointer]:
+                  - /url: "#community-discord"
+                  - text: "#"
+              - paragraph [ref=e304]:
+                - text: Join our community
+                - link "Discord Server" [ref=e305] [cursor=pointer]:
+                  - /url: https://aka.ms/playwright/discord
+                - text: to connect with other developers using Playwright, ask questions in our
+                - link "'help-playwright'" [ref=e306] [cursor=pointer]:
+                  - /url: https://discord.com/channels/807756831384403968/1054804523652231198
+                - text: forum, share your articles and videos and join live events on the Playwright stage.
+              - heading "Community LinkedInDirect link to Community LinkedIn" [level=2] [ref=e307]:
+                - text: Community LinkedIn
+                - link "Direct link to Community LinkedIn" [ref=e308] [cursor=pointer]:
+                  - /url: "#community-linkedin"
+                  - text: "#"
+              - paragraph [ref=e309]:
+                - text: Join our community on
+                - link "LinkedIn" [ref=e310] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/playwrightweb/
+                - text: to connect with other developers and hear the latest news about Playwright.
+              - heading "Stack OverflowDirect link to Stack Overflow" [level=2] [ref=e311]:
+                - text: Stack Overflow
+                - link "Direct link to Stack Overflow" [ref=e312] [cursor=pointer]:
+                  - /url: "#stack-overflow"
+                  - text: "#"
+              - paragraph [ref=e313]:
+                - text: Read through the
+                - link "existing questions" [ref=e314] [cursor=pointer]:
+                  - /url: https://stackoverflow.com/tags/playwright
+                - text: tagged with
+                - strong [ref=e315]: playwright
+                - text: or
+                - link "ask your own" [ref=e316] [cursor=pointer]:
+                  - /url: https://stackoverflow.com/questions/ask?tags=playwright
+                - text: "!"
+              - heading "YouTubeDirect link to YouTube" [level=2] [ref=e317]:
+                - text: YouTube
+                - link "Direct link to YouTube" [ref=e318] [cursor=pointer]:
+                  - /url: "#youtube"
+                  - text: "#"
+              - paragraph [ref=e319]:
+                - text: Check out our
+                - link "YouTube channel" [ref=e320] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UC46Zj8pDH5tDosqm1gd7WTg
+                - text: for getting started series, feature videos and new releases.
+              - heading "BlogDirect link to Blog" [level=2] [ref=e321]:
+                - text: Blog
+                - link "Direct link to Blog" [ref=e322] [cursor=pointer]:
+                  - /url: "#blog"
+                  - text: "#"
+              - paragraph [ref=e323]:
+                - text: Follow our
+                - link "Blog" [ref=e324] [cursor=pointer]:
+                  - /url: https://dev.to/playwright
+                - text: on dev.to for official posts on Playwright.
+              - heading "NewsDirect link to News" [level=2] [ref=e325]:
+                - text: News
+                - link "Direct link to News" [ref=e326] [cursor=pointer]:
+                  - /url: "#news"
+                  - text: "#"
+              - paragraph [ref=e327]:
+                - text: For the latest news about Playwright,
+                - link "follow @playwrightweb on Twitter" [ref=e328] [cursor=pointer]:
+                  - /url: https://twitter.com/playwrightweb
+                  - text: follow
+                  - strong [ref=e329]: "@playwrightweb"
+                  - text: on Twitter
+                - text: .
+              - heading "Playwright TrainingDirect link to Playwright Training" [level=2] [ref=e330]:
+                - text: Playwright Training
+                - link "Direct link to Playwright Training" [ref=e331] [cursor=pointer]:
+                  - /url: "#training"
+                  - text: "#"
+              - paragraph [ref=e332]:
+                - text: Learn how to
+                - link "Build Your first end-to-end test with Playwright" [ref=e333] [cursor=pointer]:
+                  - /url: https://learn.microsoft.com/en-us/training/modules/build-with-playwright/
+                - text: on Microsoft Learn.
+          - navigation "Docs pages" [ref=e334]:
+            - link "Next Ambassadors »" [ref=e335] [cursor=pointer]:
+              - /url: /community/ambassadors
+              - generic [ref=e336]: Next
+              - generic [ref=e337]: Ambassadors »
+        - list [ref=e340]:
+          - listitem [ref=e341]:
+            - link "Ambassadors" [ref=e342] [cursor=pointer]:
+              - /url: "#ambassadors"
+          - listitem [ref=e343]:
+            - link "GitHub" [ref=e344] [cursor=pointer]:
+              - /url: "#github"
+          - listitem [ref=e345]:
+            - link "Contributing" [ref=e346] [cursor=pointer]:
+              - /url: "#contributing"
+          - listitem [ref=e347]:
+            - link "Community Discord" [ref=e348] [cursor=pointer]:
+              - /url: "#community-discord"
+          - listitem [ref=e349]:
+            - link "Community LinkedIn" [ref=e350] [cursor=pointer]:
+              - /url: "#community-linkedin"
+          - listitem [ref=e351]:
+            - link "Stack Overflow" [ref=e352] [cursor=pointer]:
+              - /url: "#stack-overflow"
+          - listitem [ref=e353]:
+            - link "YouTube" [ref=e354] [cursor=pointer]:
+              - /url: "#youtube"
+          - listitem [ref=e355]:
+            - link "Blog" [ref=e356] [cursor=pointer]:
+              - /url: "#blog"
+          - listitem [ref=e357]:
+            - link "News" [ref=e358] [cursor=pointer]:
+              - /url: "#news"
+          - listitem [ref=e359]:
+            - link "Playwright Training" [ref=e360] [cursor=pointer]:
+              - /url: "#training"
+  - contentinfo [ref=e361]:
+    - generic [ref=e362]:
+      - generic [ref=e363]:
+        - generic [ref=e364]:
+          - generic [ref=e365]: Learn
+          - list [ref=e366]:
+            - listitem [ref=e367]:
+              - link "Getting started" [ref=e368] [cursor=pointer]:
+                - /url: /docs/intro
+            - listitem [ref=e369]:
+              - link "Playwright Training" [ref=e370] [cursor=pointer]:
+                - /url: https://learn.microsoft.com/en-us/training/modules/build-with-playwright/
+                - text: Playwright Training
+                - img [ref=e371]
+            - listitem [ref=e373]:
+              - link "Learn Videos" [ref=e374] [cursor=pointer]:
+                - /url: /community/learn-videos
+            - listitem [ref=e375]:
+              - link "Feature Videos" [ref=e376] [cursor=pointer]:
+                - /url: /community/feature-videos
+        - generic [ref=e377]:
+          - generic [ref=e378]: Community
+          - list [ref=e379]:
+            - listitem [ref=e380]:
+              - link "Stack Overflow" [ref=e381] [cursor=pointer]:
+                - /url: https://stackoverflow.com/questions/tagged/playwright
+                - text: Stack Overflow
+                - img [ref=e382]
+            - listitem [ref=e384]:
+              - link "Discord" [ref=e385] [cursor=pointer]:
+                - /url: https://aka.ms/playwright/discord
+                - text: Discord
+                - img [ref=e386]
+            - listitem [ref=e388]:
+              - link "Twitter" [ref=e389] [cursor=pointer]:
+                - /url: https://twitter.com/playwrightweb
+                - text: Twitter
+                - img [ref=e390]
+            - listitem [ref=e392]:
+              - link "LinkedIn" [ref=e393] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/playwrightweb
+                - text: LinkedIn
+                - img [ref=e394]
+        - generic [ref=e396]:
+          - generic [ref=e397]: More
+          - list [ref=e398]:
+            - listitem [ref=e399]:
+              - link "GitHub" [ref=e400] [cursor=pointer]:
+                - /url: https://github.com/microsoft/playwright
+                - text: GitHub
+                - img [ref=e401]
+            - listitem [ref=e403]:
+              - link "YouTube" [ref=e404] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UC46Zj8pDH5tDosqm1gd7WTg
+                - text: YouTube
+                - img [ref=e405]
+            - listitem [ref=e407]:
+              - link "Blog" [ref=e408] [cursor=pointer]:
+                - /url: https://dev.to/playwright
+                - text: Blog
+                - img [ref=e409]
+            - listitem [ref=e411]:
+              - link "Ambassadors" [ref=e412] [cursor=pointer]:
+                - /url: /community/ambassadors
+      - generic [ref=e414]: Copyright © 2026 Microsoft

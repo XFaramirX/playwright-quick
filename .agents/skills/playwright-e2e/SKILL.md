@@ -1,202 +1,129 @@
 ---
 name: playwright-e2e
-description: Playwright E2E testing framework with Page Object Model, accessibility testing, API validation, and multi-environment support. Use when creating end-to-end tests, accessibility tests, API tests with schema validation, or building test automation frameworks. Triggers on tasks involving "create tests", "add accessibility testing", "generate API tests", or "build test suite".
+description: "Generate A+ production-ready Playwright E2E tests with Page Object Model, zero hard waits, and complete documentation. **Use this skill whenever the user mentions**: 'test', 'e2e', 'end-to-end', 'playwright', 'accessibility', 'a11y', 'smoke test', 'API test', 'test automation', 'test suite', 'create tests', 'add tests', 'test this', 'test the', 'write tests', or wants to test any web application feature, page, component, or API endpoint. Also use for canvas testing, complex UI interactions (drag-drop, drawing, animations), or when user wants tests with proper Page Object Model architecture."
 license: MIT
 metadata:
   author: XFaramirX
-  version: "1.0.0"
+  version: "1.2.0"
 ---
 
 # Playwright E2E Testing Framework
 
-A comprehensive Playwright testing framework featuring Page Object Model architecture, accessibility testing, API validation, multi-environment support, and advanced test automation capabilities. Perfect for creating robust, maintainable end-to-end test suites with built-in best practices.
+Generates production-ready Playwright test suites with **A+ quality standards**: zero `waitForTimeout()`, proper assertions, constants management, and complete documentation. Built on Page Object Model architecture with accessibility testing, API validation, and multi-environment support.
 
 ## Quick Start
 
-Generate a complete test suite:
-
 ```
-"Create E2E tests for the login feature with accessibility checks"
-```
-
-Create API tests with validation:
-
-```
+"Create E2E tests for the login feature"
+"Add accessibility tests for the homepage"
 "Generate API tests for the user service with schema validation"
+"Create smoke tests with @smoke tags for critical flows"
+"Test the canvas drawing functionality"
 ```
-
-Add accessibility testing:
-
-```
-"Add accessibility tests for the homepage using axe-core"
-```
-
-Build tagged test suites:
-
-```
-"Create a smoke test suite with @smoke tag for critical user flows"
-```
-
-Multi-environment testing:
-
-```
-"Run tests against staging environment"
-```
-
-## Quick Reference
-
-| Deliverable | What You Get | Time |
-|-------------|--------------|------|
-| E2E Test Suite | Complete tests with POM, fixtures, selectors | 15-20 min |
-| API Tests | Endpoint tests with Zod schema validation | 10-15 min |
-| Accessibility Suite | A11y tests with axe-core, WCAG compliance | 10-12 min |
-| Smoke Tests | Critical path tests with @smoke tags | 8-10 min |
-| Visual Regression | Screenshot comparison tests | 5-8 min |
 
 ## How It Works
 
 ```
-Your Request
-    │
-    ▼
-┌─────────────────────────────────────────────────────┐
-│ 1. ANALYZE                                          │
-│    • Parse feature requirements                     │
-│    • Identify test patterns needed                  │
-│    • Determine page objects and fixtures            │
-├─────────────────────────────────────────────────────┤
-│ 2. GENERATE                                         │
-│    • Create spec files with test.describe()         │
-│    • Build page objects with locators               │
-│    • Add accessibility checks if needed             │
-│    • Include API validation with Zod schemas        │
-├─────────────────────────────────────────────────────┤
-│ 3. STRUCTURE                                        │
-│    • Apply POM architecture                         │
-│    • Use fixtures for dependency injection          │
-│    • Add test.step() for clarity                    │
-│    • Tag tests appropriately (@smoke, @a11y)        │
-└─────────────────────────────────────────────────────┘
-    │
-    ▼
-Production-Ready Test Suite
+Your Request → Analyze Requirements → Generate Files → A+ Quality Assurance
+                    ↓                        ↓                    ↓
+            • Test patterns          • Spec files         • Zero hard waits
+            • Page objects           • Page objects       • Action verification
+            • Constants needs        • constants.ts       • Smart a11y filtering
+                                     • Fixtures           • Force click docs
+                                     • Selectors          • Constants usage
 ```
 
-## Core Capabilities
+## What You Get
 
-### 1. Page Object Model Architecture
+| Output | Includes | Quality |
+|--------|----------|---------|
+| **Spec File** | Tests with `test.describe()`, `test.step()`, proper tags | A+ |
+| **Page Object** | Methods, BasePage inheritance, action verification | A+ |
+| **Selectors** | Centralized, accessible (`getByRole`, `aria-label`) | A+ |
+| **Constants** | All magic numbers extracted to `constants.ts` | A+ |
+| **Fixtures** | Custom page injection, type-safe | A+ |
+| **README** | Usage instructions, examples | Complete |
 
-**Structure:**
-- Base page with reusable methods
-- Feature-specific page objects
-- Selector management separate from logic
-- Custom fixtures for page injection
+**Quality Guarantee:** Zero anti-patterns, production-ready code.
 
-**Example:**
+---
+
+## Core Principles (A+ Standards)
+
+### 1. Zero Hard Waits (CRITICAL)
+
+**Never use `page.waitForTimeout()`**. Playwright has built-in auto-waiting.
+
 ```typescript
-// pages/login/login.page.ts
-export class LoginPage extends BasePage {
-    async login(username: string, password: string) {
-        await this.page.getByPlaceholder("Enter username").fill(username);
-        await this.page.getByPlaceholder("Enter password").fill(password);
-        await this.page.getByRole('button', { name: "login" }).click();
-    }
+// ❌ NEVER
+await page.click('button');
+await page.waitForTimeout(500);
+
+// ✅ ALWAYS - Auto-retrying assertion
+await page.click('button');
+await expect(page.locator('.result')).toBeVisible();
+```
+
+### 2. Constants Management (Required)
+
+Extract all magic numbers to `constants.ts`:
+
+```typescript
+// pages/feature/constants.ts
+export const CANVAS_COORDINATES = { center: { x: 400, y: 300 } };
+export const SHAPE_SIZES = { small: 50, medium: 100, large: 150 };
+```
+
+### 3. Action Verification (Required)
+
+Always verify actions succeeded:
+
+```typescript
+async selectTool(tool: string): Promise<void> {
+    await this.page.locator(toolSelector).click();
+    await expect(this.page.locator(toolSelector)).toBeChecked(); // ✅ Verify
 }
 ```
 
-### 2. Accessibility Testing
+### 4. Force Clicks (Document Exception)
 
-**Built-in A11y Features:**
-- Axe-core integration
-- WCAG 2.0 AA/AAA compliance checks
-- Automated violation reporting
-- Attach scan results to test reports
+Use `force: true` only when necessary, always document WHY:
 
-**BasePage A11y Method:**
 ```typescript
-await homePage.checkA11y();
+// Note: force: true is necessary because [App]'s radio buttons have SVG elements
+// that intercept pointer events. This is a valid use case.
+await this.page.locator(toolSelector).click({ force: true });
+await expect(this.page.locator(toolSelector)).toBeChecked(); // Always verify!
 ```
 
-### 3. API Testing with Schema Validation
+### 5. Smart A11y Testing
 
-**Features:**
-- API client with base methods
-- Zod schema validation
-- Request/response typing
-- Authentication management
-- Structured error handling
+Filter known third-party violations, focus on testable areas:
 
-**Example:**
 ```typescript
-const response = await apiClient.createService(serviceData);
-const validatedData = ApiServiceResponseSchema.parse(response.data);
+const criticalViolations = violations.filter((v: any) => 
+    v.impact === 'critical' && v.id !== 'known-third-party-issue'
+);
+expect(criticalViolations, 'No critical violations').toHaveLength(0);
 ```
 
-### 4. Multi-Environment Support
+---
 
-**Configurations:**
-- Local, dev, staging, production
-- Environment-specific baseUrls
-- Dynamic configuration switching
-- Environment variable management
+## Test Structure Templates
 
-**Usage:**
-```bash
-TEST_ENV=stage npm run test
-TEST_ENV=prod npm run test
-```
-
-### 5. Tag-Based Test Execution
-
-**Available Tags:**
-- `@smoke` - Critical path tests
-- `@a11y` - Accessibility tests
-- Custom tags for features
-
-**Example:**
-```typescript
-test.describe('Home Layout', { tag: ['@smoke'] }, () => {
-    // Critical tests here
-});
-```
-
-**Run Tagged Tests:**
-```bash
-npm run test:smoke  # Only @smoke tests
-npx playwright test --grep @a11y  # Only a11y tests
-```
-
-### 6. Visual Regression Testing
-
-**Features:**
-- Screenshot comparison
-- Configurable diff thresholds
-- Component-level snapshots
-- Full-page screenshots
-
-**Example:**
-```typescript
-await homePage.takeQuerySnapshot("body", "home-page");
-```
-
-## Test Structure Best Practices
-
-### Standard E2E Test Format
+### E2E Test
 
 ```typescript
 import { test, expect } from '../../fixtures/base';
 import config from '../../../playwright.config';
 
-const envPage = config.baseUrl;
-
 test.describe('Feature Name', { tag: ['@smoke'] }, () => {
     test.beforeEach(async ({ featurePage }) => {
-        await featurePage.goto(envPage);
+        await featurePage.goto(config.baseUrl);
     });
 
     test('Feature - Specific behavior', async ({ featurePage, page }) => {
-        await test.step('Clear description of step', async () => {
-            // Test logic here
+        await test.step('Clear action description', async () => {
             await featurePage.performAction();
             await expect(page.getByRole('button')).toBeVisible();
         });
@@ -204,333 +131,215 @@ test.describe('Feature Name', { tag: ['@smoke'] }, () => {
 });
 ```
 
-### API Test Format
+### API Test
 
 ```typescript
-import { test, expect } from '../../fixtures/base';
-
-test.describe('API - Service Tests', { tag: ['@api'] }, () => {
-    test('API - Create and retrieve service', async ({ apiClient }) => {
-        const service = await apiClient.createService(testData);
-        expect(service.id).toBeDefined();
+test.describe('API - Service', { tag: ['@api'] }, () => {
+    test('API - Create and retrieve', async ({ apiClient }) => {
+        const response = await apiClient.createResource(data);
+        expect(response.status).toBe(201);
         
-        const retrieved = await apiClient.getService(service.id);
-        expect(retrieved.data).toEqual(service.data);
+        const validated = Schema.parse(response.data); // Zod validation
+        expect(validated.id).toBeDefined();
     });
 });
 ```
 
-### Accessibility Test Format
+### Accessibility Test
 
 ```typescript
-test('Accessibility - Homepage compliance', async ({ homePage }, testInfo) => {
+test('A11y - Page compliance', async ({ homePage }, testInfo) => {
     const violations = await homePage.checkA11y();
     
-    await testInfo.attach('accessibility-scan-results', {
+    await testInfo.attach('a11y-results', {
         body: JSON.stringify(violations, null, 2),
         contentType: 'application/json'
     });
     
-    expect(violations).toHaveLength(0);
+    // Filter known third-party issues
+    const criticalViolations = violations.filter((v: any) => 
+        v.impact === 'critical' && v.id !== 'button-name'
+    );
+    
+    expect(criticalViolations).toHaveLength(0);
 });
 ```
+
+---
+
+## Page Object Model Structure
+
+```
+e2e/
+├── fixtures/
+│   └── base.ts              # Fixture registration
+├── pages/
+│   └── feature/
+│       ├── feature.page.ts  # Page object class
+│       ├── selectors.ts     # Centralized selectors
+│       └── constants.ts     # Configuration values
+└── specs/
+    └── feature/
+        ├── feature.spec.ts  # Test specifications
+        └── README.md        # Documentation
+```
+
+**BasePage Methods Available:**
+- `goto(url)` - Navigate with load wait
+- `checkA11y()` - Run accessibility scan
+- `takeQuerySnapshot(selector, name)` - Visual regression
+- `getTrimmedText(locator)` - Get cleaned text
+- `hoverAndClick(locator)` - Hover then click
+
+---
+
+## Anti-Patterns (Never Do These)
+
+| ❌ Never | ✅ Instead | Why |
+|----------|-----------|-----|
+| `waitForTimeout()` | Auto-retrying assertions | Brittle, slow, violates guidelines |
+| Magic numbers | Constants file | Maintainability |
+| No verification | Assert after actions | Catch failures early |
+| Force without docs | Document rationale | Future maintainers |
+| Broken assertions | Ensure can fail | `expect(array).toBeTruthy()` always passes |
+
+---
 
 ## Commands
 
-### Test Execution
-
-| Command | Purpose |
-|---------|---------|
-| `npm run test` | Run all tests |
-| `npm run test:smoke` | Run smoke tests only |
-| `npm run test:failed` | Rerun failed tests |
-| `npm run test:ui` | Launch Playwright UI mode |
-
-### Environment-Specific
-
-| Command | Purpose |
-|---------|---------|
-| `TEST_ENV=dev npm run test` | Run against dev environment |
-| `TEST_ENV=stage npm run test` | Run against staging |
-| `TEST_ENV=prod npm run test` | Run against production |
-
-### CI/CD Simulation
-
 ```bash
-npx playwright test -g "@smoke" --repeat-each=100 --workers=10 -x
+# Run tests
+npm run test                 # All tests
+npm run test:smoke          # Smoke tests only
+npm run test:ui             # UI mode
+
+# Environment-specific
+TEST_ENV=stage npm run test
+TEST_ENV=prod npm run test
+
+# Debug
+PWDEBUG=1 npx playwright test
 ```
 
-### Natural Language Commands
+---
 
-| Command | What It Does |
-|---------|--------------|
-| "Create E2E test for {feature}" | Complete test with POM and fixtures |
-| "Add accessibility test for {page}" | A11y test with axe-core integration |
-| "Generate API tests for {endpoint}" | API tests with schema validation |
-| "Create smoke test suite for {flow}" | Tagged smoke tests for critical path |
-| "Add visual regression for {component}" | Screenshot comparison test |
+## A+ Quality Checklist
+
+When generating tests, ensure:
+
+**Architecture:**
+- [ ] Page Object Model with BasePage inheritance
+- [ ] Selectors in `selectors.ts`
+- [ ] Constants in `constants.ts`
+- [ ] Custom fixtures integrated
+
+**Waiting & Timing:**
+- [ ] **ZERO `waitForTimeout()` calls**
+- [ ] All assertions use `await`
+- [ ] Trust Playwright auto-waiting
+
+**Assertions:**
+- [ ] All assertions can fail (not always truthy)
+- [ ] Action verification after clicks/fills/navigations
+- [ ] Meaningful assertion messages
+
+**Code Quality:**
+- [ ] No magic numbers - all in constants
+- [ ] Force clicks documented with rationale
+- [ ] TypeScript types properly used
+
+**Locators:**
+- [ ] Prefer `getByRole()`, `getByLabel()`, `getByText()`
+- [ ] No strict mode violations
+- [ ] Avoid brittle CSS class selectors
+
+---
+
+## Grade Thresholds
+
+| Grade | Score | Key Characteristics |
+|-------|-------|-------------------|
+| **A+** | 95-100 | Zero anti-patterns, exemplary |
+| **A** | 90-94 | Solid, minor improvements possible |
+| **B+** | 85-89 | Good, some anti-patterns present |
+
+**Grade Blockers:**
+- Hard waits (`waitForTimeout`): caps at B+
+- Magic numbers: caps at B+
+- Broken assertions: caps at B
+- Force clicks without docs: -3 to -5 points
+- No action verification: -1 to -2 points each
+
+---
 
 ## Framework Features
 
-### BasePage Utilities
+### Tag-Based Execution
 
-**Built-in Methods:**
-- `goto(url)` - Navigate with wait for load
-- `checkA11y()` - Run accessibility scan
-- `takeQuerySnapshot(locator, name)` - Visual regression
-- `takeFullPageScreenshot()` - Full page capture
-- `hoverAndClick(locator)` - Hover then click
-- `getTrimmedText(locator)` - Get cleaned text content
-- `waitForText(locator, text)` - Wait for specific text
-- `getAllLinksFromPage(page)` - Extract all valid links
-
-### Custom Fixtures
-
-**Available Fixtures:**
-- `basePage` - Base page instance
-- `homePage` - Home page instance
-- `apiClient` - API client with auth
-- Custom page fixtures as needed
-
-**Usage:**
 ```typescript
-test('My test', async ({ homePage, apiClient }) => {
-    // Fixtures automatically injected
+test.describe('Feature', { tag: ['@smoke'] }, () => {
+    // Critical path tests
 });
 ```
-
-### State Management
-
-**Auth State Persistence:**
-```typescript
-await page.context().storageState({ path: STORAGE_STATE });
-```
-
-**Config Setting:**
-```typescript
-use: {
-    storageState: "./e2e/fixtures/auth.json"
-}
-```
-
-### Device and Browser Matrix
-
-**Configured Devices:**
-- Desktop Chrome
-- Desktop Firefox
-- Desktop Safari
-- Mobile Chrome (Pixel 5)
-- Mobile Safari (iPhone 12)
-
-**Configuration:**
-```typescript
-projects: [...deviceMatrix]
-```
-
-## Anti-Patterns
-
-| ❌ Don't Do | ✅ Do Instead |
-|------------|--------------|
-| Use `page.waitForTimeout()` | Use auto-retrying assertions |
-| Hard-code URLs in tests | Use `config.baseUrl` |
-| Skip page objects | Create reusable page classes |
-| Ignore accessibility | Use `checkA11y()` regularly |
-| Use CSS selectors everywhere | Prefer `getByRole`, `getByLabel` |
-| Skip test.step() | Wrap actions in clear steps |
-| Forget tags | Tag tests for organization |
-| Skip schema validation | Validate API responses with Zod |
-
-## Verification Checklist
-
-**Test Structure:**
-- ✓ Uses fixtures for page objects
-- ✓ Follows POM architecture
-- ✓ Groups tests in `test.describe()`
-- ✓ Uses `beforeEach` for setup
-- ✓ Wrapped in `test.step()` for clarity
-
-**Locators:**
-- ✓ User-facing locators (`getByRole`, `getByLabel`)
-- ✓ Avoid strict mode violations
-- ✓ Specific and accessible selectors
-- ✓ Separated in selector files when complex
-
-**Assertions:**
-- ✓ Auto-retrying web-first assertions
-- ✓ Meaningful assertion messages
-- ✓ Proper `await` usage
-- ✓ Soft assertions where appropriate
-
-**Configuration:**
-- ✓ Appropriate tags applied
-- ✓ Environment configured correctly
-- ✓ Timeouts reasonable
-- ✓ Reporters configured
-
-## Test Types
-
-| Type | Purpose | Example Use Case |
-|------|---------|-----------------|
-| Functional | Business logic verification | Login with valid credentials |
-| UI/Visual | Appearance, layout, responsive | Button matches design specs |
-| Integration | Component interaction | API data displays in UI |
-| Smoke | Critical paths (@smoke) | Core features work after deploy |
-| Accessibility | WCAG compliance (@a11y) | No a11y violations on page |
-| Regression | Existing functionality | Previous features still work |
-| API | Backend validation | Endpoints return correct data |
-
-## Reporting
-
-### Built-in Reporters
-
-**Configured Reporters:**
-- Blob reporter (for merge)
-- HTML reporter (interactive)
-- List reporter (console)
-- GitHub reporter (annotations)
-- Custom state reporter
-
-**Outputs:**
-```
-playwright-report/      # HTML report
-e2e/reports/
-  ├── test-results/     # Test artifacts
-  ├── snapshots/        # Screenshot baselines
-  └── screenshots/      # Failed test screenshots
-```
-
-### Trace Viewing
 
 ```bash
-npx playwright show-trace trace.zip
+npx playwright test --grep @smoke
+npx playwright test --grep @a11y
 ```
 
-**Trace Includes:**
-- Screenshots
-- Network requests
-- Console logs
-- DOM snapshots
-- Action timeline
+### Multi-Environment Support
 
-## Configuration Options
-
-### Lighthouse Audits
-
-```typescript
-lighthouseAudit: false  // Toggle performance audits
+```bash
+TEST_ENV=dev npm run test    # Development
+TEST_ENV=stage npm run test  # Staging
+TEST_ENV=prod npm run test   # Production
 ```
 
-### Component Snapshots
+### API Testing with Zod
 
 ```typescript
-componentSnapshots: true  // Enable visual regression
-```
+import { z } from 'zod';
 
-### Screenshot Settings
-
-```typescript
-const screenshotOptions = {
-    maxDiffPixelRatio: 0.15
-};
-```
-
-## Advanced Patterns
-
-### Geolocation Testing
-
-```typescript
-const geolocationUsers = {
-    eastCoast: {
-        geolocation: { longitude: -74.006, latitude: 40.7128 },
-        timezoneId: "America/New_York"
-    }
-};
-```
-
-### Console Error Detection
-
-```typescript
-test('Home - should not have console errors', async ({ page }) => {
-    const errors: Error[] = [];
-    page.on('pageerror', (error) => {
-        errors.push(error);
-    });
-    // Perform actions
-    expect(errors).toHaveLength(0);
+const UserSchema = z.object({
+    id: z.number(),
+    email: z.string().email(),
+    name: z.string()
 });
+
+const user = UserSchema.parse(response.data); // Validates and types
 ```
 
-### Link Validation
+### Visual Regression
 
 ```typescript
-const linkUrls = await homePage.getAllLinksFromPage(page);
-for (const url of linkUrls) {
-    const response = await page.request.get(url);
-    expect.soft(response.ok()).toBeTruthy();
-}
+await homePage.takeQuerySnapshot("body", "homepage");
+await homePage.takeQuerySnapshot(".nav", "navigation");
 ```
 
-## Best Practices
+---
 
-### Test Writing
+## Additional Resources
 
-**DO:**
-- Use Page Object Model
-- Apply clear test.step() descriptions
-- Tag tests appropriately
-- Use fixtures for setup
-- Write accessible locators
-- Validate with auto-retrying assertions
-- Keep tests independent
+**For detailed patterns and examples, read these reference files:**
 
-**DON'T:**
-- Mix test logic with page logic
-- Use hard waits unnecessarily
-- Hard-code environment URLs
-- Skip accessibility checks
-- Ignore failed tests in CI
-- Create brittle selectors
+- **`references/advanced-patterns.md`** - Constants management, force clicks, canvas testing, no hard waits policy
+- **`references/case-study.md`** - Real B+ to A+ transformation (11-point improvement)
+- **`references/examples.md`** - Complete working examples for login, API, a11y, visual tests
+- **`references/troubleshooting.md`** - Common issues and solutions
 
-### API Testing
+**When to read references:**
+- Need force click pattern → `advanced-patterns.md`
+- Canvas/complex UI testing → `advanced-patterns.md`
+- Want to see full transformation → `case-study.md`
+- Need complete test examples → `examples.md`
+- Encountering errors/flaky tests → `troubleshooting.md`
 
-**DO:**
-- Validate responses with Zod schemas
-- Use type-safe request/response
-- Authenticate before protected requests
-- Handle errors explicitly
-- Test both success and error paths
-
-**DON'T:**
-- Skip schema validation
-- Ignore response status codes
-- Test without authentication
-- Forget to test edge cases
-
-### Maintenance
-
-**DO:**
-- Keep page objects DRY
-- Update selectors in one place
-- Maintain fixture structure
-- Review and update tags
-- Keep dependencies current
-- Clean up test data
-
-**DON'T:**
-- Duplicate page methods
-- Scatter selectors throughout tests
-- Leave obsolete fixtures
-- Ignore deprecation warnings
+---
 
 ## CI/CD Integration
 
-### Example GitHub Actions
-
 ```yaml
-- name: Install dependencies
-  run: npm install
-
-- name: Install Playwright browsers
+- name: Install Playwright
   run: npx playwright install --with-deps
 
 - name: Run smoke tests
@@ -546,156 +355,25 @@ for (const url of linkUrls) {
     path: playwright-report/
 ```
 
-### Retry Strategy
-
+**Retry Strategy:**
 ```typescript
 retries: process.env.CI ? 2 : 0
 workers: process.env.CI ? 1 : undefined
 ```
 
-## Examples
+---
 
-### Complete Login Test
+## Key Reminders
 
-```typescript
-import { test, expect } from '../../fixtures/base';
-import config from '../../../playwright.config';
-
-test.describe('Authentication', { tag: ['@smoke'] }, () => {
-    test('Login - Valid user can authenticate', async ({ page, loginPage }) => {
-        await test.step('Navigate to login page', async () => {
-            await loginPage.goto(`${config.baseUrl}/login`);
-        });
-
-        await test.step('Enter credentials and submit', async () => {
-            await page.getByPlaceholder("Enter username").fill("testuser");
-            await page.getByPlaceholder("Enter password").fill("password123");
-            await page.getByRole('button', { name: "login" }).click();
-        });
-
-        await test.step('Verify successful login', async () => {
-            await expect(page.getByRole('button', { name: "Profile" })).toBeVisible();
-            await expect(page).toHaveURL(/dashboard/);
-        });
-    });
-});
-```
-
-### Complete API Test with Validation
-
-```typescript
-import { test, expect } from '../../fixtures/api.fixture';
-import { submitForm } from '../../fixtures/dataFactory';
-
-test.describe('API - User Service', { tag: ['@api'] }, () => {
-    test('API - Create user and validate response', async ({ apiClient }) => {
-        await test.step('Authenticate API client', async () => {
-            await apiClient.authenticate({
-                username: process.env.USERNAME!,
-                password: process.env.PASSWORD!
-            });
-        });
-
-        const userData = submitForm();
-
-        await test.step('Create new user', async () => {
-            const response = await apiClient.createNewUser(userData);
-            
-            expect(response.status).toBe(201);
-            expect(response.data.email).toBe(userData.email);
-            expect(response.data.id).toBeDefined();
-        });
-    });
-});
-```
-
-### Accessibility Test with Reporting
-
-```typescript
-import { test, expect } from '../../fixtures/base';
-import config from '../../../playwright.config';
-
-test.describe('Accessibility', { tag: ['@a11y'] }, () => {
-    test('A11y - Homepage WCAG compliance', async ({ homePage }, testInfo) => {
-        await test.step('Navigate to homepage', async () => {
-            await homePage.goto(config.baseUrl);
-        });
-
-        await test.step('Run accessibility scan', async () => {
-            const violations = await homePage.checkA11y();
-            
-            await testInfo.attach('accessibility-scan-results', {
-                body: JSON.stringify(violations, null, 2),
-                contentType: 'application/json'
-            });
-
-            expect(violations, 'No accessibility violations found').toHaveLength(0);
-        });
-    });
-});
-```
-
-### Visual Regression Test
-
-```typescript
-test('Visual - Homepage layout matches baseline', async ({ homePage }) => {
-    await test.step('Navigate and capture snapshot', async () => {
-        await homePage.goto(config.baseUrl);
-        await homePage.takeQuerySnapshot("body", "homepage-full");
-    });
-
-    await test.step('Capture component snapshot', async () => {
-        await homePage.takeQuerySnapshot(".navigation", "nav-component");
-    });
-});
-```
-
-## Troubleshooting
-
-### Common Issues
-
-**Issue: Tests fail in CI but pass locally**
-- Solution: Check CI environment variables, ensure consistent browser versions, verify network conditions
-
-**Issue: Flaky tests due to timing**
-- Solution: Replace hard waits with auto-retrying assertions, use `waitForLoadState`, check for loading indicators
-
-**Issue: Cannot find locator**
-- Solution: Use Playwright Inspector (`PWDEBUG=1`), prefer `getByRole` over CSS selectors, check for visibility issues
-
-**Issue: Schema validation fails**
-- Solution: Verify API response structure, update Zod schemas, check for nullable fields
-
-**Issue: Screenshot comparison fails**
-- Solution: Update baseline with `--update-snapshots`, adjust `maxDiffPixelRatio`, ensure consistent viewport
-
-## References
-
-### Documentation Links
-
-- [Playwright Official Docs](https://playwright.dev)
-- [Axe-core Accessibility Rules](https://github.com/dequelabs/axe-core)
-- [Zod Schema Validation](https://zod.dev)
-- [Page Object Model Pattern](https://playwright.dev/docs/pom)
-
-### Framework Structure
-
-```
-e2e/
-├── fixtures/          # Test fixtures and dependency injection
-├── helpers/           # Utility functions and API clients
-├── pages/             # Page Object Model classes
-├── reports/           # Test outputs and reports
-├── scripts/           # Agent automation scripts
-└── specs/             # Test specification files
-    ├── accessibility/ # A11y test suites
-    ├── api/           # API test suites
-    ├── auth/          # Authentication tests
-    └── home/          # Homepage test suites
-```
+1. **Trust Playwright's auto-waiting** - No hard waits needed
+2. **Extract to constants** - All magic numbers
+3. **Verify every action** - Assert state changed
+4. **Document exceptions** - Force clicks need explanation
+5. **Test assertions** - Ensure they can fail
+6. **Use references** - Detailed guidance available
 
 ---
 
-**"Quality is never an accident; it is always the result of intelligent effort."** - John Ruskin
+**"Hard waits in Playwright tests are like GOTO statements in code - technically possible, but always a red flag."** - Playwright Best Practices
 
-**"The best error message is the one that never shows up."** - Thomas Fuchs
+**"Quality is never an accident; it is always the result of intelligent effort."** - John Ruskin

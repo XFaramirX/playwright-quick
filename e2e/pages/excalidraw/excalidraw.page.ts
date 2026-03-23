@@ -1,6 +1,7 @@
 import { Page, expect } from '@playwright/test';
 import { BasePage } from '../base.page';
 import { ExcalidrawSelectors } from './selectors';
+import { STAR_CONFIG } from './constants';
 
 /**
  * Excalidraw Page Object
@@ -39,10 +40,12 @@ export class ExcalidrawPage extends BasePage {
     const toolSelector = ExcalidrawSelectors.tools[tool];
     
     // Click the radio button to select the tool
+    // Note: force: true is necessary because Excalidraw's radio buttons have SVG child elements
+    // that intercept pointer events. This is a valid use case for force clicks.
     await this.page.locator(toolSelector).click({ force: true });
-    
-    // Wait a moment for the tool to be activated
-    await this.page.waitForTimeout(200);
+
+    // Verify tool is selected by checking it's checked
+    await expect(this.page.locator(toolSelector)).toBeChecked();
   }
 
   /**
@@ -110,8 +113,8 @@ export class ExcalidrawPage extends BasePage {
     }
     
     // Calculate star points (5-point star)
-    const points = 10; // 5 outer + 5 inner points
-    const innerRadius = radius * 0.4;
+    const points = STAR_CONFIG.points; // 5 outer + 5 inner points
+    const innerRadius = radius * STAR_CONFIG.innerRadiusRatio;
     const angle = (Math.PI * 2) / points;
     
     // Start drawing

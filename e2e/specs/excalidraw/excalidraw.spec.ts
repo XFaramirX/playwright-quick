@@ -1,4 +1,5 @@
 import { test, expect } from '../../fixtures/base';
+import { CANVAS_COORDINATES, SHAPE_SIZES, DRAWING_AREAS } from '../../pages/excalidraw/constants';
 
 /**
  * Excalidraw E2E Test Suite
@@ -24,13 +25,6 @@ test.describe('Excalidraw Drawing Tests', { tag: ['@smoke', '@excalidraw'] }, ()
       await expect(canvas).toBeVisible();
     });
 
-    await test.step('Verify welcome message or canvas is ready', async () => {
-      // The welcome message may disappear once user starts interacting
-      // Just check that the canvas is interactive instead
-      const canvas = page.locator('canvas.excalidraw__canvas.interactive');
-      await expect(canvas).toBeVisible();
-    });
-
     await test.step('Verify tool palette is available', async () => {
       const shapesHeading = page.getByRole('heading', { name: 'Shapes' });
       await expect(shapesHeading).toBeVisible();
@@ -49,10 +43,7 @@ test.describe('Excalidraw Drawing Tests', { tag: ['@smoke', '@excalidraw'] }, ()
     await test.step('Draw star/diamond shape on canvas', async () => {
       // Draw a diamond shape in the center of the canvas
       // Diamond is the closest shape to a star in Excalidraw's default tools
-      await excalidrawPage.drawStar(400, 300, 150);
-      
-      // Wait a moment for the shape to be drawn
-      await page.waitForTimeout(500);
+      await excalidrawPage.drawStar(CANVAS_COORDINATES.center.x, CANVAS_COORDINATES.center.y, SHAPE_SIZES.large);
     });
 
     await test.step('Verify undo button becomes enabled after drawing', async () => {
@@ -75,10 +66,7 @@ test.describe('Excalidraw Drawing Tests', { tag: ['@smoke', '@excalidraw'] }, ()
 
     await test.step('Draw a free-form star shape', async () => {
       // Draw a 5-point star using the draw tool
-      await excalidrawPage.drawCustomStar(400, 300, 80);
-      
-      // Wait for drawing to complete
-      await page.waitForTimeout(500);
+      await excalidrawPage.drawCustomStar(CANVAS_COORDINATES.center.x, CANVAS_COORDINATES.center.y, 80);
     });
 
     await test.step('Verify drawing was created', async () => {
@@ -93,20 +81,20 @@ test.describe('Excalidraw Drawing Tests', { tag: ['@smoke', '@excalidraw'] }, ()
   test('Excalidraw - Test multiple shape tools', async ({ excalidrawPage, page }) => {
     await test.step('Draw a rectangle', async () => {
       await excalidrawPage.selectTool('rectangle');
-      await excalidrawPage.drawShape(100, 100, 250, 200);
-      await page.waitForTimeout(300);
+      const area = DRAWING_AREAS.rectangle1;
+      await excalidrawPage.drawShape(area.startX, area.startY, area.endX, area.endY);
     });
 
     await test.step('Draw an ellipse', async () => {
       await excalidrawPage.selectTool('ellipse');
-      await excalidrawPage.drawShape(300, 100, 450, 200);
-      await page.waitForTimeout(300);
+      const area = DRAWING_AREAS.rectangle2;
+      await excalidrawPage.drawShape(area.startX, area.startY, area.endX, area.endY);
     });
 
     await test.step('Draw a diamond (star-like)', async () => {
       await excalidrawPage.selectTool('diamond');
-      await excalidrawPage.drawShape(500, 100, 650, 200);
-      await page.waitForTimeout(300);
+      const area = DRAWING_AREAS.rectangle3;
+      await excalidrawPage.drawShape(area.startX, area.startY, area.endX, area.endY);
     });
 
     await test.step('Verify multiple shapes were created', async () => {
@@ -122,8 +110,7 @@ test.describe('Excalidraw Drawing Tests', { tag: ['@smoke', '@excalidraw'] }, ()
 
     await test.step('Draw a shape', async () => {
       await excalidrawPage.selectTool('diamond');
-      await excalidrawPage.drawStar(400, 300, 100);
-      await page.waitForTimeout(300);
+      await excalidrawPage.drawStar(CANVAS_COORDINATES.center.x, CANVAS_COORDINATES.center.y, SHAPE_SIZES.medium);
     });
 
     await test.step('Verify undo is now enabled', async () => {
@@ -132,7 +119,6 @@ test.describe('Excalidraw Drawing Tests', { tag: ['@smoke', '@excalidraw'] }, ()
 
     await test.step('Undo the drawing', async () => {
       await excalidrawPage.clickUndo();
-      await page.waitForTimeout(300);
     });
 
     await test.step('Verify undo is disabled again after undoing', async () => {
@@ -150,17 +136,14 @@ test.describe('Excalidraw Drawing Tests', { tag: ['@smoke', '@excalidraw'] }, ()
 
     await test.step('Zoom in', async () => {
       await excalidrawPage.zoomIn();
-      await page.waitForTimeout(300);
     });
 
     await test.step('Zoom out', async () => {
       await excalidrawPage.zoomOut();
-      await page.waitForTimeout(300);
     });
 
     await test.step('Reset zoom', async () => {
       await excalidrawPage.resetZoom();
-      await page.waitForTimeout(300);
       
       // Verify zoom controls are still functional
       const zoomIn = page.locator('button[aria-label*="Zoom in"]');
@@ -228,8 +211,12 @@ test.describe('Excalidraw Accessibility Tests', { tag: ['@a11y', '@excalidraw'] 
       });
 
       // Note: Some violations may be expected for a canvas-based application
-      // Review violations to ensure critical accessibility features are present
-      expect(violations, 'Critical accessibility violations should be minimal').toBeTruthy();
+      // Focus on critical violations that impact usability
+      // Filter out known Excalidraw issues (main menu button lacking aria-label)
+      const criticalViolations = violations.filter((v: any) => 
+        v.impact === 'critical' && v.id !== 'button-name'
+      );
+      expect(criticalViolations, 'No critical accessibility violations in user-testable areas').toHaveLength(0);
     });
   });
 });
