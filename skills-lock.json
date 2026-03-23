@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "playwright-e2e": {
+      "source": "xfaramirx/playwright-e2e-skills",
+      "sourceType": "github",
+      "computedHash": "3e07a453d7ceb3f6d69a13cb9b4131221bcd7292032cfdd31b663ec21b516b3e"
+    },
+    "skill-creator": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "b122f4d1e91aa1d83027e050b5b37c3156203ee85458d7b1360bc48167c9e02a"
+    }
+  }
+}

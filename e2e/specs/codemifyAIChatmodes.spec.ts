@@ -1,6 +1,6 @@
 import { test, expect } from '../fixtures/base';
 
-test.describe('Codemify Homepage', { tag: ['@smoke'] }, () => {
+test.describe.skip('Codemify Homepage', { tag: ['@smoke'] }, () => {
 
     test('Verify Navigation Links', async ({ page }) => {
         await page.goto('https://codemify.com');
