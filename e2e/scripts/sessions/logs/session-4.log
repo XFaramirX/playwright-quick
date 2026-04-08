@@ -1,0 +1,54 @@
+[dotenv@17.0.1] injecting env (5) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+
+Running 1 test using 1 worker
+
+Starting test run...
+[dotenv@17.0.1] injecting env (5) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+
+────────────────────────────────────────────────────────────
+Session ready!  name: session-4
+Endpoint:       \\.\pipe\pw-d27937f9-browser-browser@ccd56e
+
+Open another terminal and run:
+  npx playwright-cli attach session-4
+
+Or run individual commands:
+  npx playwright-cli -s session-4 snapshot
+  npx playwright-cli -s session-4 navigate "https://github.com"
+
+Or point @playwright/mcp at it:
+  npx @playwright/mcp --endpoint=session-4
+────────────────────────────────────────────────────────────
+
+Browser will stay open for ~298 s (test timeout).
+  ✘  1 [chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test (1.0m)
+normalizedPath debug-session.spec.ts
+
+
+  1) [chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test 
+
+    Error: page.waitForTimeout: Target page, context or browser has been closed
+        at G:\DataXFaramir\Huge\playwrightFramework\e2e\specs\debug-session.spec.ts:62:14
+
+    Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, open 'G:\DataXFaramir\Huge\playwrightFramework\e2e\reports\test-results\.playwright-artifacts-0\traces\4203d117a679fb1acba1-b969d3bef989105f4506.trace'
+
+    Error: ENOENT: no such file or directory, open 'G:\DataXFaramir\Huge\playwrightFramework\e2e\reports\test-results\.playwright-artifacts-0\4e857e56c5ab0818e91deb2d11d4da75.zip'
+
+    [31mTest timeout of 300000ms exceeded.[39m
+
+    Error Context: e2e\reports\test-results\debug-session-attach-playwright-cli-to-this-running-test-chromium\error-context.md
+
+  1 failed
+    [chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test ─
+::error file=e2e\specs\debug-session.spec.ts,title=[chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test,line=62,col=14::  1) [chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test %0A    Error: page.waitForTimeout: Target page, context or browser has been closed%0A        at G:\DataXFaramir\Huge\playwrightFramework\e2e\specs\debug-session.spec.ts:62:14
+::error file=e2e\specs\debug-session.spec.ts,title=[chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test::  1) [chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test %0A    Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, open 'G:\DataXFaramir\Huge\playwrightFramework\e2e\reports\test-results\.playwright-artifacts-0\traces\4203d117a679fb1acba1-b969d3bef989105f4506.trace'
+::error file=e2e\specs\debug-session.spec.ts,title=[chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test::  1) [chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test %0A    Error: ENOENT: no such file or directory, open 'G:\DataXFaramir\Huge\playwrightFramework\e2e\reports\test-results\.playwright-artifacts-0\4e857e56c5ab0818e91deb2d11d4da75.zip'
+::error file=e2e\specs\debug-session.spec.ts,title=[chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test::  1) [chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test %0A    Test timeout of 300000ms exceeded.
+::notice title=🎭 Playwright Run Summary::  1 failed%0A    [chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test ─
+Test results saved to: G:\DataXFaramir\Huge\playwrightFramework\state.json
+e2e\specs\debug-session.spec.ts,title=[chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test::  1) [chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test %0A    Test timeout of 300000ms exceeded.
+::error file=e2e\specs\debug-session.spec.ts,title=[chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test::  1) [chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test %0A    Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, open 'G:\DataXFaramir\Huge\playwrightFramework\e2e\reports\test-results\.playwright-artifacts-0\traces\4203d117a679fb1acba1-b969d3bef989105f4506.trace'
+::error file=e2e\specs\debug-session.spec.ts,title=[chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test,line=62,col=14::  1) [chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test %0A    Error: page.waitForTimeout: Test ended.%0A%0A      60 |   const holdMs = testInfo.timeout - 2_000; // leave 2 s for cleanup%0A      61 |   console.log(`\nBrowser will stay open for ~${Math.round(holdMs / 1000)} s (test timeout).`);%0A    > 62 |   await page.waitForTimeout(holdMs > 0 ? holdMs : 30_000);%0A         |              ^%0A      63 |%0A      64 |   // ── 5. Clean up ──────────────────────────────────────────────────────────────%0A      65 |   await browser.unbind();%0A        at G:\DataXFaramir\Huge\playwrightFramework\e2e\specs\debug-session.spec.ts:62:14
+::warning title=Slow Test,file=[chromium] › e2e\specs\debug-session.spec.ts::[chromium] › e2e\specs\debug-session.spec.ts took 5.0m
+::notice title=🎭 Playwright Run Summary::  1 failed%0A    [chromium] › e2e\specs\debug-session.spec.ts:25:5 › attach playwright-cli to this running test ─
+Test results saved to: G:\DataXFaramir\Huge\playwrightFramework\state.json

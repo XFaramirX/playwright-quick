@@ -53,7 +53,7 @@ const defaultConfig: TestConfig = {
 
 };
 // get the environment type from command line. If none, set it to local
-const environment = process.env.TEST_ENV || 'local';
+const environment = (process.env.TEST_ENV || 'local') as keyof typeof environments;
 
 // config object with default configuration and environment-specific configuration
 const config: TestConfig = {

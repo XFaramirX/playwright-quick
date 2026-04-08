@@ -1,7 +1,7 @@
 import { Page, expect } from '@playwright/test';
 import { BasePage } from '../base.page';
 import { ExcalidrawSelectors } from './selectors';
-import { STAR_CONFIG } from './constants';
+import { STAR_CONFIG, HEART_CONFIG } from './constants';
 
 /**
  * Excalidraw Page Object
@@ -132,6 +132,50 @@ export class ExcalidrawPage extends BasePage {
       await this.page.mouse.move(x, y, { steps: 5 });
     }
     
+    await this.page.mouse.up();
+  }
+
+  /**
+   * Draw a heart shape using the Draw tool
+   * @param centerX - Center X coordinate
+   * @param centerY - Center Y coordinate
+   * @param size - Overall scale of the heart
+   */
+  async drawHeart(centerX: number, centerY: number, size: number = 60) {
+    await this.selectTool('draw');
+
+    const canvas = this.page.locator(ExcalidrawSelectors.canvas.drawingArea);
+    const canvasBox = await canvas.boundingBox();
+
+    if (!canvasBox) {
+      throw new Error('Canvas not found');
+    }
+
+    const points = HEART_CONFIG.points;
+    const scale = size / 32;
+
+    for (let i = 0; i <= points; i++) {
+      const t = (Math.PI * 2 * i) / points;
+      const heartX = HEART_CONFIG.xScale * 16 * Math.pow(Math.sin(t), 3);
+      const heartY = HEART_CONFIG.yScale * (
+        13 * Math.cos(t) -
+        5 * Math.cos(2 * t) -
+        2 * Math.cos(3 * t) -
+        Math.cos(4 * t)
+      );
+
+      const x = canvasBox.x + centerX + heartX * scale;
+      // Invert Y so the heart isn't upside-down on the canvas coordinate system.
+      const y = canvasBox.y + centerY - heartY * scale;
+
+      if (i === 0) {
+        await this.page.mouse.move(x, y);
+        await this.page.mouse.down();
+      } else {
+        await this.page.mouse.move(x, y, { steps: 3 });
+      }
+    }
+
     await this.page.mouse.up();
   }
 

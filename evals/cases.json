@@ -1,0 +1,42 @@
+{
+  "cases": [
+    {
+      "id": "test-01",
+      "name": "Excalidraw feature structure and quality",
+      "feature": "excalidraw",
+      "specPath": "e2e/specs/excalidraw/excalidraw.spec.ts",
+      "expectedFiles": [
+        "e2e/pages/excalidraw/excalidraw.page.ts",
+        "e2e/pages/excalidraw/selectors.ts",
+        "e2e/pages/excalidraw/constants.ts",
+        "e2e/specs/excalidraw/excalidraw.spec.ts"
+      ],
+      "stateKeyIncludes": "excalidraw/excalidraw.spec.ts",
+      "requiresConstants": true
+    },
+    {
+      "id": "test-02",
+      "name": "Home feature structure and quality",
+      "feature": "home",
+      "specPath": "e2e/specs/home/home-layout.spec.ts",
+      "expectedFiles": [
+        "e2e/pages/home/home.page.ts",
+        "e2e/pages/home/selectors.ts",
+        "e2e/specs/home/home-layout.spec.ts"
+      ],
+      "stateKeyIncludes": "home/home-layout.spec.ts",
+      "requiresConstants": false
+    },
+    {
+      "id": "test-03",
+      "name": "API feature structure and quality",
+      "feature": "api",
+      "specPath": "e2e/specs/api/api.spec.ts",
+      "expectedFiles": [
+        "e2e/specs/api/api.spec.ts"
+      ],
+      "stateKeyIncludes": "api/api.spec.ts",
+      "requiresConstants": false
+    }
+  ]
+}

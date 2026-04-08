@@ -78,6 +78,30 @@ test.describe('Excalidraw Drawing Tests', { tag: ['@smoke', '@excalidraw'] }, ()
     });
   });
 
+  test('Excalidraw - Draw heart shape using Draw tool', async ({ excalidrawPage, page }) => {
+    await test.step('Select Draw tool and verify it is active', async () => {
+      await excalidrawPage.selectTool('draw');
+      const drawRadio = page.locator('input[type="radio"][aria-label="Draw"]');
+      await expect(drawRadio).toBeChecked();
+    });
+
+    await test.step('Draw a heart in the center of the canvas', async () => {
+      await excalidrawPage.drawHeart(
+        CANVAS_COORDINATES.center.x,
+        CANVAS_COORDINATES.center.y,
+        SHAPE_SIZES.medium,
+      );
+    });
+
+    await test.step('Verify drawing created a canvas change', async () => {
+      await excalidrawPage.verifyUndoEnabled();
+    });
+
+    await test.step('Capture heart drawing screenshot', async () => {
+      await excalidrawPage.takeCanvasScreenshot('heart-drawing');
+    });
+  });
+
   test('Excalidraw - Test multiple shape tools', async ({ excalidrawPage, page }) => {
     await test.step('Draw a rectangle', async () => {
       await excalidrawPage.selectTool('rectangle');

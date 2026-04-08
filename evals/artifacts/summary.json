@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-03-23T23:51:24.326Z",
+  "total": 3,
+  "passed": 2,
+  "failed": 1,
+  "averageScore": 94,
+  "results": [
+    {
+      "id": "test-01",
+      "score": 100,
+      "pass": true,
+      "artifactPath": "G:\\DataXFaramir\\Huge\\playwrightFramework\\evals\\artifacts\\test-01.json"
+    },
+    {
+      "id": "test-02",
+      "score": 100,
+      "pass": true,
+      "artifactPath": "G:\\DataXFaramir\\Huge\\playwrightFramework\\evals\\artifacts\\test-02.json"
+    },
+    {
+      "id": "test-03",
+      "score": 83,
+      "pass": false,
+      "artifactPath": "G:\\DataXFaramir\\Huge\\playwrightFramework\\evals\\artifacts\\test-03.json"
+    }
+  ]
+}

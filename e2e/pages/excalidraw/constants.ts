@@ -25,3 +25,9 @@ export const STAR_CONFIG = {
   points: 10, // 5 outer + 5 inner points
   innerRadiusRatio: 0.4,
 } as const;
+
+export const HEART_CONFIG = {
+  points: 80,
+  xScale: 1,
+  yScale: 1,
+} as const;
