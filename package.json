@@ -9,6 +9,10 @@
     "test:smoke": "npx playwright test --project smoke",
     "test:failed": "npx playwright test --last-failed --update-snapshots",
     "test:auth": "npx playwright codegen --save-storage=fixtures/auth.json",
+    "cli:show": "playwright-cli show",
+    "cli:show:annotate": "playwright-cli show --annotate",
+    "cli:show:port": "playwright-cli show --port 9323",
+    "cli:show:kill": "playwright-cli show --kill",
     "eval:skill": "node evals/run-evals.mjs",
     "eval:skill:with-transcript": "node evals/run-evals.mjs",
     "prepare": "husky install"
@@ -17,11 +21,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@axe-core/playwright": "^4.10.1",
+    "@axe-core/playwright": "^4.11.3",
     "@playwright/test": "^1.59.1",
     "@types/node": "^22.10.2",
     "husky": "^9.0.7",
-    "pw-api-plugin": "^1.1.0"
+    "pw-api-plugin": "^2.1.0"
   },
   "dependencies": {
     "dotenv": "^17.0.1",

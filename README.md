@@ -78,6 +78,62 @@ npx playwright e2e-codegen
 
 ---
 
+## Playwright CLI Dashboard and Annotation
+
+Use the Playwright CLI dashboard for interactive inspection and annotation mode.
+
+### NPM shortcuts
+
+```bash
+npm run cli:show
+npm run cli:show:annotate
+npm run cli:show:port
+npm run cli:show:kill
+```
+
+### Direct CLI commands
+
+```bash
+playwright-cli show
+playwright-cli show --annotate
+playwright-cli show --port 9323
+playwright-cli show --port 9323 --host 0.0.0.0
+playwright-cli show --kill
+```
+
+### Helper scripts
+
+Use these scripts when you want explicit shell or PowerShell entry points.
+
+```bash
+# Bash
+./scripts/cli-show.sh
+./scripts/cli-annotate.sh
+./scripts/cli-show-kill.sh
+```
+
+```powershell
+# PowerShell
+./scripts/cli-show.ps1
+./scripts/cli-annotate.ps1
+./scripts/cli-show-kill.ps1
+```
+
+### Typical annotation flow
+
+```bash
+# 1) Open regular dashboard
+playwright-cli show
+
+# 2) Open dashboard in annotation mode
+playwright-cli show --annotate
+
+# 3) Stop dashboard daemon when done
+playwright-cli show --kill
+```
+
+---
+
 ## Accessibility Testing
 
 Use the `checkA11y()` method from the `BasePage` class for accessibility reports:
