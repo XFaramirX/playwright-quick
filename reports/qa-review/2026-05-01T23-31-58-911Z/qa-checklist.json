@@ -1,0 +1,32 @@
+[
+  {
+    "id": "QA-001",
+    "check": "Responsive rendering validated for primary breakpoints",
+    "status": "todo"
+  },
+  {
+    "id": "QA-002",
+    "check": "No clipped or off-screen interactive elements",
+    "status": "todo"
+  },
+  {
+    "id": "QA-003",
+    "check": "Form validation and error states verified",
+    "status": "todo"
+  },
+  {
+    "id": "QA-004",
+    "check": "Keyboard navigation path validated",
+    "status": "todo"
+  },
+  {
+    "id": "QA-005",
+    "check": "Color contrast and heading structure reviewed",
+    "status": "todo"
+  },
+  {
+    "id": "QA-006",
+    "check": "Visual baseline approved and stored",
+    "status": "todo"
+  }
+]

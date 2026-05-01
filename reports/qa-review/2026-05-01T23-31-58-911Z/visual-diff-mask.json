@@ -1,0 +1,37 @@
+{
+  "strategy": "Mask volatile or intentionally unstable regions while keeping structural checks strict.",
+  "zones": [
+    {
+      "id": "MASK-001",
+      "x": 1037,
+      "y": 275,
+      "width": 167,
+      "height": 245,
+      "reason": "Elements not rendering responsively"
+    },
+    {
+      "id": "MASK-002",
+      "x": 18,
+      "y": 275,
+      "width": 175,
+      "height": 319,
+      "reason": "Elements not rendering responsively."
+    },
+    {
+      "id": "MASK-003",
+      "x": 455,
+      "y": 167,
+      "width": 386,
+      "height": 50,
+      "reason": "This is neither center or anything"
+    },
+    {
+      "id": "MASK-004",
+      "x": -25,
+      "y": 559,
+      "width": 45,
+      "height": 139,
+      "reason": "Spacing here is weird"
+    }
+  ]
+}

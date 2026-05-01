@@ -1,0 +1,10 @@
+{
+  "username": "page.getByLabel('Username')",
+  "password": "page.getByLabel('Password')",
+  "loginButton": "page.getByRole('button', { name: /login/i })",
+  "pageHeading": "page.getByRole('heading', { name: /test login page/i })",
+  "registerLink": "page.getByRole('link', { name: /here/i })",
+  "buyCoffee": "page.getByRole('link', { name: /buy us a coffee/i })",
+  "leftSidebarNav": "page.getByRole('navigation').first()",
+  "rightSidebarNav": "page.getByRole('navigation').last()"
+}

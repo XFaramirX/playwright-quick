@@ -13,6 +13,7 @@
     "cli:show:annotate": "playwright-cli show --annotate",
     "cli:show:port": "playwright-cli show --port 9323",
     "cli:show:kill": "playwright-cli show --kill",
+    "qa:annotate:review": "node scripts/qa-review-pipeline.mjs",
     "eval:skill": "node evals/run-evals.mjs",
     "eval:skill:with-transcript": "node evals/run-evals.mjs",
     "prepare": "husky install"

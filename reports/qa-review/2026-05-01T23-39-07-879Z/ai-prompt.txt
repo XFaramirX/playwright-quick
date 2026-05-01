@@ -1,0 +1,26 @@
+You are a senior QA automation engineer.
+Analyze the screenshot and annotation metadata below.
+Return: bug report, functional test cases, edge cases, accessibility risks, Playwright automation suggestions, visual diff strategy, selectors, QA checklist, Jira ticket, and MVP idea.
+If unsure for a section, return exactly: Unable to complete
+
+URL: https://practice.expandtesting.com/login
+Screenshot: G:\DataXFaramir\Huge\playwrightFramework\.playwright-cli\annotations-2026-05-01T23-35-14-089Z.png
+Snapshot: G:\DataXFaramir\Huge\playwrightFramework\.playwright-cli\page-2026-05-01T23-34-43-742Z.yml
+
+Annotations JSON:
+[
+  {
+    "x": 1003,
+    "y": 209,
+    "width": 244,
+    "height": 377,
+    "note": "not render"
+  },
+  {
+    "x": 348,
+    "y": 411,
+    "width": 230,
+    "height": 29,
+    "note": "overlap?"
+  }
+]

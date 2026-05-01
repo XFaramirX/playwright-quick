@@ -132,6 +132,29 @@ playwright-cli show --annotate
 playwright-cli show --kill
 ```
 
+### AI QA Review Pipeline (Annotation to Artifacts)
+
+This flow converts annotation metadata into structured QA artifacts (bug report, test cases, Playwright draft, visual diff mask, accessibility risks, checklist, Jira payload, and MVP idea).
+
+1) Create an annotation metadata text file from `playwright-cli show --annotate` output:
+
+```bash
+cat > .playwright-cli/annotation-input.txt <<'EOF'
+{ x: 1037, y: 275, width: 167, height: 245 }: Elements not rendering responsively
+{ x: 18, y: 275, width: 175, height: 319 }: Elements not rendering responsively.
+{ x: 455, y: 167, width: 386, height: 50 }: This is neither center or anything
+{ x: -25, y: 559, width: 45, height: 139 }: Spacing here is weird
+EOF
+```
+
+2) Run the pipeline:
+
+```bash
+npm run qa:annotate:review -- --url https://practice.expandtesting.com/login --annotations-file .playwright-cli/annotation-input.txt
+```
+
+3) Review generated output in `reports/qa-review/<timestamp>/`.
+
 ---
 
 ## Accessibility Testing

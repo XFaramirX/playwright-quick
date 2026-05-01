@@ -108,5 +108,8 @@
   "[chromium] › interoperability.spec.ts:151:7 › browser.bind() – Interoperability API (v1.59) › dashboard – set PLAYWRIGHT_DASHBOARD=1 to surface test browsers": 3155,
   "[chromium] › interoperability.spec.ts:73:7 › browser.bind() – Interoperability API (v1.59) › should allow a second Playwright client to connect and share the browser": 2208,
   "[chromium] › interoperability.spec.ts:51:7 › browser.bind() – Interoperability API (v1.59) › should bind over WebSocket and return a ws:// endpoint": 60,
-  "[chromium] › screencast.spec.ts:46:9 › Screencast - DuckDuckGo Search receipt › record a DuckDuckGo search walkthrough as a video receipt": 3416
+  "[chromium] › screencast.spec.ts:46:9 › Screencast - DuckDuckGo Search receipt › record a DuckDuckGo search walkthrough as a video receipt": 9177,
+  "[chromium] › home/login-annotated-review.spec.ts:4:7 › Login Page - Annotated QA checks › layout and core flow checks": 5030,
+  "[chromium] › home/login-annotated-review.spec.ts:81:7 › Login Page - Annotated QA checks › layout and core flow checks": 4543,
+  "[chromium] › home/login-annotated-review.spec.ts:42:7 › Login Page - Annotated QA Review › record annotated QA walkthrough as a video receipt": 14647
 }
