@@ -46,7 +46,7 @@
   "[chromium] › accesibility/a11y.spec.ts:11:7 › A11y › Accessibility Testing": 0,
   "[chromium] › accesibility/a11y.spec.ts:21:7 › A11y › The docs have no 404s": 0,
   "[chromium] › api/api.spec.ts:75:9 › API Tests for https://jsonplaceholder.typicode.com › Verify Single API Call Using apiFetch with Default GET Method": 2005,
-  "[chromium] › api/api.spec.ts:9:9 › API Tests for https://jsonplaceholder.typicode.com › Testing API Endpoints - Perform Single Call for Each CRUD Operation (GET, HEAD, POST, PUT, PATCH, DELETE)": 3193,
+  "[chromium] › api/api.spec.ts:9:9 › API Tests for https://jsonplaceholder.typicode.com › Testing API Endpoints - Perform Single Call for Each CRUD Operation (GET, HEAD, POST, PUT, PATCH, DELETE)": 1977,
   "[chromium] › api/api-fixture.spec.ts:2:5 › Create new user and log in via UI": 155,
   "[chromium] › contentModel/system-library.spec.ts:12:7 › Component Library › Contact Us Loop tru example": 0,
   "[chromium] › contentModel/visual-testing.spec.ts:12:7 › Visual Assertions › Component Snapshots": 0,
@@ -111,5 +111,14 @@
   "[chromium] › screencast.spec.ts:46:9 › Screencast - DuckDuckGo Search receipt › record a DuckDuckGo search walkthrough as a video receipt": 9177,
   "[chromium] › home/login-annotated-review.spec.ts:4:7 › Login Page - Annotated QA checks › layout and core flow checks": 5030,
   "[chromium] › home/login-annotated-review.spec.ts:81:7 › Login Page - Annotated QA checks › layout and core flow checks": 4543,
-  "[chromium] › home/login-annotated-review.spec.ts:42:7 › Login Page - Annotated QA Review › record annotated QA walkthrough as a video receipt": 14218
+  "[chromium] › home/login-annotated-review.spec.ts:42:7 › Login Page - Annotated QA Review › record annotated QA walkthrough as a video receipt": 14218,
+  "[chromium] › api/articles.spec.ts:6:9 › Articles API › GET /posts returns a list of articles": 383,
+  "[chromium] › api/articles.spec.ts:14:9 › Articles API › GET /posts/:id returns a single article": 369,
+  "[chromium] › api/article-creation.spec.ts:4:9 › Article Creation › Publish article and validate response payload": 534,
+  "[chromium] › api/article-creation.spec.ts:39:9 › Article Creation › POST /posts creates article and response matches sent payload": 539,
+  "[chromium] › api/articles.spec.ts:23:9 › Articles API › POST /posts creates a new article": 220,
+  "[chromium] › api/articles.spec.ts:36:9 › Articles API › PUT /posts/:id replaces an article": 215,
+  "[chromium] › api/articles.spec.ts:47:9 › Articles API › PATCH /posts/:id partially updates an article": 162,
+  "[chromium] › api/articles.spec.ts:57:9 › Articles API › DELETE /posts/:id removes an article": 149,
+  "[chromium] › api/api.spec.ts:75:9 › API Tests for https://jsonplaceholder.typicode.com › Verify Single API Call Using pwApi.fetch with Default GET Method": 1340
 }
