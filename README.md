@@ -3,6 +3,12 @@
 
 This repository contains end-to-end tests using Playwright. Below are instructions for setup, running tests, and useful commands.
 
+## Architecture Overview
+
+![Playwright framework system design overview](docs/images/system-design-overview.png)
+
+The visual overview is exported from `system-design.html` so GitHub users can see the framework layout directly in the repository.
+
 ---
 
 ## Directory Structure

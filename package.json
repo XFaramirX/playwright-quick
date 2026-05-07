@@ -9,6 +9,7 @@
     "test:smoke": "npx playwright test --project smoke",
     "test:failed": "npx playwright test --last-failed --update-snapshots",
     "test:auth": "npx playwright codegen --save-storage=fixtures/auth.json",
+    "cli:open": "playwright-cli open",
     "cli:show": "playwright-cli show",
     "cli:show:annotate": "playwright-cli show --annotate",
     "cli:show:port": "playwright-cli show --port 9323",

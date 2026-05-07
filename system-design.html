@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Design - Playwright E2E Framework</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+    :root {
+      --bg: #f4efe6;
+      --bg-strong: #efe7da;
+      --surface: rgba(255, 255, 255, 0.92);
+      --surface-soft: #f4ede1;
+      --text: #14212b;
+      --muted: #425261;
+      --line: rgba(20, 33, 43, 0.12);
+      --shadow: 0 22px 60px rgba(24, 32, 40, 0.14);
+      --teal: #0f766e;
+      --teal-soft: rgba(15, 118, 110, 0.12);
+      --blue: #1d4ed8;
+      --blue-soft: rgba(29, 78, 216, 0.12);
+      --amber: #b45309;
+      --amber-soft: rgba(180, 83, 9, 0.12);
+      --radius-xl: 30px;
+      --radius-lg: 22px;
+      --max-width: 1440px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--text);
+      font-family: 'Manrope', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.16), transparent 30%),
+        radial-gradient(circle at top right, rgba(29, 78, 216, 0.12), transparent 24%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-strong) 100%);
+    }
+
+    body::before,
+    body::after {
+      content: '';
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(56px);
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::before {
+      top: -120px;
+      left: -120px;
+      width: 320px;
+      height: 320px;
+      background: rgba(15, 118, 110, 0.18);
+    }
+
+    body::after {
+      right: -120px;
+      bottom: 80px;
+      width: 300px;
+      height: 300px;
+      background: rgba(29, 78, 216, 0.16);
+    }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 24px auto 40px;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 36px;
+      background: rgba(255, 255, 255, 0.42);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .frame {
+      overflow: hidden;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(250, 246, 239, 0.97));
+      border: 1px solid rgba(23, 32, 42, 0.08);
+    }
+
+    .topbar,
+    .panel-head,
+    .section-head,
+    .page-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 20px 28px;
+      padding: 20px 26px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      font-weight: 800;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--teal), var(--blue));
+      box-shadow: 0 10px 28px rgba(15, 118, 110, 0.24);
+    }
+
+    .brand-copy h1,
+    .hero-panel h2,
+    .section h3,
+    .insight-card h3,
+    .feature-card h4,
+    .timeline-card h4,
+    .footer-card h3 {
+      margin: 0;
+    }
+
+    .brand-copy h1 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-copy p {
+      font-size: 0.98rem;
+      color: #344657;
+    }
+
+    .brand-copy p,
+    .hero-panel p,
+    .section p,
+    .insight-card p,
+    .feature-card p,
+    .timeline-card p,
+    .footer-card p,
+    .stack-item span,
+    .metric-pill span,
+    .rail-card p,
+    .page-footer span {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .status-strip,
+    .tag-row,
+    .check-grid,
+    .footer-list,
+    .mini-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .status-strip {
+      justify-content: flex-end;
+      align-self: center;
+      min-width: 0;
+    }
+
+    .chip,
+    .tag,
+    .timeline-tag,
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .chip {
+      gap: 6px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(23, 32, 42, 0.1);
+      background: rgba(245, 247, 250, 0.96);
+      color: #395066;
+      font-size: 0.9rem;
+      font-weight: 700;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    }
+
+    .chip strong,
+    .metric-pill strong,
+    .score strong,
+    .command-card strong,
+    .stack-item strong {
+      color: var(--text);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(360px, 0.92fr);
+      gap: 24px;
+      padding: 28px;
+    }
+
+    .hero-panel,
+    .insight-card,
+    .section,
+    .feature-card,
+    .timeline-card,
+    .footer-card,
+    .command-card,
+    .rail-card,
+    .metric-pill,
+    .stack-item {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: 0 10px 32px rgba(32, 38, 46, 0.06);
+    }
+
+    .hero-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at top right, rgba(15, 118, 110, 0.12), transparent 32%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.99), rgba(247, 242, 233, 0.96));
+    }
+
+    .hero-panel::after {
+      content: '';
+      position: absolute;
+      right: -40px;
+      bottom: -60px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(15, 118, 110, 0.14), transparent 70%);
+      border: 1px solid rgba(15, 118, 110, 0.1);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--teal-soft);
+      color: var(--teal);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-panel h2 {
+      position: relative;
+      z-index: 1;
+      margin: 18px 0 14px;
+      max-width: 11ch;
+      font-size: clamp(2.5rem, 4vw, 4.6rem);
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+      text-wrap: balance;
+    }
+
+    .hero-panel p {
+      position: relative;
+      z-index: 1;
+      max-width: 58ch;
+      font-size: 1.05rem;
+      color: #324250;
+    }
+
+    .hero-meta,
+    .feature-grid,
+    .timeline-grid,
+    .footer-grid,
+    .command-list,
+    .architecture {
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero-meta {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 28px;
+    }
+
+    .metric-pill {
+      padding: 18px 20px;
+      background: rgba(255, 255, 255, 0.98);
+    }
+
+    .metric-pill strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    .insight-card,
+    .section {
+      padding: 24px;
+    }
+
+    .panel-head {
+      align-items: start;
+    }
+
+    .score {
+      min-width: 76px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: var(--surface-soft);
+      text-align: center;
+      border: 1px solid var(--line);
+    }
+
+    .score strong {
+      display: block;
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .score span {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .architecture-row {
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .rail-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 88px;
+      padding: 16px;
+      border-radius: 18px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .rail-core {
+      background: var(--teal-soft);
+      color: var(--teal);
+    }
+
+    .rail-enable {
+      background: var(--blue-soft);
+      color: var(--blue);
+    }
+
+    .rail-ops {
+      background: var(--amber-soft);
+      color: var(--amber);
+    }
+
+    .rail-card,
+    .stack-item,
+    .command-card,
+    .feature-card,
+    .timeline-card,
+    .footer-card {
+      padding: 18px 20px;
+    }
+
+    .rail-card,
+    .stack-item,
+    .command-card,
+    .feature-card,
+    .timeline-card,
+    .footer-card,
+    .metric-pill {
+      background-color: rgba(255, 255, 255, 0.98);
+    }
+
+    .rail-card h4,
+    .feature-card h4,
+    .timeline-card h4,
+    .footer-card h3 {
+      margin-bottom: 8px;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.22fr);
+      gap: 24px;
+      padding: 0 28px 28px;
+    }
+
+    .sidebar,
+    .main-content {
+      display: grid;
+      gap: 22px;
+      align-content: start;
+    }
+
+    .section-head {
+      margin-bottom: 18px;
+    }
+
+    .section h3,
+    .insight-card h3 {
+      margin-bottom: 6px;
+      font-size: 1.24rem;
+      font-weight: 800;
+    }
+
+    .section-label,
+    .timeline-tag,
+    .tag {
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .section-label {
+      padding: 10px 12px;
+    }
+
+    .tone-teal {
+      color: var(--teal);
+      background: var(--teal-soft);
+    }
+
+    .tone-blue {
+      color: var(--blue);
+      background: var(--blue-soft);
+    }
+
+    .tone-amber {
+      color: var(--amber);
+      background: var(--amber-soft);
+    }
+
+    .stack-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .stack-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.96rem;
+    }
+
+    .check-grid,
+    .footer-list,
+    .mini-list {
+      margin-top: 14px;
+    }
+
+    .check-grid span,
+    .footer-list span,
+    .mini-list span,
+    .command-code,
+    .tag {
+      padding: 9px 12px;
+      border-radius: 12px;
+      background: rgba(248, 250, 252, 0.98);
+      border: 1px solid rgba(23, 32, 42, 0.1);
+    }
+
+    .command-code,
+    .tag,
+    .inline-code {
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    .command-code,
+    .tag {
+      font-size: 0.82rem;
+    }
+
+    .command-list,
+    .feature-grid,
+    .footer-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .timeline-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .command-card strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 0.96rem;
+    }
+
+    .command-card {
+      display: grid;
+      gap: 10px;
+    }
+
+    .tag-row {
+      margin-top: 14px;
+    }
+
+    .timeline-tag {
+      padding: 8px 11px;
+      margin-bottom: 14px;
+      color: var(--blue);
+      background: var(--blue-soft);
+    }
+
+    .inline-code {
+      font-size: 0.88em;
+    }
+
+    .page-footer {
+      padding: 22px 28px 28px;
+      border-top: 1px solid var(--line);
+      color: #445564;
+      font-size: 0.94rem;
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    @media (max-width: 1180px) {
+      .topbar {
+        grid-template-columns: 1fr;
+      }
+
+      .status-strip {
+        justify-content: flex-start;
+      }
+
+      .hero,
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-meta,
+      .command-list,
+      .feature-grid,
+      .timeline-grid,
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 820px) {
+      .shell {
+        width: min(calc(100% - 20px), var(--max-width));
+        margin-top: 12px;
+        padding: 10px;
+        border-radius: 26px;
+      }
+
+      .topbar,
+      .panel-head,
+      .section-head,
+      .page-footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .brand {
+        align-items: flex-start;
+      }
+
+      .brand-copy h1 {
+        font-size: 0.98rem;
+      }
+
+      .brand-copy p {
+        font-size: 0.92rem;
+      }
+
+      .hero,
+      .content {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .hero {
+        padding-top: 16px;
+      }
+
+      .hero-panel,
+      .insight-card,
+      .section {
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .hero-panel h2 {
+        max-width: 12ch;
+        font-size: clamp(2.1rem, 9vw, 3.3rem);
+      }
+
+      .hero-meta,
+      .command-list,
+      .feature-grid,
+      .timeline-grid,
+      .footer-grid,
+      .architecture {
+        grid-template-columns: 1fr;
+      }
+
+      .architecture-row {
+        grid-template-columns: 1fr;
+      }
+
+      .rail-label {
+        min-height: auto;
+        justify-content: flex-start;
+      }
+    }
+  </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="frame">
+        <header class="topbar">
+          <div class="brand">
+            <div class="brand-mark">PW</div>
+            <div class="brand-copy">
+              <h1>Playwright Framework</h1>
+              <p>System design view for the TypeScript end-to-end test platform.</p>
+            </div>
+          </div>
+          <div class="status-strip">
+            <span class="chip"><strong>Stack</strong> TypeScript + Playwright</span>
+            <span class="chip"><strong>Model</strong> Page objects + fixtures</span>
+            <span class="chip"><strong>Ops</strong> Reporting + CI/CD</span>
+          </div>
+        </header>
+
+        <section class="hero">
+          <article class="hero-panel">
+            <span class="eyebrow">System Design</span>
+            <h2>Reliable Playwright automation built for daily delivery.</h2>
+            <p>
+              The framework separates authored tests, shared execution layers, and reporting outputs so the system stays
+              readable as it grows. Specs describe behavior, fixtures and page objects provide reusable context, and the
+              reporting pipeline turns every run into traceable feedback for the team.
+            </p>
+            <div class="hero-meta">
+              <div class="metric-pill">
+                <strong>3 layers</strong>
+                <span>Test authoring, execution support, and operational delivery.</span>
+              </div>
+              <div class="metric-pill">
+                <strong>9 modules</strong>
+                <span>Specs, pages, fixtures, helpers, APIs, config, reports, artifacts, and workflows.</span>
+              </div>
+              <div class="metric-pill">
+                <strong>1 pipeline</strong>
+                <span>From scenario definition to evidence, reporting, and CI feedback.</span>
+              </div>
+            </div>
+          </article>
+
+          <aside class="insight-card">
+            <div class="panel-head">
+              <div>
+                <h3>Architecture Overview</h3>
+                <p>The repository is split by responsibility so ownership is clear and test work stays maintainable.</p>
+              </div>
+              <div class="score">
+                <strong>01</strong>
+                <span>Overview</span>
+              </div>
+            </div>
+
+            <div class="architecture">
+              <div class="architecture-row">
+                <div class="rail-label rail-core">Core</div>
+                <div class="rail-card">
+                  <h4>Specs, page objects, fixtures</h4>
+                  <p>Business scenarios live in specs, reusable UI behavior stays in page objects, and fixtures provide shared setup and context.</p>
+                </div>
+              </div>
+
+              <div class="architecture-row">
+                <div class="rail-label rail-enable">Support</div>
+                <div class="rail-card">
+                  <h4>Config, helpers, API clients</h4>
+                  <p>Configuration, helper modules, and request utilities handle environment routing, data setup, and service-level checks.</p>
+                </div>
+              </div>
+
+              <div class="architecture-row">
+                <div class="rail-label rail-ops">Delivery</div>
+                <div class="rail-card">
+                  <h4>Reports, artifacts, workflows</h4>
+                  <p>Reports, saved evidence, and CI workflows turn test runs into visible operational output rather than isolated logs.</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <main class="content">
+          <aside class="sidebar">
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <h3>Core Areas</h3>
+                  <p>The main folders are grouped by function so new work can be placed in the correct layer quickly.</p>
+                </div>
+                <span class="section-label tone-teal">Structure</span>
+              </div>
+
+              <div class="stack-list">
+                <div class="stack-item">
+                  <strong>e2e/specs</strong>
+                  <span>Feature, auth, API, accessibility, and generated scenarios.</span>
+                </div>
+                <div class="stack-item">
+                  <strong>e2e/pages</strong>
+                  <span>Base abstractions and screen-specific page object models.</span>
+                </div>
+                <div class="stack-item">
+                  <strong>e2e/fixtures</strong>
+                  <span>Extended test context, storage state, factories, and environment data.</span>
+                </div>
+                <div class="stack-item">
+                  <strong>helpers and scripts</strong>
+                  <span>Shared utilities, API helpers, QA tooling, and agent-style automation scripts.</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <h3>Standards</h3>
+                  <p>The framework follows a consistent set of working rules so tests remain stable and easy to review.</p>
+                </div>
+                <span class="section-label tone-blue">Practice</span>
+              </div>
+
+              <div class="check-grid">
+                <span>Page object model for UI behavior</span>
+                <span>Fixture-driven test composition</span>
+                <span>Web-first assertions</span>
+                <span>Reusable auth with storage state</span>
+                <span>Parallel execution and sharding</span>
+                <span>Multi-environment routing</span>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <h3>Key Commands</h3>
+                  <p>The most common run and review commands are grouped into one operational panel.</p>
+                </div>
+                <span class="section-label tone-amber">Runbook</span>
+              </div>
+
+              <div class="command-list">
+                <div class="command-card">
+                  <strong>Core run</strong>
+                  <span class="command-code">npx playwright test</span>
+                  <span class="command-code">npx playwright test --ui</span>
+                  <span class="command-code">npx playwright show-report</span>
+                </div>
+                <div class="command-card">
+                  <strong>Targeted run</strong>
+                  <span class="command-code">npx playwright test --project=chromium</span>
+                  <span class="command-code">npx playwright test --grep @smoke</span>
+                  <span class="command-code">npx playwright test --shard=1/4</span>
+                </div>
+              </div>
+            </section>
+          </aside>
+
+          <div class="main-content">
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <h3>Capabilities</h3>
+                  <p>Each area below shows how the framework supports authoring, execution, service setup, and reporting.</p>
+                </div>
+                <span class="section-label tone-teal">Modules</span>
+              </div>
+
+              <div class="feature-grid">
+                <article class="feature-card">
+                  <h4>Test orchestration</h4>
+                  <p><span class="inline-code">playwright.config.ts</span> controls discovery, retries, parallelism, output locations, and environment targeting.</p>
+                  <div class="tag-row">
+                    <span class="tag">fullyParallel</span>
+                    <span class="tag">snapshotDir</span>
+                    <span class="tag">baseUrl</span>
+                  </div>
+                </article>
+
+                <article class="feature-card">
+                  <h4>Page model layer</h4>
+                  <p>Page objects keep locators, actions, navigation, and assertions out of specs so scenarios stay readable.</p>
+                  <div class="mini-list">
+                    <span>Base page</span>
+                    <span>Home page</span>
+                    <span>Excalidraw page</span>
+                  </div>
+                </article>
+
+                <article class="feature-card">
+                  <h4>Fixture and data layer</h4>
+                  <p>Custom fixtures inject shared dependencies while factories and environment files keep setup explicit and repeatable.</p>
+                  <div class="tag-row">
+                    <span class="tag">base.ts</span>
+                    <span class="tag">api.fixture.ts</span>
+                    <span class="tag">auth.json</span>
+                  </div>
+                </article>
+
+                <article class="feature-card">
+                  <h4>Service utilities</h4>
+                  <p>Helpers and API clients support request-driven setup, data preparation, and non-UI validation when tests need it.</p>
+                  <div class="mini-list">
+                    <span>api-client</span>
+                    <span>fetch-helper</span>
+                    <span>QA scripts</span>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <h3>Test Flow</h3>
+                  <p>This sequence shows how a scenario moves from authored test code to browser execution and reviewable evidence.</p>
+                </div>
+                <span class="section-label tone-blue">Flow</span>
+              </div>
+
+              <div class="timeline-grid">
+                <article class="timeline-card">
+                  <span class="timeline-tag">Step 01</span>
+                  <h4>Author</h4>
+                  <p>Specs define user or API behavior, while fixtures and pages provide reusable setup and interaction logic.</p>
+                  <div class="tag-row">
+                    <span class="tag">describe</span>
+                    <span class="tag">beforeEach</span>
+                    <span class="tag">step</span>
+                  </div>
+                </article>
+
+                <article class="timeline-card">
+                  <span class="timeline-tag">Step 02</span>
+                  <h4>Execute</h4>
+                  <p>Playwright provisions isolated browser contexts, applies project settings, captures traces, and runs the selected scope.</p>
+                  <div class="tag-row">
+                    <span class="tag">Chromium</span>
+                    <span class="tag">Tracing</span>
+                    <span class="tag">Sharding</span>
+                  </div>
+                </article>
+
+                <article class="timeline-card">
+                  <span class="timeline-tag">Step 03</span>
+                  <h4>Report</h4>
+                  <p>Reports, screenshots, QA review outputs, and CI artifacts capture the run so failures are easy to inspect and share.</p>
+                  <div class="tag-row">
+                    <span class="tag">HTML report</span>
+                    <span class="tag">blob merge</span>
+                    <span class="tag">qa-review</span>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-head">
+                <div>
+                  <h3>Operations</h3>
+                  <p>Supporting systems are grouped by outcome so reporting, artifacts, and delivery paths are easy to scan.</p>
+                </div>
+                <span class="section-label tone-amber">Operations</span>
+              </div>
+
+              <div class="footer-grid">
+                <article class="footer-card">
+                  <h3>Reporting</h3>
+                  <p>HTML output, blob reports, and state reporting keep execution results visible after each run.</p>
+                  <div class="footer-list">
+                    <span>playwright-report</span>
+                    <span>blob-report</span>
+                    <span>state.json</span>
+                  </div>
+                </article>
+
+                <article class="footer-card">
+                  <h3>Artifacts</h3>
+                  <p>Evidence capture includes screenshots, traces, snapshots, Lighthouse output, and generated test results.</p>
+                  <div class="footer-list">
+                    <span>screenshots</span>
+                    <span>test-results</span>
+                    <span>snapshots</span>
+                    <span>lighthouse</span>
+                  </div>
+                </article>
+
+                <article class="footer-card">
+                  <h3>Delivery</h3>
+                  <p>Workflow automation coordinates matrix runs, shard distribution, artifact retention, and report merging.</p>
+                  <div class="footer-list">
+                    <span>playwright.yml</span>
+                    <span>quick.yml</span>
+                    <span>reusable workflow</span>
+                  </div>
+                </article>
+
+                <article class="footer-card">
+                  <h3>Environment routing</h3>
+                  <p>Local, dev, stage, and production targets stay configurable without changing the core test structure.</p>
+                  <div class="footer-list">
+                    <span>TEST_ENV</span>
+                    <span>baseUrl</span>
+                    <span>env files</span>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </main>
+
+        <footer class="page-footer">
+          <span><strong>Summary:</strong> the framework combines structured test design, reusable execution layers, and clear reporting.</span>
+          <span><strong>Status:</strong> ready for browser review.</span>
+        </footer>
+      </div>
+    </div>
+  </body>
+  </html>
