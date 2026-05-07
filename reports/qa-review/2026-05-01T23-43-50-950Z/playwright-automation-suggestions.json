@@ -1,0 +1,7 @@
+[
+  "Use role/label-first locators: getByRole/getByLabel/getByText",
+  "Assert URL transitions with toHaveURL after login",
+  "Add viewport matrix tests (desktop/tablet/mobile) for layout checks",
+  "Use toHaveScreenshot with mask zones for dynamic widgets",
+  "Use toMatchAriaSnapshot for structural accessibility regression checks"
+]

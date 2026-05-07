@@ -1,0 +1,30 @@
+[
+  {
+    "x": 1037,
+    "y": 275,
+    "width": 167,
+    "height": 245,
+    "note": "Elements not rendering responsively"
+  },
+  {
+    "x": 18,
+    "y": 275,
+    "width": 175,
+    "height": 319,
+    "note": "Elements not rendering responsively."
+  },
+  {
+    "x": 455,
+    "y": 167,
+    "width": 386,
+    "height": 50,
+    "note": "This is neither center or anything"
+  },
+  {
+    "x": -25,
+    "y": 559,
+    "width": 45,
+    "height": 139,
+    "note": "Spacing here is weird"
+  }
+]

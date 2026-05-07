@@ -1,0 +1,21 @@
+{
+  "strategy": "Mask volatile or intentionally unstable regions while keeping structural checks strict.",
+  "zones": [
+    {
+      "id": "MASK-001",
+      "x": 1003,
+      "y": 209,
+      "width": 244,
+      "height": 377,
+      "reason": "not render"
+    },
+    {
+      "id": "MASK-002",
+      "x": 348,
+      "y": 411,
+      "width": 230,
+      "height": 29,
+      "reason": "overlap?"
+    }
+  ]
+}

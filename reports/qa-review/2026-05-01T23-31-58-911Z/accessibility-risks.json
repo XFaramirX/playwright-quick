@@ -1,0 +1,6 @@
+[
+  "Potential focus order confusion if clipped elements remain tabbable",
+  "Possible missing or ambiguous labels in sidebar navigation groups",
+  "Off-screen content can degrade screen magnifier usability",
+  "Detected negative x-coordinate annotation, indicating off-screen rendering risk."
+]

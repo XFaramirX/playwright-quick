@@ -1,0 +1,22 @@
+{
+  "url": "https://practice.expandtesting.com/login",
+  "generatedAt": "2026-05-01T23:43:50.963Z",
+  "outDir": "G:\\DataXFaramir\\Huge\\playwrightFramework\\reports\\qa-review\\2026-05-01T23-43-50-950Z",
+  "screenshotPath": "G:\\DataXFaramir\\Huge\\playwrightFramework\\.playwright-cli\\annotations-2026-05-01T23-35-14-089Z.png",
+  "snapshotPath": "G:\\DataXFaramir\\Huge\\playwrightFramework\\.playwright-cli\\page-2026-05-01T23-34-43-742Z.yml",
+  "files": [
+    "accessibility-risks.json",
+    "ai-prompt.txt",
+    "annotation-metadata.json",
+    "best-mvp-idea.json",
+    "bug-report.json",
+    "edge-cases.json",
+    "functional-test-cases.json",
+    "jira-tickets.json",
+    "playwright-automation-suggestions.json",
+    "playwright-locators.json",
+    "playwright-test-draft.spec.ts",
+    "qa-checklist.json",
+    "visual-diff-mask.json"
+  ]
+}

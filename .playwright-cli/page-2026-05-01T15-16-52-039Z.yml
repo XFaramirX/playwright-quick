@@ -1,0 +1,319 @@
+- generic [active] [ref=e1]:
+  - paragraph [ref=e3]:
+    - link "PMP Practice" [ref=e4] [cursor=pointer]:
+      - /url: https://pmp.expandtesting.com/
+    - text: "| Free PMP Certification Mock Exam Test +900 Questions & Quizzes"
+    - link "Software" [ref=e5] [cursor=pointer]:
+      - img [ref=e7]
+      - text: Software
+  - banner [ref=e10]:
+    - navigation "Main navigation" [ref=e11]:
+      - link "SUT" [ref=e12] [cursor=pointer]:
+        - /url: /
+        - 'img "Best Website for Practice Automation Testing: Free UI and REST API Examples and Apps. Using Cypress, Playwright, Selenium, WebdriverIO and Postman." [ref=e13]'
+        - text: Practice
+      - generic [ref=e14]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - button "Demos" [ref=e17] [cursor=pointer]
+          - listitem [ref=e18]:
+            - link "Tools" [ref=e19] [cursor=pointer]:
+              - /url: /#tools
+          - listitem [ref=e20]:
+            - link "Tips" [ref=e21] [cursor=pointer]:
+              - /url: /tips
+          - listitem [ref=e22]:
+            - link "Test Cases" [ref=e23] [cursor=pointer]:
+              - /url: /test-cases
+          - listitem [ref=e24]:
+            - link "API Testing" [ref=e25] [cursor=pointer]:
+              - /url: /notes/api/api-docs/
+          - listitem [ref=e26]:
+            - link "About" [ref=e27] [cursor=pointer]:
+              - /url: /about
+        - list
+        - link "Free ISTQB Mock Exams" [ref=e28] [cursor=pointer]:
+          - /url: https://istqb.expandtesting.com/
+  - main [ref=e29]:
+    - paragraph [ref=e34]:
+      - text: Do you enjoy this platform? ❤️
+      - link "Buy us a coffee" [ref=e35] [cursor=pointer]:
+        - /url: https://www.buymeacoffee.com/expandtesting
+    - generic [ref=e36]:
+      - insertion [ref=e38]:
+        - generic [ref=e41]:
+          - heading "These are topics related to the article that might interest you" [level=2] [ref=e43]: Discover more
+          - link "Automation Consulting Services" [ref=e44] [cursor=pointer]:
+            - generic "Automation Consulting Services" [ref=e45]
+            - img [ref=e47]
+          - link "Computer Security" [ref=e49] [cursor=pointer]:
+            - generic "Computer Security" [ref=e50]
+            - img [ref=e52]
+          - link "Network Security" [ref=e54] [cursor=pointer]:
+            - generic "Network Security" [ref=e55]
+            - img [ref=e57]
+          - link "Programming" [ref=e59] [cursor=pointer]:
+            - generic "Programming" [ref=e60]
+            - img [ref=e62]
+          - link "Open Source" [ref=e64] [cursor=pointer]:
+            - generic "Open Source" [ref=e65]
+            - img [ref=e67]
+          - link "Software Testing Tools" [ref=e69] [cursor=pointer]:
+            - generic "Software Testing Tools" [ref=e70]
+            - img [ref=e72]
+          - link "Edge Case Testing" [ref=e74] [cursor=pointer]:
+            - generic "Edge Case Testing" [ref=e75]
+            - img [ref=e77]
+          - link "Authentication System Audits" [ref=e79] [cursor=pointer]:
+            - generic "Authentication System Audits" [ref=e80]
+            - img [ref=e82]
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - navigation "breadcrumb mb-2" [ref=e87]:
+            - list [ref=e88]:
+              - listitem [ref=e89]:
+                - link "Home" [ref=e90] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e91]: / Login Page
+          - heading "Test Login page for Automation Testing Practice" [level=1] [ref=e92]
+          - generic [ref=e94]:
+            - paragraph [ref=e95]: This Test Login page is designed for automation testing practice. Test various positive and negative login scenarios in a testing environment.
+            - paragraph [ref=e96]: You can use this login page for practicing with Selenium or other tools like Playwright, Cypress, etc.
+            - paragraph [ref=e97]:
+              - text: Register
+              - link "here" [ref=e98] [cursor=pointer]:
+                - /url: /register
+              - text: "or Log in to the secure area with these credentials:"
+            - list [ref=e99]:
+              - listitem [ref=e100]: "Username: practice"
+              - listitem [ref=e101]: "Password: SuperSecretPassword!"
+            - paragraph
+          - generic [ref=e106]:
+            - generic [ref=e107]:
+              - generic [ref=e108]:
+                - generic [ref=e109]: Username
+                - textbox "Username" [ref=e110]
+              - generic [ref=e111]:
+                - generic [ref=e112]: Password
+                - textbox "Password" [ref=e113]
+            - button "Login" [ref=e114] [cursor=pointer]
+          - generic [ref=e115]:
+            - heading "How to test the login page?" [level=2] [ref=e116]
+            - generic [ref=e117]:
+              - paragraph [ref=e118]: If the credentials are correct, you should see a welcome message; otherwise, you will see an error message.
+              - insertion [ref=e120]:
+                - iframe [ref=e122]:
+                  - iframe [ref=f10e1]:
+                    - iframe [ref=f19e5]:
+                      - generic [ref=f20e3]:
+                        - generic [ref=f20e4]: Search for
+                        - list [ref=f20e5]:
+                          - listitem [ref=f20e6]:
+                            - generic [ref=f20e7]:
+                              - generic [ref=f20e8]: "1."
+                              - generic [ref=f20e9]: ❯
+                              - table [ref=f20e10]:
+                                - rowgroup [ref=f20e11]:
+                                  - row "🖌️ Create My Own Website" [ref=f20e12]:
+                                    - cell "🖌️ Create My Own Website" [ref=f20e13]:
+                                      - link "🖌️ Create My Own Website" [ref=f20e15] [cursor=pointer]:
+                                        - /url: https://similarsearch.net/search.cfm?ule=5836&&lgplp=jf75EJ%3ABJ1eJL&prvep=g4ztEd5Gptti639Yk9qpGA%3D%3D&ktr=1&vi=1777648611795727952&cq=eNf15fdlqdniBdSf%2F9W5f&vsid=4206502113679738&sc=CODC&oksu=224&prid=8PRVCXX19&cid=8CU54N5CK&pid=8PO610UU7&crid=272537869&https=1&rms=1777648612&size=336x280&ksu=224&ugd=4&tsid=7&asn=10620&radepth=0&kwep=JaPG%26JaW4PzAbGZA%26JgNPz.bbbbbb%26Q4U5PEtF%26U%2FJPtTAAA1QtbAz1AbJ4A144zz%2F4QZA4HtF4.4G9%26U%2FJGPJvB5fB5%25FIz%25TeJaW4oQC%25FIzZzGH%25TeJaW4o9fNg%25FIzZzGH%25Te9U5%25FIU1aUW%25TeUUN%25FIG%25Te1Ug%25FIG%25TeQ9%25FIz%25TeBJU%2FoV5%25FIB1%25TeJ%2F9B%25FIp88nS-I%25TeU39%25FIb.EEGt%25TeU3J9%25FIb.FbFZ%25TeUJ3J9%25FIb.ZGHG%25TeUJ3J9G%25FIb.ZGHG%25TeU99U9%25FIH.bbbb%25TeNJW4%25FIzAbGZA%25TeJagN%25FIz.bbbbbb%25TeJaama%25FIG%25TevU5%25FIEtF%25Te%2F4U5%25FIEtF%25TefVo3%25FI%25_b%25t_%25tZ%25Ae%25-_%25hA%25A_%25Te14mo1ssoNg9oAbbbbbbbb%25FIL1L%25Te14mo1ssoJaWJU9oAbbbbbbbb%25FIb.bbb%25Te14mo1ssoNg9oAbbbbbbbbo1m%25FIz%25Te14mo1ssoNg9oAbbbbbbbboama%25FIb.bbb%25Te14mo1ssoNg9omGoHF%25FIb.btAAtE%25Te14mo1ssoJaWJU9omGoHF%25FIG.bbb%25Te14mo1ssoNg9omGoHFo1m%25FIz%25Te14mo1ssoNg9omGoHFoama%25FIT.bbb%25Teg9%25FIb.tzZ%25Teg9oW4%25FIb%26UJPKB5fNBf5%2B%25GZ%2BrfafJvV%2B%25F-%2BSf%2F%2BRfNmWJf9%2B%25F-%2BSf%2F%2BIf9WsB%2B%25GZ%2BIfmfavgVfB5%26UJW4PHbbtzG%26UWPTGzTEZA%26UasPfB%26UV%2FP8r-3lIpi%26UV4PB3aa%26UVQP3U9%25FIb.EEGt%26UgPz%26U5PEtF%26U54PAzTbEbEGHtGAFHbtAEGGHEtbGETZA%26Ng9+NmPHF%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bFbA%25TI%25Te%25Eb%25TezG%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bGFA%25TI%25Te%25Eb%25TeZz%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bbbZ%25TI%265k%2FaUPz%25Tez&oscar=1&tsce=L1216-S1216&ssld=%7B%22QQNN%22%3A%22%3Da%22%2C%22QQN75%22%3A%22Rmym71%22%2C%22QQ8E%22%3A%22uWu.Fu.fHF.9%22%2C%22QQQN%22%3A%22%3Daor%3D%22%2C%22QQl8E%22%3A%22uu9WHu%22%7D&mprpslog=undefined&acid=8bda8b1aebefb8a6573ff45227972f0e&verid=3111299&tsrc=en_adtag&sbdrId=134&kafm_ull_cache=00&hvsid=00001777648611627030407367685723&vgd_ecrid=1700090001091500336028000040400&vgd_matchstr=CommercialUrlOn%7Chr%3D0%7Cdlg%3Den%7Chlid%3D2002%7Cclg%3Den%7Cbcat%3D16e%2Cjo%7Ccsh%3D1&vgd_ifrmode=14&&fp=VFSvoM2-ZwX3sbEiFh13VpEko_i4UVPwBD6cGUO9-tgqp0Nb5fU7_sVKB5Xrk_2Y6Btouhz8nI-B3v8TjVHmT79nCJmnlU6Bwih5AftTu5dAKLbQqGReQySkPUeiEzmPwCFCErrH0b7v37cKA00dtcZaP2UsXApg&cme=vtFYOCDBF-FtjowBHMVCLKCz4pA2ywEzDnSOg388bDdV0CUwu869jwTMtpYpQKxRdz__REoihxg_2M7-6lpglh-HnVDAQR-lX9YUahXnnkGL5Wo66bg-sGIoLTf4jjtCfZa_NRRiq05TJQo22wN6QBlW0JzvBkxmSQbbFtX99Td-YKzSHwgmLQLxZYfF5jODbFs7aOkKPjnTkjQPI7NYxIh7-o9vTuHfnsNJtFuLyfUcBbdZMenAbIh3pZcj2CXAy7uW1OnmVHD6ULBk596p4iwwqWN5NK5AXCHDuNT6jdr-It52Ivs75hI28TmWJ3KdZtmhpPIc5NUpbfFnUaria72zEqqDzFuJCRt_BkdOo9M%3D%7C%7Cu8A6SM53vAf5-nKB4Fp8suHWkamTqseX%7C5bh_8NJlDH1f9jlfKAddkUkwFK7-cjA5%7Cd9vPLM1tRn-WLhCjY8-_mw%3D%3D%7CzYpLL9MKypogx1gH5yThrZzSC5RFNTMO%7Ca0AmFUYXmD63GXapyWrnjzR30Hs9UAzXaDZkSrjRyqxQpEFg1dChoxt-aXsb7Q9P5vERxjVdGLo%3D%7CcPcb3VhU0BVjXgWFWEAzinttU1oq1ouO%7CYN6Mu-ZPh1-670HXWup3cHvI5mlQYFWHScbHw_-MvClaEWSrNRJfS44jyrkYPwBfN3buy2cbcCoU9GuG_BRCtDC5gk-5MxvEOw39pFij1YIOrAX64C1xugH92zBPJYutVmoIfQ7ROF4KOIfkW0j2Q1ROOj322aRSiAwAw5YFPITcbIl1o8-Zt7n5S2UVyKIdnvlnYVpCANJ2WPLhG1C3DClOXqNkKQC217frmMXC_RsGrJB1JFej6gkIDVbcUtqgBzroc1-akQLZcTB8yT7gyr7zPs0FF3in0aqkNqpuOlC5bNnU-xihJ7m-q_FrhrMlZwxHdXc0aJn5u5n3I3ByLIlrwiHxD2KAp1gwkt4nDw7-x0LCUWU02hiE7_b8c0S0lyu3wTLamM2kjkLkLbW02D2nmEypq7C3D_MD6R2Ld1Mq69b-uqcfIrc4c6dPwZErhhZsLeEFKNSZXMbiMORJ5sDzjLwNf27jCBbr9IXC6IJU_op_4C_ZXPw1Y4oh_jTfQwb0vsk0VzrW5soplEUTNdTJ8f3uyutIw7_xL8cWtbuIzVIW-lWDUUutPCqTcT4TggIJ-1iYMB7Ua2iF75ZKkkqq5yQuLxFwIgd-NumYlSf5H7pIgpdOswrPgmxUrbKl4vms0NOSV5qUWNDOshQ7tKvfuMA8uvVMHbZ5AQMT5Bgmwar8mJufQjr9gMCKLHOfUOOaczZK2YDnk8TcJeC78iGw3Taquj-C70TkosF3P0DJck-IpHUMncUdY4Jgy4EWR4X8tx_vEuUtDI8VDxjcTx-4Ic0X5KIt3mSugEeb2RLnsx213VF27AgZVpfDgy2Jy6pUhtyahmhuAUCYyGlIKNUsmWSkYVzM27eE9XnHc830y0M3_S4OZrF1Jed0LRNU1XIbhjD50sWQlJBm60nUWDtAGy8CGWgL07tYql6HlIfRWJ6UkgSffcUj8YxioG4WAWys-Nnxz7sD2S0gtOSktPaIGz4_uNqpX3hPpZGw21Ys8I65Zm6Lso_q5eBBvHk5%7C&subBdr=134&bdrid=460&bqs=6&bd=-5%231152%232048&ypl=5ON%3ANff%7CGxNUJ7VO4z7875%3Aiiii%7CGxNUJ7I1YJ4z7875%3ApJ1eJL%7CQEx%3AXuWX~%7CyE8O%3A&lgpl=BjQ7E%3A9%7CeQ7L8O%3AHf9FX9fuuAFhihAW%7CGO171%3AJLEYv9.9f~myJLEYv9.9f~OQOeLvW99.hu~J-MQvf~QQOeLvHiX.uH~x8OvuW5%2FrXZO5cENVG4K3%3DROZ~jMG8OOJLM8OvHF9~NejfLMGvh.Xf~G7OvhFhXiiFAHfuuhHWFXuWAiiHhWiifiHiHWAuuFWffFWXiWW9hXHiAHFHfXHF99hifHWHFuufFihhuHWF99AHhAif9huFhiuiXXAFuuiFXh9iFhHXuuhAH9hhuh9HFii9hFiFfHuX9fXAhHXFiAuifhWHiufAfAuf9uWFXfhhHH~jMQ7MQNv9.AA~myOfEMGv9.iX~-YjMG8Ov9.9ui~Q7OvAXfiuHFWWf~LEQMGvuH.WX~OQeLvWuH.FH~j1Q7v~%3DVvAFHh~8EvAdc%3D-%20~1GYvu~jM%20Q7QvF~%20GNvu~GO7vuhhhFHWFuu~e8QMGvfWA.h~8QDJkv9~jMuMLzMQ7vF~G8Ov9.9f~LGYM8Ovu~O1LeLvFfX.fW~ejfLMGvH.9X~NGOEv9.9uW~QOvu~875EJM8Ovuh~875EJMmeJLL8OJvKrt~QJjjJLM71yM8OvAXfiuHFWWf~QxEEj5M71yM8OvAXfiuHFWWf~OJ7JN7JOM71yM8Ov~NMj1zyvJz~e8JB1G8j875v9.Au~EmQvA~1NM75EJvu~1OGjUvAXfiuHFWWf~1YEvu~N1LL8JLVOv9~myG8Ov9.9ui999~GkjLv9.9u9~Qx8Ov%3DK4b469EIQ9QZVbO5gayKC3_pL4~O7NvJ1Q7MQN~8QMmL7Gvu~OYYMJLEYvk1jQJ~OYYv1EJ-~GOEN1EOv9~O1jyvOzMuMeAAM1GmeJM%209X~QmGEv~-8OvKrtoExGou9XF9AHWfuFHFfiF~w7Yjvu~OYYMOfWv9o9~ELJO8N7JOMBLv9.99~ONx7vX~OmyGv9ou~OJLEv9.9ui999~O1jyvOzMuMeAAM1GmeJM%209X~JNEMxQJOvGJjmBM%209X~JNEMeJLvOzMuMeAA~JNEME9Xv9.9f~JNEMEu9v9.9f~JNEMEuXv9.9f~JNEMEf9v9.9f~JNEMEfXv9.9f~JNEMEA9v9.9f~JNEMEAXv9.9f~JNEMEH9v9.9f~JNEMEHXv9.9f~JNEMEX9v9.9f~JNEMEXXv9.9f~JNEMEF9v9.9f~JNEMEFXv9.9f~JNEMEh9v9.9f~JNEMEhXv9.9f~JNEMEW9v9.9f~JNEMEWXv9.9f~JNEMEi9v9.9f~JNEMEiXv9.9f~JNEMEiiv9.9f~OYYMQkYvEkOMuhMu~eGLv1YMLmBMQW~OYYMOAWv9~~8GNvu~zQlvu~7yQvAAF-fW9~7Y-vfiF~Y-GU7v9~Y-wYQvHW~Y-wYJv9~kExLJ%20vu%7CQNQeJL%3AAuXA%7Cw8Yyjy%3AC909oa9C9ob9%7CN1NwJMYJ71O171%3A%7B%22UGG%22%23*k1jQJ%7D%7CU1Nm8z7mQQ%3A7LxJ%7CNkxO%3AfH9iuF%7CmE7mx7%3A9%7C5OQEL%3Au%7CjfQwjO%3Au%7C1UN8E%3AuWu.Fu.fHF.fi%7CmLJ%20k%3AmzJ%7CmLJQk%3AmzJ%7CmNw%3A9%7CLJzQ8lJ%3AAAFMfW9%7CQNLMw%3AuuXf%7CQNLMB%3Af9HW%7CLJQOzef%3AuX%7CNmjMQNw%3Aj%7CJN7%3AHy%7CGJ%3A9%7CQQYNLMj1L%3Af&ure=1&kwd_ofl=0
+                            - link [ref=f20e16] [cursor=pointer]:
+                              - /url: https://similarsearch.net/search.cfm?ule=5836&&lgplp=jf75EJ%3ABJ1eJL&prvep=g4ztEd5Gptti639Yk9qpGA%3D%3D&ktr=1&vi=1777648611795727952&cq=eNf15fdlqdniBdSf%2F9W5f&vsid=4206502113679738&sc=CODC&oksu=224&prid=8PRVCXX19&cid=8CU54N5CK&pid=8PO610UU7&crid=272537869&https=1&rms=1777648612&size=336x280&ksu=224&ugd=4&tsid=7&asn=10620&radepth=0&kwep=JaPG%26JaW4PzAbGZA%26JgNPz.bbbbbb%26Q4U5PEtF%26U%2FJPtTAAA1QtbAz1AbJ4A144zz%2F4QZA4HtF4.4G9%26U%2FJGPJvB5fB5%25FIz%25TeJaW4oQC%25FIzZzGH%25TeJaW4o9fNg%25FIzZzGH%25Te9U5%25FIU1aUW%25TeUUN%25FIG%25Te1Ug%25FIG%25TeQ9%25FIz%25TeBJU%2FoV5%25FIB1%25TeJ%2F9B%25FIp88nS-I%25TeU39%25FIb.EEGt%25TeU3J9%25FIb.FbFZ%25TeUJ3J9%25FIb.ZGHG%25TeUJ3J9G%25FIb.ZGHG%25TeU99U9%25FIH.bbbb%25TeNJW4%25FIzAbGZA%25TeJagN%25FIz.bbbbbb%25TeJaama%25FIG%25TevU5%25FIEtF%25Te%2F4U5%25FIEtF%25TefVo3%25FI%25_b%25t_%25tZ%25Ae%25-_%25hA%25A_%25Te14mo1ssoNg9oAbbbbbbbb%25FIL1L%25Te14mo1ssoJaWJU9oAbbbbbbbb%25FIb.bbb%25Te14mo1ssoNg9oAbbbbbbbbo1m%25FIz%25Te14mo1ssoNg9oAbbbbbbbboama%25FIb.bbb%25Te14mo1ssoNg9omGoHF%25FIb.btAAtE%25Te14mo1ssoJaWJU9omGoHF%25FIG.bbb%25Te14mo1ssoNg9omGoHFo1m%25FIz%25Te14mo1ssoNg9omGoHFoama%25FIT.bbb%25Teg9%25FIb.tzZ%25Teg9oW4%25FIb%26UJPKB5fNBf5%2B%25GZ%2BrfafJvV%2B%25F-%2BSf%2F%2BRfNmWJf9%2B%25F-%2BSf%2F%2BIf9WsB%2B%25GZ%2BIfmfavgVfB5%26UJW4PHbbtzG%26UWPTGzTEZA%26UasPfB%26UV%2FP8r-3lIpi%26UV4PB3aa%26UVQP3U9%25FIb.EEGt%26UgPz%26U5PEtF%26U54PAzTbEbEGHtGAFHbtAEGGHEtbGETZA%26Ng9+NmPHF%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bFbA%25TI%25Te%25Eb%25TezG%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bGFA%25TI%25Te%25Eb%25TeZz%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bbbZ%25TI%265k%2FaUPz%25Tez&oscar=1&tsce=L1216-S1216&ssld=%7B%22QQNN%22%3A%22%3Da%22%2C%22QQN75%22%3A%22Rmym71%22%2C%22QQ8E%22%3A%22uWu.Fu.fHF.9%22%2C%22QQQN%22%3A%22%3Daor%3D%22%2C%22QQl8E%22%3A%22uu9WHu%22%7D&mprpslog=undefined&acid=8bda8b1aebefb8a6573ff45227972f0e&verid=3111299&tsrc=en_adtag&sbdrId=134&kafm_ull_cache=00&hvsid=00001777648611627030407367685723&vgd_ecrid=1700090001091500336028000040400&vgd_matchstr=CommercialUrlOn%7Chr%3D0%7Cdlg%3Den%7Chlid%3D2002%7Cclg%3Den%7Cbcat%3D16e%2Cjo%7Ccsh%3D1&vgd_ifrmode=14&&fp=VFSvoM2-ZwX3sbEiFh13VpEko_i4UVPwBD6cGUO9-tgqp0Nb5fU7_sVKB5Xrk_2Y6Btouhz8nI-B3v8TjVHmT79nCJmnlU6Bwih5AftTu5dAKLbQqGReQySkPUeiEzmPwCFCErrH0b7v37cKA00dtcZaP2UsXApg&cme=vtFYOCDBF-FtjowBHMVCLKCz4pA2ywEzDnSOg388bDdV0CUwu869jwTMtpYpQKxRdz__REoihxg_2M7-6lpglh-HnVDAQR-lX9YUahXnnkGL5Wo66bg-sGIoLTf4jjtCfZa_NRRiq05TJQo22wN6QBlW0JzvBkxmSQbbFtX99Td-YKzSHwgmLQLxZYfF5jODbFs7aOkKPjnTkjQPI7NYxIh7-o9vTuHfnsNJtFuLyfUcBbdZMenAbIh3pZcj2CXAy7uW1OnmVHD6ULBk596p4iwwqWN5NK5AXCHDuNT6jdr-It52Ivs75hI28TmWJ3KdZtmhpPIc5NUpbfFnUaria72zEqqDzFuJCRt_BkdOo9M%3D%7C%7Cu8A6SM53vAf5-nKB4Fp8suHWkamTqseX%7C5bh_8NJlDH1f9jlfKAddkUkwFK7-cjA5%7Cd9vPLM1tRn-WLhCjY8-_mw%3D%3D%7CzYpLL9MKypogx1gH5yThrZzSC5RFNTMO%7Ca0AmFUYXmD63GXapyWrnjzR30Hs9UAzXaDZkSrjRyqxQpEFg1dChoxt-aXsb7Q9P5vERxjVdGLo%3D%7CcPcb3VhU0BVjXgWFWEAzinttU1oq1ouO%7CYN6Mu-ZPh1-670HXWup3cHvI5mlQYFWHScbHw_-MvClaEWSrNRJfS44jyrkYPwBfN3buy2cbcCoU9GuG_BRCtDC5gk-5MxvEOw39pFij1YIOrAX64C1xugH92zBPJYutVmoIfQ7ROF4KOIfkW0j2Q1ROOj322aRSiAwAw5YFPITcbIl1o8-Zt7n5S2UVyKIdnvlnYVpCANJ2WPLhG1C3DClOXqNkKQC217frmMXC_RsGrJB1JFej6gkIDVbcUtqgBzroc1-akQLZcTB8yT7gyr7zPs0FF3in0aqkNqpuOlC5bNnU-xihJ7m-q_FrhrMlZwxHdXc0aJn5u5n3I3ByLIlrwiHxD2KAp1gwkt4nDw7-x0LCUWU02hiE7_b8c0S0lyu3wTLamM2kjkLkLbW02D2nmEypq7C3D_MD6R2Ld1Mq69b-uqcfIrc4c6dPwZErhhZsLeEFKNSZXMbiMORJ5sDzjLwNf27jCBbr9IXC6IJU_op_4C_ZXPw1Y4oh_jTfQwb0vsk0VzrW5soplEUTNdTJ8f3uyutIw7_xL8cWtbuIzVIW-lWDUUutPCqTcT4TggIJ-1iYMB7Ua2iF75ZKkkqq5yQuLxFwIgd-NumYlSf5H7pIgpdOswrPgmxUrbKl4vms0NOSV5qUWNDOshQ7tKvfuMA8uvVMHbZ5AQMT5Bgmwar8mJufQjr9gMCKLHOfUOOaczZK2YDnk8TcJeC78iGw3Taquj-C70TkosF3P0DJck-IpHUMncUdY4Jgy4EWR4X8tx_vEuUtDI8VDxjcTx-4Ic0X5KIt3mSugEeb2RLnsx213VF27AgZVpfDgy2Jy6pUhtyahmhuAUCYyGlIKNUsmWSkYVzM27eE9XnHc830y0M3_S4OZrF1Jed0LRNU1XIbhjD50sWQlJBm60nUWDtAGy8CGWgL07tYql6HlIfRWJ6UkgSffcUj8YxioG4WAWys-Nnxz7sD2S0gtOSktPaIGz4_uNqpX3hPpZGw21Ys8I65Zm6Lso_q5eBBvHk5%7C&subBdr=134&bdrid=460&bqs=6&bd=-5%231152%232048&ypl=5ON%3ANff%7CGxNUJ7VO4z7875%3Aiiii%7CGxNUJ7I1YJ4z7875%3ApJ1eJL%7CQEx%3AXuWX~%7CyE8O%3A&lgpl=BjQ7E%3A9%7CeQ7L8O%3AHf9FX9fuuAFhihAW%7CGO171%3AJLEYv9.9f~myJLEYv9.9f~OQOeLvW99.hu~J-MQvf~QQOeLvHiX.uH~x8OvuW5%2FrXZO5cENVG4K3%3DROZ~jMG8OOJLM8OvHF9~NejfLMGvh.Xf~G7OvhFhXiiFAHfuuhHWFXuWAiiHhWiifiHiHWAuuFWffFWXiWW9hXHiAHFHfXHF99hifHWHFuufFihhuHWF99AHhAif9huFhiuiXXAFuuiFXh9iFhHXuuhAH9hhuh9HFii9hFiFfHuX9fXAhHXFiAuifhWHiufAfAuf9uWFXfhhHH~jMQ7MQNv9.AA~myOfEMGv9.iX~-YjMG8Ov9.9ui~Q7OvAXfiuHFWWf~LEQMGvuH.WX~OQeLvWuH.FH~j1Q7v~%3DVvAFHh~8EvAdc%3D-%20~1GYvu~jM%20Q7QvF~%20GNvu~GO7vuhhhFHWFuu~e8QMGvfWA.h~8QDJkv9~jMuMLzMQ7vF~G8Ov9.9f~LGYM8Ovu~O1LeLvFfX.fW~ejfLMGvH.9X~NGOEv9.9uW~QOvu~875EJM8Ovuh~875EJMmeJLL8OJvKrt~QJjjJLM71yM8OvAXfiuHFWWf~QxEEj5M71yM8OvAXfiuHFWWf~OJ7JN7JOM71yM8Ov~NMj1zyvJz~e8JB1G8j875v9.Au~EmQvA~1NM75EJvu~1OGjUvAXfiuHFWWf~1YEvu~N1LL8JLVOv9~myG8Ov9.9ui999~GkjLv9.9u9~Qx8Ov%3DK4b469EIQ9QZVbO5gayKC3_pL4~O7NvJ1Q7MQN~8QMmL7Gvu~OYYMJLEYvk1jQJ~OYYv1EJ-~GOEN1EOv9~O1jyvOzMuMeAAM1GmeJM%209X~QmGEv~-8OvKrtoExGou9XF9AHWfuFHFfiF~w7Yjvu~OYYMOfWv9o9~ELJO8N7JOMBLv9.99~ONx7vX~OmyGv9ou~OJLEv9.9ui999~O1jyvOzMuMeAAM1GmeJM%209X~JNEMxQJOvGJjmBM%209X~JNEMeJLvOzMuMeAA~JNEME9Xv9.9f~JNEMEu9v9.9f~JNEMEuXv9.9f~JNEMEf9v9.9f~JNEMEfXv9.9f~JNEMEA9v9.9f~JNEMEAXv9.9f~JNEMEH9v9.9f~JNEMEHXv9.9f~JNEMEX9v9.9f~JNEMEXXv9.9f~JNEMEF9v9.9f~JNEMEFXv9.9f~JNEMEh9v9.9f~JNEMEhXv9.9f~JNEMEW9v9.9f~JNEMEWXv9.9f~JNEMEi9v9.9f~JNEMEiXv9.9f~JNEMEiiv9.9f~OYYMQkYvEkOMuhMu~eGLv1YMLmBMQW~OYYMOAWv9~~8GNvu~zQlvu~7yQvAAF-fW9~7Y-vfiF~Y-GU7v9~Y-wYQvHW~Y-wYJv9~kExLJ%20vu%7CQNQeJL%3AAuXA%7Cw8Yyjy%3AC909oa9C9ob9%7CN1NwJMYJ71O171%3A%7B%22UGG%22%23*k1jQJ%7D%7CU1Nm8z7mQQ%3A7LxJ%7CNkxO%3AfH9iuF%7CmE7mx7%3A9%7C5OQEL%3Au%7CjfQwjO%3Au%7C1UN8E%3AuWu.Fu.fHF.fi%7CmLJ%20k%3AmzJ%7CmLJQk%3AmzJ%7CmNw%3A9%7CLJzQ8lJ%3AAAFMfW9%7CQNLMw%3AuuXf%7CQNLMB%3Af9HW%7CLJQOzef%3AuX%7CNmjMQNw%3Aj%7CJN7%3AHy%7CGJ%3A9%7CQQYNLMj1L%3Af&ure=1&kwd_ofl=0
+                          - listitem [ref=f20e17]:
+                            - generic [ref=f20e18]:
+                              - generic [ref=f20e19]: "2."
+                              - generic [ref=f20e20]: ❯
+                              - table [ref=f20e21]:
+                                - rowgroup [ref=f20e22]:
+                                  - row "💰 Sign in to Your Account" [ref=f20e23]:
+                                    - cell "💰 Sign in to Your Account" [ref=f20e24]:
+                                      - link "💰 Sign in to Your Account" [ref=f20e26] [cursor=pointer]:
+                                        - /url: https://similarsearch.net/search.cfm?ule=5950&&lgplp=jf75EJ%3ABJ1eJL&prvep=g4ztEd5Gptti639Yk9qpGA%3D%3D&ktr=1&vi=1777648611795727952&cq=RWsBdWBd5vd6v3NdpJJv3B5&vsid=4206502113679738&sc=CODC&oksu=224&prid=8PRVCXX19&cid=8CU54N5CK&pid=8PO610UU7&crid=272537869&https=1&rms=1777648612&size=336x280&ksu=224&ugd=4&tsid=7&asn=10620&radepth=0&kwep=JaPG%26JaW4PzGGFAt%26JgNPb.ZFGHbb%26Q4U5PEtF%26U%2FJPtTAAA1QtbAz1AbJ4A144zz%2F4QZA4HtF4.4G9%26U%2FJGPJvB5fB5%25FIz%25TeJaW4oQC%25FIGFGZt%25TeJaW4o9fNg%25FIzFbTb%25Te9U5%25FIU1aUW%25TeUUN%25FIz%25Te1Ug%25FIz%25TeQ9%25FIz%25TeBJU%2FoV5%25FIB1%25TeJ%2FJ%25FIx1s3f%2BvN%2BpV%2FWs3v39%2BjfqivN49%25TeJ%2F9B%25FIh8nej-I%25TeJ%2FN%25FIWJ%25Fpb%25H-mJW%25FpzF%25H-N%25FpnmfNaq%2Bm1s3f%25G_1V%2FWs3v39%25Fh%2Ba1JU9%2B9gfJWQWJ%2BJvB5fY5%2BvN%2BWB5fB5.%25TeU39%25FIb.HzZH%25TeU3J9%25FIb.FTZz%25TeUJ3J9%25FIb.HATE%25TeUJ3J9G%25FIb.HATE%25TeU99U9%25FIH.bbbb%25TeNJW4%25FIzGGFAt%25TeJagN%25FIb.ZFGHbb%25TeJaama%25FIG%25TevU5%25FIEtF%25Te%2F4U5%25FIEtF%25TefVo3%25FI%25_b%25t_%25tG%25hb%25Te14mo1ssoNg9oAbbbbbbbb%25FIL1L%25Te14mo1ssoJaWJU9oAbbbbbbbb%25FIb.bbb%25Te14mo1ssoNg9oAbbbbbbbbo1m%25FIz%25Te14mo1ssoNg9oAbbbbbbbboama%25FIb.bbb%25Te14mo1ssoNg9omGoAbbbbbbbb%25FIL1L%25Te14mo1ssoJaWJU9omGoAbbbbbbbb%25FIb.bbb%25Te14mo1ssoNg9omGoAbbbbbbbbo1m%25FIz%25Te14mo1ssoNg9omGoAbbbbbbbboama%25FIb.bbb%25Teg9%25FIb.tzZ%25Teg9oW4%25FIb%26UJP_WB1BJf%2B%25F-%2Bh1BUWBs%26UJW4PHbbHFA%26UWPzHTtZGZZt%26UasPfB%26UV%2FP8r-3lIpi%26UV4PB3aa%26UVQP3U9%25FIb.HzZH%26UgPG%26U5PEtF%26U54PzGzFzAzGFAEttZTGZTTZtbZbbFZZbA%26Ng9+NmPzG%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bzHE%25TI%25Te%25Eb%25TeZz%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bbbZ%25TI%25Te%25Eb%25TeHF%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bTGE%25TI%265k%2FaUPz%25Tez&oscar=1&tsce=L1216-S1216&ssld=%7B%22QQNN%22%3A%22%3Da%22%2C%22QQN75%22%3A%22Rmym71%22%2C%22QQ8E%22%3A%22uWu.Fu.fHF.9%22%2C%22QQQN%22%3A%22%3Daor%3D%22%2C%22QQl8E%22%3A%22uu9WHu%22%7D&mprpslog=undefined&acid=8bda8b1aebefb8a6573ff45227972f0e&verid=3111299&tsrc=en_adtag&sbdrId=134&kafm_ull_cache=00&hvsid=00001777648611627030407367685723&vgd_ecrid=1700090001091500336028000040400&vgd_matchstr=CommercialUrlOn%7Chr%3D0%7Cdlg%3Den%7Chlid%3D2002%7Cclg%3Den%7Cbcat%3D16e%2Cjo%7Ccsh%3D1&vgd_ifrmode=14&&fp=VFSvoM2-ZwX3sbEiFh13VpEko_i4UVPwBD6cGUO9-tgqp0Nb5fU7_sVKB5Xrk_2Y6Btouhz8nI-B3v8TjVHmT79nCJmnlU6Bwih5AftTu5dAKLbQqGReQySkPUeiEzmPwCFCErrH0b7v37cKA00dtcZaP2UsXApg&cme=vtFYOCDBF-FtjowBHMVCLKCz4pA2ywEzDnSOg388bDdV0CUwu869jwTMtpYpQKxRdz__REoihxg_2M7-6lpglh-HnVDAQR-lX9YUahXnnkGL5Wo66bg-sGIoLTf4jjtCfZa_NRRiq05TJQo22wN6QBlW0JzvBkxmSQbbFtX99Td-YKzSHwgmLQLxZYfF5jODbFs7aOkKPjnTkjQPI7NYxIh7-o9vTuHfnsNJtFuLyfUcBbdZMenAbIh3pZcj2CXAy7uW1OnmVHD6ULBk596p4iwwqWN5NK5AXCHDuNT6jdr-It52Ivs75hI28TmWJ3KdZtmhpPIc5NUpbfFnUaria72zEqqDzFuJCRt_BkdOo9M%3D%7C%7Cu8A6SM53vAf5-nKB4Fp8suHWkamTqseX%7C5bh_8NJlDH1f9jlfKAddkUkwFK7-cjA5%7Cd9vPLM1tRn-WLhCjY8-_mw%3D%3D%7CzYpLL9MKypogx1gH5yThrZzSC5RFNTMO%7Ca0AmFUYXmD63GXapyWrnjzR30Hs9UAzXaDZkSrjRyqxQpEFg1dChoxt-aXsb7Q9P5vERxjVdGLo%3D%7CcPcb3VhU0BVjXgWFWEAzinttU1oq1ouO%7CYN6Mu-ZPh1-670HXWup3cHvI5mlQYFWHScbHw_-MvClaEWSrNRJfS44jyrkYPwBfN3buy2cbcCoU9GuG_BRCtDC5gk-5MxvEOw39pFij1YIOrAX64C1xugH92zBPJYutVmoIfQ7ROF4KOIfkW0j2Q1ROOj322aRSiAwAw5YFPITcbIl1o8-Zt7n5S2UVyKIdnvlnYVpCANJ2WPLhG1C3DClOXqNkKQC217frmMXC_RsGrJB1JFej6gkIDVbcUtqgBzroc1-akQLZcTB8yT7gyr7zPs0FF3in0aqkNqpuOlC5bNnU-xihJ7m-q_FrhrMlZwxHdXc0aJn5u5n3I3ByLIlrwiHxD2KAp1gwkt4nDw7-x0LCUWU02hiE7_b8c0S0lyu3wTLamM2kjkLkLbW02D2nmEypq7C3D_MD6R2Ld1Mq69b-uqcfIrc4c6dPwZErhhZsLeEFKNSZXMbiMORJ5sDzjLwNf27jCBbr9IXC6IJU_op_4C_ZXPw1Y4oh_jTfQwb0vsk0VzrW5soplEUTNdTJ8f3uyutIw7_xL8cWtbuIzVIW-lWDUUutPCqTcT4TggIJ-1iYMB7Ua2iF75ZKkkqq5yQuLxFwIgd-NumYlSf5H7pIgpdOswrPgmxUrbKl4vms0NOSV5qUWNDOshQ7tKvfuMA8uvVMHbZ5AQMT5Bgmwar8mJufQjr9gMCKLHOfUOOaczZK2YDnk8TcJeC78iGw3Taquj-C70TkosF3P0DJck-IpHUMncUdY4Jgy4EWR4X8tx_vEuUtDI8VDxjcTx-4Ic0X5KIt3mSugEeb2RLnsx213VF27AgZVpfDgy2Jy6pUhtyahmhuAUCYyGlIKNUsmWSkYVzM27eE9XnHc830y0M3_S4OZrF1Jed0LRNU1XIbhjD50sWQlJBm60nUWDtAGy8CGWgL07tYql6HlIfRWJ6UkgSffcUj8YxioG4WAWys-Nnxz7sD2S0gtOSktPaIGz4_uNqpX3hPpZGw21Ys8I65Zm6Lso_q5eBBvHk5%7C&subBdr=134&bdrid=460&bqs=6&bd=-5%231152%232048&ypl=5ON%3ANff%7CGxNUJ7VO4z7875%3Aiiii%7CGxNUJ7I1YJ4z7875%3ApJ1eJL%7CQEx%3AXuWX~%7CyE8O%3A&lgpl=BjQ7E%3A9%7CeQ7L8O%3AHf9FX9fuuAFhihAW%7CGO171%3AJLEYv9.9f~myJLEYv9.9f~OQOeLvW99.hu~J-MQvf~QQOeLvHiX.uH~x8OvuW5%2FrXZO5cENVG4K3%3DROZ~jMG8OOJLM8OvHF9~NejfLMGvh.Xf~G7OvhFhXiiFAHfuuhHWFXuWAiiHhWiifiHiHWAuuFWffFWXiWW9hXHiAHFHfXHF99hifHWHFuufFihhuHWF99AHhAif9huFhiuiXXAFuuiFXh9iFhHXuuhAH9hhuh9HFii9hFiFfHuX9fXAhHXFiAuifhWHiufAfAuf9uWFXfhhHH~jMQ7MQNv9.AA~myOfEMGv9.iX~-YjMG8Ov9.9ui~Q7OvAXfiuHFWWf~LEQMGvuH.WX~OQeLvWuH.FH~j1Q7v~%3DVvAFHh~8EvAdc%3D-%20~1GYvu~jM%20Q7QvF~%20GNvu~GO7vuhhhFHWFuu~e8QMGvfWA.h~8QDJkv9~jMuMLzMQ7vF~G8Ov9.9f~LGYM8Ovu~O1LeLvFfX.fW~ejfLMGvH.9X~NGOEv9.9uW~QOvu~875EJM8Ovuh~875EJMmeJLL8OJvKrt~QJjjJLM71yM8OvAXfiuHFWWf~QxEEj5M71yM8OvAXfiuHFWWf~OJ7JN7JOM71yM8Ov~NMj1zyvJz~e8JB1G8j875v9.Au~EmQvA~1NM75EJvu~1OGjUvAXfiuHFWWf~1YEvu~N1LL8JLVOv9~myG8Ov9.9ui999~GkjLv9.9u9~Qx8Ov%3DK4b469EIQ9QZVbO5gayKC3_pL4~O7NvJ1Q7MQN~8QMmL7Gvu~OYYMJLEYvk1jQJ~OYYv1EJ-~GOEN1EOv9~O1jyvOzMuMeAAM1GmeJM%209X~QmGEv~-8OvKrtoExGou9XF9AHWfuFHFfiF~w7Yjvu~OYYMOfWv9o9~ELJO8N7JOMBLv9.99~ONx7vX~OmyGv9ou~OJLEv9.9ui999~O1jyvOzMuMeAAM1GmeJM%209X~JNEMxQJOvGJjmBM%209X~JNEMeJLvOzMuMeAA~JNEME9Xv9.9f~JNEMEu9v9.9f~JNEMEuXv9.9f~JNEMEf9v9.9f~JNEMEfXv9.9f~JNEMEA9v9.9f~JNEMEAXv9.9f~JNEMEH9v9.9f~JNEMEHXv9.9f~JNEMEX9v9.9f~JNEMEXXv9.9f~JNEMEF9v9.9f~JNEMEFXv9.9f~JNEMEh9v9.9f~JNEMEhXv9.9f~JNEMEW9v9.9f~JNEMEWXv9.9f~JNEMEi9v9.9f~JNEMEiXv9.9f~JNEMEiiv9.9f~OYYMQkYvEkOMuhMu~eGLv1YMLmBMQW~OYYMOAWv9~~8GNvu~zQlvu~7yQvAAF-fW9~7Y-vfiF~Y-GU7v9~Y-wYQvHW~Y-wYJv9~kExLJ%20vu%7CQNQeJL%3AAuXA%7Cw8Yyjy%3AC909oa9C9ob9%7CN1NwJMYJ71O171%3A%7B%22UGG%22%23*k1jQJ%7D%7CU1Nm8z7mQQ%3A7LxJ%7CNkxO%3AfH9iuF%7CmE7mx7%3A9%7C5OQEL%3Au%7CjfQwjO%3Au%7C1UN8E%3AuWu.Fu.fHF.fi%7CmLJ%20k%3AmzJ%7CmLJQk%3AmzJ%7CmNw%3A9%7CLJzQ8lJ%3AAAFMfW9%7CQNLMw%3AuuXf%7CQNLMB%3Af9HW%7CLJQOzef%3AuX%7CNmjMQNw%3Aj%7CJN7%3AHy%7CGJ%3A9%7CQQYNLMj1L%3Af&ure=1&kwd_ofl=0
+                            - link [ref=f20e27] [cursor=pointer]:
+                              - /url: https://similarsearch.net/search.cfm?ule=5950&&lgplp=jf75EJ%3ABJ1eJL&prvep=g4ztEd5Gptti639Yk9qpGA%3D%3D&ktr=1&vi=1777648611795727952&cq=RWsBdWBd5vd6v3NdpJJv3B5&vsid=4206502113679738&sc=CODC&oksu=224&prid=8PRVCXX19&cid=8CU54N5CK&pid=8PO610UU7&crid=272537869&https=1&rms=1777648612&size=336x280&ksu=224&ugd=4&tsid=7&asn=10620&radepth=0&kwep=JaPG%26JaW4PzGGFAt%26JgNPb.ZFGHbb%26Q4U5PEtF%26U%2FJPtTAAA1QtbAz1AbJ4A144zz%2F4QZA4HtF4.4G9%26U%2FJGPJvB5fB5%25FIz%25TeJaW4oQC%25FIGFGZt%25TeJaW4o9fNg%25FIzFbTb%25Te9U5%25FIU1aUW%25TeUUN%25FIz%25Te1Ug%25FIz%25TeQ9%25FIz%25TeBJU%2FoV5%25FIB1%25TeJ%2FJ%25FIx1s3f%2BvN%2BpV%2FWs3v39%2BjfqivN49%25TeJ%2F9B%25FIh8nej-I%25TeJ%2FN%25FIWJ%25Fpb%25H-mJW%25FpzF%25H-N%25FpnmfNaq%2Bm1s3f%25G_1V%2FWs3v39%25Fh%2Ba1JU9%2B9gfJWQWJ%2BJvB5fY5%2BvN%2BWB5fB5.%25TeU39%25FIb.HzZH%25TeU3J9%25FIb.FTZz%25TeUJ3J9%25FIb.HATE%25TeUJ3J9G%25FIb.HATE%25TeU99U9%25FIH.bbbb%25TeNJW4%25FIzGGFAt%25TeJagN%25FIb.ZFGHbb%25TeJaama%25FIG%25TevU5%25FIEtF%25Te%2F4U5%25FIEtF%25TefVo3%25FI%25_b%25t_%25tG%25hb%25Te14mo1ssoNg9oAbbbbbbbb%25FIL1L%25Te14mo1ssoJaWJU9oAbbbbbbbb%25FIb.bbb%25Te14mo1ssoNg9oAbbbbbbbbo1m%25FIz%25Te14mo1ssoNg9oAbbbbbbbboama%25FIb.bbb%25Te14mo1ssoNg9omGoAbbbbbbbb%25FIL1L%25Te14mo1ssoJaWJU9omGoAbbbbbbbb%25FIb.bbb%25Te14mo1ssoNg9omGoAbbbbbbbbo1m%25FIz%25Te14mo1ssoNg9omGoAbbbbbbbboama%25FIb.bbb%25Teg9%25FIb.tzZ%25Teg9oW4%25FIb%26UJP_WB1BJf%2B%25F-%2Bh1BUWBs%26UJW4PHbbHFA%26UWPzHTtZGZZt%26UasPfB%26UV%2FP8r-3lIpi%26UV4PB3aa%26UVQP3U9%25FIb.HzZH%26UgPG%26U5PEtF%26U54PzGzFzAzGFAEttZTGZTTZtbZbbFZZbA%26Ng9+NmPzG%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bzHE%25TI%25Te%25Eb%25TeZz%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bbbZ%25TI%25Te%25Eb%25TeHF%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bTGE%25TI%265k%2FaUPz%25Tez&oscar=1&tsce=L1216-S1216&ssld=%7B%22QQNN%22%3A%22%3Da%22%2C%22QQN75%22%3A%22Rmym71%22%2C%22QQ8E%22%3A%22uWu.Fu.fHF.9%22%2C%22QQQN%22%3A%22%3Daor%3D%22%2C%22QQl8E%22%3A%22uu9WHu%22%7D&mprpslog=undefined&acid=8bda8b1aebefb8a6573ff45227972f0e&verid=3111299&tsrc=en_adtag&sbdrId=134&kafm_ull_cache=00&hvsid=00001777648611627030407367685723&vgd_ecrid=1700090001091500336028000040400&vgd_matchstr=CommercialUrlOn%7Chr%3D0%7Cdlg%3Den%7Chlid%3D2002%7Cclg%3Den%7Cbcat%3D16e%2Cjo%7Ccsh%3D1&vgd_ifrmode=14&&fp=VFSvoM2-ZwX3sbEiFh13VpEko_i4UVPwBD6cGUO9-tgqp0Nb5fU7_sVKB5Xrk_2Y6Btouhz8nI-B3v8TjVHmT79nCJmnlU6Bwih5AftTu5dAKLbQqGReQySkPUeiEzmPwCFCErrH0b7v37cKA00dtcZaP2UsXApg&cme=vtFYOCDBF-FtjowBHMVCLKCz4pA2ywEzDnSOg388bDdV0CUwu869jwTMtpYpQKxRdz__REoihxg_2M7-6lpglh-HnVDAQR-lX9YUahXnnkGL5Wo66bg-sGIoLTf4jjtCfZa_NRRiq05TJQo22wN6QBlW0JzvBkxmSQbbFtX99Td-YKzSHwgmLQLxZYfF5jODbFs7aOkKPjnTkjQPI7NYxIh7-o9vTuHfnsNJtFuLyfUcBbdZMenAbIh3pZcj2CXAy7uW1OnmVHD6ULBk596p4iwwqWN5NK5AXCHDuNT6jdr-It52Ivs75hI28TmWJ3KdZtmhpPIc5NUpbfFnUaria72zEqqDzFuJCRt_BkdOo9M%3D%7C%7Cu8A6SM53vAf5-nKB4Fp8suHWkamTqseX%7C5bh_8NJlDH1f9jlfKAddkUkwFK7-cjA5%7Cd9vPLM1tRn-WLhCjY8-_mw%3D%3D%7CzYpLL9MKypogx1gH5yThrZzSC5RFNTMO%7Ca0AmFUYXmD63GXapyWrnjzR30Hs9UAzXaDZkSrjRyqxQpEFg1dChoxt-aXsb7Q9P5vERxjVdGLo%3D%7CcPcb3VhU0BVjXgWFWEAzinttU1oq1ouO%7CYN6Mu-ZPh1-670HXWup3cHvI5mlQYFWHScbHw_-MvClaEWSrNRJfS44jyrkYPwBfN3buy2cbcCoU9GuG_BRCtDC5gk-5MxvEOw39pFij1YIOrAX64C1xugH92zBPJYutVmoIfQ7ROF4KOIfkW0j2Q1ROOj322aRSiAwAw5YFPITcbIl1o8-Zt7n5S2UVyKIdnvlnYVpCANJ2WPLhG1C3DClOXqNkKQC217frmMXC_RsGrJB1JFej6gkIDVbcUtqgBzroc1-akQLZcTB8yT7gyr7zPs0FF3in0aqkNqpuOlC5bNnU-xihJ7m-q_FrhrMlZwxHdXc0aJn5u5n3I3ByLIlrwiHxD2KAp1gwkt4nDw7-x0LCUWU02hiE7_b8c0S0lyu3wTLamM2kjkLkLbW02D2nmEypq7C3D_MD6R2Ld1Mq69b-uqcfIrc4c6dPwZErhhZsLeEFKNSZXMbiMORJ5sDzjLwNf27jCBbr9IXC6IJU_op_4C_ZXPw1Y4oh_jTfQwb0vsk0VzrW5soplEUTNdTJ8f3uyutIw7_xL8cWtbuIzVIW-lWDUUutPCqTcT4TggIJ-1iYMB7Ua2iF75ZKkkqq5yQuLxFwIgd-NumYlSf5H7pIgpdOswrPgmxUrbKl4vms0NOSV5qUWNDOshQ7tKvfuMA8uvVMHbZ5AQMT5Bgmwar8mJufQjr9gMCKLHOfUOOaczZK2YDnk8TcJeC78iGw3Taquj-C70TkosF3P0DJck-IpHUMncUdY4Jgy4EWR4X8tx_vEuUtDI8VDxjcTx-4Ic0X5KIt3mSugEeb2RLnsx213VF27AgZVpfDgy2Jy6pUhtyahmhuAUCYyGlIKNUsmWSkYVzM27eE9XnHc830y0M3_S4OZrF1Jed0LRNU1XIbhjD50sWQlJBm60nUWDtAGy8CGWgL07tYql6HlIfRWJ6UkgSffcUj8YxioG4WAWys-Nnxz7sD2S0gtOSktPaIGz4_uNqpX3hPpZGw21Ys8I65Zm6Lso_q5eBBvHk5%7C&subBdr=134&bdrid=460&bqs=6&bd=-5%231152%232048&ypl=5ON%3ANff%7CGxNUJ7VO4z7875%3Aiiii%7CGxNUJ7I1YJ4z7875%3ApJ1eJL%7CQEx%3AXuWX~%7CyE8O%3A&lgpl=BjQ7E%3A9%7CeQ7L8O%3AHf9FX9fuuAFhihAW%7CGO171%3AJLEYv9.9f~myJLEYv9.9f~OQOeLvW99.hu~J-MQvf~QQOeLvHiX.uH~x8OvuW5%2FrXZO5cENVG4K3%3DROZ~jMG8OOJLM8OvHF9~NejfLMGvh.Xf~G7OvhFhXiiFAHfuuhHWFXuWAiiHhWiifiHiHWAuuFWffFWXiWW9hXHiAHFHfXHF99hifHWHFuufFihhuHWF99AHhAif9huFhiuiXXAFuuiFXh9iFhHXuuhAH9hhuh9HFii9hFiFfHuX9fXAhHXFiAuifhWHiufAfAuf9uWFXfhhHH~jMQ7MQNv9.AA~myOfEMGv9.iX~-YjMG8Ov9.9ui~Q7OvAXfiuHFWWf~LEQMGvuH.WX~OQeLvWuH.FH~j1Q7v~%3DVvAFHh~8EvAdc%3D-%20~1GYvu~jM%20Q7QvF~%20GNvu~GO7vuhhhFHWFuu~e8QMGvfWA.h~8QDJkv9~jMuMLzMQ7vF~G8Ov9.9f~LGYM8Ovu~O1LeLvFfX.fW~ejfLMGvH.9X~NGOEv9.9uW~QOvu~875EJM8Ovuh~875EJMmeJLL8OJvKrt~QJjjJLM71yM8OvAXfiuHFWWf~QxEEj5M71yM8OvAXfiuHFWWf~OJ7JN7JOM71yM8Ov~NMj1zyvJz~e8JB1G8j875v9.Au~EmQvA~1NM75EJvu~1OGjUvAXfiuHFWWf~1YEvu~N1LL8JLVOv9~myG8Ov9.9ui999~GkjLv9.9u9~Qx8Ov%3DK4b469EIQ9QZVbO5gayKC3_pL4~O7NvJ1Q7MQN~8QMmL7Gvu~OYYMJLEYvk1jQJ~OYYv1EJ-~GOEN1EOv9~O1jyvOzMuMeAAM1GmeJM%209X~QmGEv~-8OvKrtoExGou9XF9AHWfuFHFfiF~w7Yjvu~OYYMOfWv9o9~ELJO8N7JOMBLv9.99~ONx7vX~OmyGv9ou~OJLEv9.9ui999~O1jyvOzMuMeAAM1GmeJM%209X~JNEMxQJOvGJjmBM%209X~JNEMeJLvOzMuMeAA~JNEME9Xv9.9f~JNEMEu9v9.9f~JNEMEuXv9.9f~JNEMEf9v9.9f~JNEMEfXv9.9f~JNEMEA9v9.9f~JNEMEAXv9.9f~JNEMEH9v9.9f~JNEMEHXv9.9f~JNEMEX9v9.9f~JNEMEXXv9.9f~JNEMEF9v9.9f~JNEMEFXv9.9f~JNEMEh9v9.9f~JNEMEhXv9.9f~JNEMEW9v9.9f~JNEMEWXv9.9f~JNEMEi9v9.9f~JNEMEiXv9.9f~JNEMEiiv9.9f~OYYMQkYvEkOMuhMu~eGLv1YMLmBMQW~OYYMOAWv9~~8GNvu~zQlvu~7yQvAAF-fW9~7Y-vfiF~Y-GU7v9~Y-wYQvHW~Y-wYJv9~kExLJ%20vu%7CQNQeJL%3AAuXA%7Cw8Yyjy%3AC909oa9C9ob9%7CN1NwJMYJ71O171%3A%7B%22UGG%22%23*k1jQJ%7D%7CU1Nm8z7mQQ%3A7LxJ%7CNkxO%3AfH9iuF%7CmE7mx7%3A9%7C5OQEL%3Au%7CjfQwjO%3Au%7C1UN8E%3AuWu.Fu.fHF.fi%7CmLJ%20k%3AmzJ%7CmLJQk%3AmzJ%7CmNw%3A9%7CLJzQ8lJ%3AAAFMfW9%7CQNLMw%3AuuXf%7CQNLMB%3Af9HW%7CLJQOzef%3AuX%7CNmjMQNw%3Aj%7CJN7%3AHy%7CGJ%3A9%7CQQYNLMj1L%3Af&ure=1&kwd_ofl=0
+                          - listitem [ref=f20e28]:
+                            - generic [ref=f20e29]:
+                              - generic [ref=f20e30]: "3."
+                              - generic [ref=f20e31]: ❯
+                              - table [ref=f20e32]:
+                                - rowgroup [ref=f20e33]:
+                                  - row "🧠 Free IQ Test" [ref=f20e34]:
+                                    - cell "🧠 Free IQ Test" [ref=f20e35]:
+                                      - link "🧠 Free IQ Test" [ref=f20e37] [cursor=pointer]:
+                                        - /url: https://similarsearch.net/search.cfm?ule=5805&&lgplp=jf75EJ%3ABJ1eJL&prvep=g4ztEd5Gptti639Yk9qpGA%3D%3D&ktr=1&vi=1777648611795727952&cq=_NffdKwdrf95&vsid=4206502113679738&sc=CODC&oksu=224&prid=8PRVCXX19&cid=8CU54N5CK&pid=8PO610UU7&crid=272537869&https=1&rms=1777648612&size=336x280&ksu=224&ugd=4&tsid=7&asn=10620&radepth=0&kwep=JaPz%26JaW4PZFzEF%26JgNPz.bbbbbb%26Q4U5PEtF%26U%2FJPtTAAA1QtbAz1AbJ4A144zz%2F4QZA4HtF4.4G9%26U%2FJGPJvB5fB5%25FIz%25TeJaW4oQC%25FIzHAtH%25TeJaW4o9fNg%25FIzHAtH%25Te9U5%25FIU1aUW%25TeUUN%25FIE%25Te1Ug%25FIE%25TeQ9%25FIz%25TeBJU%2FoV5%25FIB1%25TeJ%2F9B%25FIp88nS-I%25TeU39%25FIb.EHET%25TeU3J9%25FIb.EGGA%25TeUJ3J9%25FIb.ZztE%25TeUJ3J9G%25FIb.ZztE%25TeU99U9%25FIH.bbbb%25TeNJW4%25FIZFzEF%25TeJagN%25FIz.bbbbbb%25TeJaama%25FIz%25TevU5%25FIEtF%25Te%2F4U5%25FIEtF%25TefVo3%25FI%25_b%25t_%25pT%25pb%25Te14mo1ssoNg9oAbbbbbbbb%25FIL1L%25Te14mo1ssoJaWJU9oAbbbbbbbb%25FIb.bbb%25Te14mo1ssoNg9oAbbbbbbbbo1m%25FIz%25Te14mo1ssoNg9oAbbbbbbbboama%25FIb.bbb%25Te14mo1ssoNg9omGoAbbbbbbbb%25FIL1L%25Te14mo1ssoJaWJU9omGoAbbbbbbbb%25FIb.bbb%25Te14mo1ssoNg9omGoAbbbbbbbbo1m%25FIz%25Te14mo1ssoNg9omGoAbbbbbbbboama%25FIb.bbb%25Teg9%25FIb.tzZ%25Teg9oW4%25FIb%26UJP+fvgaf%2B%25GZ%2BRvJWf5q%2B%25F-%2BRvJW1a%2BRJWfBJf9%2B%25F-%2B+9qJXvavsq%26UJW4PHbzzzt%26UWPzzHAZHZE%26UasPfB%26UV%2FP8r-3lIpi%26UV4PB3aa%26UVQP3U9%25FIb.EHET%26UgPF%26U5PEtF%26U54PAzTbEbEGHtGAFHbtAEGGHEtbGETZA%26Ng9+NmPZz%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bbbZ%25TI%25Te%25Eb%25TeHF%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bzEz%25TI%25Te%25Eb%25TezG%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bGFA%25TI%265k%2FaUPz%25Tez&oscar=1&tsce=L1216-S1216&ssld=%7B%22QQNN%22%3A%22%3Da%22%2C%22QQN75%22%3A%22Rmym71%22%2C%22QQ8E%22%3A%22uWu.Fu.fHF.9%22%2C%22QQQN%22%3A%22%3Daor%3D%22%2C%22QQl8E%22%3A%22uu9WHu%22%7D&mprpslog=undefined&acid=8bda8b1aebefb8a6573ff45227972f0e&verid=3111299&tsrc=en_adtag&sbdrId=134&kafm_ull_cache=00&hvsid=00001777648611627030407367685723&vgd_ecrid=1700090001091500336028000040400&vgd_matchstr=CommercialUrlOn%7Chr%3D0%7Cdlg%3Den%7Chlid%3D2002%7Cclg%3Den%7Cbcat%3D16e%2Cjo%7Ccsh%3D1&vgd_ifrmode=14&&fp=VFSvoM2-ZwX3sbEiFh13VpEko_i4UVPwBD6cGUO9-tgqp0Nb5fU7_sVKB5Xrk_2Y6Btouhz8nI-B3v8TjVHmT79nCJmnlU6Bwih5AftTu5dAKLbQqGReQySkPUeiEzmPwCFCErrH0b7v37cKA00dtcZaP2UsXApg&cme=vtFYOCDBF-FtjowBHMVCLKCz4pA2ywEzDnSOg388bDdV0CUwu869jwTMtpYpQKxRdz__REoihxg_2M7-6lpglh-HnVDAQR-lX9YUahXnnkGL5Wo66bg-sGIoLTf4jjtCfZa_NRRiq05TJQo22wN6QBlW0JzvBkxmSQbbFtX99Td-YKzSHwgmLQLxZYfF5jODbFs7aOkKPjnTkjQPI7NYxIh7-o9vTuHfnsNJtFuLyfUcBbdZMenAbIh3pZcj2CXAy7uW1OnmVHD6ULBk596p4iwwqWN5NK5AXCHDuNT6jdr-It52Ivs75hI28TmWJ3KdZtmhpPIc5NUpbfFnUaria72zEqqDzFuJCRt_BkdOo9M%3D%7C%7Cu8A6SM53vAf5-nKB4Fp8suHWkamTqseX%7C5bh_8NJlDH1f9jlfKAddkUkwFK7-cjA5%7Cd9vPLM1tRn-WLhCjY8-_mw%3D%3D%7CzYpLL9MKypogx1gH5yThrZzSC5RFNTMO%7Ca0AmFUYXmD63GXapyWrnjzR30Hs9UAzXaDZkSrjRyqxQpEFg1dChoxt-aXsb7Q9P5vERxjVdGLo%3D%7CcPcb3VhU0BVjXgWFWEAzinttU1oq1ouO%7CYN6Mu-ZPh1-670HXWup3cHvI5mlQYFWHScbHw_-MvClaEWSrNRJfS44jyrkYPwBfN3buy2cbcCoU9GuG_BRCtDC5gk-5MxvEOw39pFij1YIOrAX64C1xugH92zBPJYutVmoIfQ7ROF4KOIfkW0j2Q1ROOj322aRSiAwAw5YFPITcbIl1o8-Zt7n5S2UVyKIdnvlnYVpCANJ2WPLhG1C3DClOXqNkKQC217frmMXC_RsGrJB1JFej6gkIDVbcUtqgBzroc1-akQLZcTB8yT7gyr7zPs0FF3in0aqkNqpuOlC5bNnU-xihJ7m-q_FrhrMlZwxHdXc0aJn5u5n3I3ByLIlrwiHxD2KAp1gwkt4nDw7-x0LCUWU02hiE7_b8c0S0lyu3wTLamM2kjkLkLbW02D2nmEypq7C3D_MD6R2Ld1Mq69b-uqcfIrc4c6dPwZErhhZsLeEFKNSZXMbiMORJ5sDzjLwNf27jCBbr9IXC6IJU_op_4C_ZXPw1Y4oh_jTfQwb0vsk0VzrW5soplEUTNdTJ8f3uyutIw7_xL8cWtbuIzVIW-lWDUUutPCqTcT4TggIJ-1iYMB7Ua2iF75ZKkkqq5yQuLxFwIgd-NumYlSf5H7pIgpdOswrPgmxUrbKl4vms0NOSV5qUWNDOshQ7tKvfuMA8uvVMHbZ5AQMT5Bgmwar8mJufQjr9gMCKLHOfUOOaczZK2YDnk8TcJeC78iGw3Taquj-C70TkosF3P0DJck-IpHUMncUdY4Jgy4EWR4X8tx_vEuUtDI8VDxjcTx-4Ic0X5KIt3mSugEeb2RLnsx213VF27AgZVpfDgy2Jy6pUhtyahmhuAUCYyGlIKNUsmWSkYVzM27eE9XnHc830y0M3_S4OZrF1Jed0LRNU1XIbhjD50sWQlJBm60nUWDtAGy8CGWgL07tYql6HlIfRWJ6UkgSffcUj8YxioG4WAWys-Nnxz7sD2S0gtOSktPaIGz4_uNqpX3hPpZGw21Ys8I65Zm6Lso_q5eBBvHk5%7C&subBdr=134&bdrid=460&bqs=6&bd=-5%231152%232048&ypl=5ON%3ANff%7CGxNUJ7VO4z7875%3Aiiii%7CGxNUJ7I1YJ4z7875%3ApJ1eJL%7CQEx%3AXuWX~%7CyE8O%3A&lgpl=BjQ7E%3A9%7CeQ7L8O%3AHf9FX9fuuAFhihAW%7CGO171%3AJLEYv9.9f~myJLEYv9.9f~OQOeLvW99.hu~J-MQvf~QQOeLvHiX.uH~x8OvuW5%2FrXZO5cENVG4K3%3DROZ~jMG8OOJLM8OvHF9~NejfLMGvh.Xf~G7OvhFhXiiFAHfuuhHWFXuWAiiHhWiifiHiHWAuuFWffFWXiWW9hXHiAHFHfXHF99hifHWHFuufFihhuHWF99AHhAif9huFhiuiXXAFuuiFXh9iFhHXuuhAH9hhuh9HFii9hFiFfHuX9fXAhHXFiAuifhWHiufAfAuf9uWFXfhhHH~jMQ7MQNv9.AA~myOfEMGv9.iX~-YjMG8Ov9.9ui~Q7OvAXfiuHFWWf~LEQMGvuH.WX~OQeLvWuH.FH~j1Q7v~%3DVvAFHh~8EvAdc%3D-%20~1GYvu~jM%20Q7QvF~%20GNvu~GO7vuhhhFHWFuu~e8QMGvfWA.h~8QDJkv9~jMuMLzMQ7vF~G8Ov9.9f~LGYM8Ovu~O1LeLvFfX.fW~ejfLMGvH.9X~NGOEv9.9uW~QOvu~875EJM8Ovuh~875EJMmeJLL8OJvKrt~QJjjJLM71yM8OvAXfiuHFWWf~QxEEj5M71yM8OvAXfiuHFWWf~OJ7JN7JOM71yM8Ov~NMj1zyvJz~e8JB1G8j875v9.Au~EmQvA~1NM75EJvu~1OGjUvAXfiuHFWWf~1YEvu~N1LL8JLVOv9~myG8Ov9.9ui999~GkjLv9.9u9~Qx8Ov%3DK4b469EIQ9QZVbO5gayKC3_pL4~O7NvJ1Q7MQN~8QMmL7Gvu~OYYMJLEYvk1jQJ~OYYv1EJ-~GOEN1EOv9~O1jyvOzMuMeAAM1GmeJM%209X~QmGEv~-8OvKrtoExGou9XF9AHWfuFHFfiF~w7Yjvu~OYYMOfWv9o9~ELJO8N7JOMBLv9.99~ONx7vX~OmyGv9ou~OJLEv9.9ui999~O1jyvOzMuMeAAM1GmeJM%209X~JNEMxQJOvGJjmBM%209X~JNEMeJLvOzMuMeAA~JNEME9Xv9.9f~JNEMEu9v9.9f~JNEMEuXv9.9f~JNEMEf9v9.9f~JNEMEfXv9.9f~JNEMEA9v9.9f~JNEMEAXv9.9f~JNEMEH9v9.9f~JNEMEHXv9.9f~JNEMEX9v9.9f~JNEMEXXv9.9f~JNEMEF9v9.9f~JNEMEFXv9.9f~JNEMEh9v9.9f~JNEMEhXv9.9f~JNEMEW9v9.9f~JNEMEWXv9.9f~JNEMEi9v9.9f~JNEMEiXv9.9f~JNEMEiiv9.9f~OYYMQkYvEkOMuhMu~eGLv1YMLmBMQW~OYYMOAWv9~~8GNvu~zQlvu~7yQvAAF-fW9~7Y-vfiF~Y-GU7v9~Y-wYQvHW~Y-wYJv9~kExLJ%20vu%7CQNQeJL%3AAuXA%7Cw8Yyjy%3AC909oa9C9ob9%7CN1NwJMYJ71O171%3A%7B%22UGG%22%23*k1jQJ%7D%7CU1Nm8z7mQQ%3A7LxJ%7CNkxO%3AfH9iuF%7CmE7mx7%3A9%7C5OQEL%3Au%7CjfQwjO%3Au%7C1UN8E%3AuWu.Fu.fHF.fi%7CmLJ%20k%3AmzJ%7CmLJQk%3AmzJ%7CmNw%3A9%7CLJzQ8lJ%3AAAFMfW9%7CQNLMw%3AuuXf%7CQNLMB%3Af9HW%7CLJQOzef%3AuX%7CNmjMQNw%3Aj%7CJN7%3AHy%7CGJ%3A9%7CQQYNLMj1L%3Af&ure=1&kwd_ofl=0
+                            - link [ref=f20e38] [cursor=pointer]:
+                              - /url: https://similarsearch.net/search.cfm?ule=5805&&lgplp=jf75EJ%3ABJ1eJL&prvep=g4ztEd5Gptti639Yk9qpGA%3D%3D&ktr=1&vi=1777648611795727952&cq=_NffdKwdrf95&vsid=4206502113679738&sc=CODC&oksu=224&prid=8PRVCXX19&cid=8CU54N5CK&pid=8PO610UU7&crid=272537869&https=1&rms=1777648612&size=336x280&ksu=224&ugd=4&tsid=7&asn=10620&radepth=0&kwep=JaPz%26JaW4PZFzEF%26JgNPz.bbbbbb%26Q4U5PEtF%26U%2FJPtTAAA1QtbAz1AbJ4A144zz%2F4QZA4HtF4.4G9%26U%2FJGPJvB5fB5%25FIz%25TeJaW4oQC%25FIzHAtH%25TeJaW4o9fNg%25FIzHAtH%25Te9U5%25FIU1aUW%25TeUUN%25FIE%25Te1Ug%25FIE%25TeQ9%25FIz%25TeBJU%2FoV5%25FIB1%25TeJ%2F9B%25FIp88nS-I%25TeU39%25FIb.EHET%25TeU3J9%25FIb.EGGA%25TeUJ3J9%25FIb.ZztE%25TeUJ3J9G%25FIb.ZztE%25TeU99U9%25FIH.bbbb%25TeNJW4%25FIZFzEF%25TeJagN%25FIz.bbbbbb%25TeJaama%25FIz%25TevU5%25FIEtF%25Te%2F4U5%25FIEtF%25TefVo3%25FI%25_b%25t_%25pT%25pb%25Te14mo1ssoNg9oAbbbbbbbb%25FIL1L%25Te14mo1ssoJaWJU9oAbbbbbbbb%25FIb.bbb%25Te14mo1ssoNg9oAbbbbbbbbo1m%25FIz%25Te14mo1ssoNg9oAbbbbbbbboama%25FIb.bbb%25Te14mo1ssoNg9omGoAbbbbbbbb%25FIL1L%25Te14mo1ssoJaWJU9omGoAbbbbbbbb%25FIb.bbb%25Te14mo1ssoNg9omGoAbbbbbbbbo1m%25FIz%25Te14mo1ssoNg9omGoAbbbbbbbboama%25FIb.bbb%25Teg9%25FIb.tzZ%25Teg9oW4%25FIb%26UJP+fvgaf%2B%25GZ%2BRvJWf5q%2B%25F-%2BRvJW1a%2BRJWfBJf9%2B%25F-%2B+9qJXvavsq%26UJW4PHbzzzt%26UWPzzHAZHZE%26UasPfB%26UV%2FP8r-3lIpi%26UV4PB3aa%26UVQP3U9%25FIb.EHET%26UgPF%26U5PEtF%26U54PAzTbEbEGHtGAFHbtAEGGHEtbGETZA%26Ng9+NmPZz%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bbbZ%25TI%25Te%25Eb%25TeHF%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bzEz%25TI%25Te%25Eb%25TezG%25Te%25GF%25Te%25Th%25GGNg9%25GG%25Fpb.bGFA%25TI%265k%2FaUPz%25Tez&oscar=1&tsce=L1216-S1216&ssld=%7B%22QQNN%22%3A%22%3Da%22%2C%22QQN75%22%3A%22Rmym71%22%2C%22QQ8E%22%3A%22uWu.Fu.fHF.9%22%2C%22QQQN%22%3A%22%3Daor%3D%22%2C%22QQl8E%22%3A%22uu9WHu%22%7D&mprpslog=undefined&acid=8bda8b1aebefb8a6573ff45227972f0e&verid=3111299&tsrc=en_adtag&sbdrId=134&kafm_ull_cache=00&hvsid=00001777648611627030407367685723&vgd_ecrid=1700090001091500336028000040400&vgd_matchstr=CommercialUrlOn%7Chr%3D0%7Cdlg%3Den%7Chlid%3D2002%7Cclg%3Den%7Cbcat%3D16e%2Cjo%7Ccsh%3D1&vgd_ifrmode=14&&fp=VFSvoM2-ZwX3sbEiFh13VpEko_i4UVPwBD6cGUO9-tgqp0Nb5fU7_sVKB5Xrk_2Y6Btouhz8nI-B3v8TjVHmT79nCJmnlU6Bwih5AftTu5dAKLbQqGReQySkPUeiEzmPwCFCErrH0b7v37cKA00dtcZaP2UsXApg&cme=vtFYOCDBF-FtjowBHMVCLKCz4pA2ywEzDnSOg388bDdV0CUwu869jwTMtpYpQKxRdz__REoihxg_2M7-6lpglh-HnVDAQR-lX9YUahXnnkGL5Wo66bg-sGIoLTf4jjtCfZa_NRRiq05TJQo22wN6QBlW0JzvBkxmSQbbFtX99Td-YKzSHwgmLQLxZYfF5jODbFs7aOkKPjnTkjQPI7NYxIh7-o9vTuHfnsNJtFuLyfUcBbdZMenAbIh3pZcj2CXAy7uW1OnmVHD6ULBk596p4iwwqWN5NK5AXCHDuNT6jdr-It52Ivs75hI28TmWJ3KdZtmhpPIc5NUpbfFnUaria72zEqqDzFuJCRt_BkdOo9M%3D%7C%7Cu8A6SM53vAf5-nKB4Fp8suHWkamTqseX%7C5bh_8NJlDH1f9jlfKAddkUkwFK7-cjA5%7Cd9vPLM1tRn-WLhCjY8-_mw%3D%3D%7CzYpLL9MKypogx1gH5yThrZzSC5RFNTMO%7Ca0AmFUYXmD63GXapyWrnjzR30Hs9UAzXaDZkSrjRyqxQpEFg1dChoxt-aXsb7Q9P5vERxjVdGLo%3D%7CcPcb3VhU0BVjXgWFWEAzinttU1oq1ouO%7CYN6Mu-ZPh1-670HXWup3cHvI5mlQYFWHScbHw_-MvClaEWSrNRJfS44jyrkYPwBfN3buy2cbcCoU9GuG_BRCtDC5gk-5MxvEOw39pFij1YIOrAX64C1xugH92zBPJYutVmoIfQ7ROF4KOIfkW0j2Q1ROOj322aRSiAwAw5YFPITcbIl1o8-Zt7n5S2UVyKIdnvlnYVpCANJ2WPLhG1C3DClOXqNkKQC217frmMXC_RsGrJB1JFej6gkIDVbcUtqgBzroc1-akQLZcTB8yT7gyr7zPs0FF3in0aqkNqpuOlC5bNnU-xihJ7m-q_FrhrMlZwxHdXc0aJn5u5n3I3ByLIlrwiHxD2KAp1gwkt4nDw7-x0LCUWU02hiE7_b8c0S0lyu3wTLamM2kjkLkLbW02D2nmEypq7C3D_MD6R2Ld1Mq69b-uqcfIrc4c6dPwZErhhZsLeEFKNSZXMbiMORJ5sDzjLwNf27jCBbr9IXC6IJU_op_4C_ZXPw1Y4oh_jTfQwb0vsk0VzrW5soplEUTNdTJ8f3uyutIw7_xL8cWtbuIzVIW-lWDUUutPCqTcT4TggIJ-1iYMB7Ua2iF75ZKkkqq5yQuLxFwIgd-NumYlSf5H7pIgpdOswrPgmxUrbKl4vms0NOSV5qUWNDOshQ7tKvfuMA8uvVMHbZ5AQMT5Bgmwar8mJufQjr9gMCKLHOfUOOaczZK2YDnk8TcJeC78iGw3Taquj-C70TkosF3P0DJck-IpHUMncUdY4Jgy4EWR4X8tx_vEuUtDI8VDxjcTx-4Ic0X5KIt3mSugEeb2RLnsx213VF27AgZVpfDgy2Jy6pUhtyahmhuAUCYyGlIKNUsmWSkYVzM27eE9XnHc830y0M3_S4OZrF1Jed0LRNU1XIbhjD50sWQlJBm60nUWDtAGy8CGWgL07tYql6HlIfRWJ6UkgSffcUj8YxioG4WAWys-Nnxz7sD2S0gtOSktPaIGz4_uNqpX3hPpZGw21Ys8I65Zm6Lso_q5eBBvHk5%7C&subBdr=134&bdrid=460&bqs=6&bd=-5%231152%232048&ypl=5ON%3ANff%7CGxNUJ7VO4z7875%3Aiiii%7CGxNUJ7I1YJ4z7875%3ApJ1eJL%7CQEx%3AXuWX~%7CyE8O%3A&lgpl=BjQ7E%3A9%7CeQ7L8O%3AHf9FX9fuuAFhihAW%7CGO171%3AJLEYv9.9f~myJLEYv9.9f~OQOeLvW99.hu~J-MQvf~QQOeLvHiX.uH~x8OvuW5%2FrXZO5cENVG4K3%3DROZ~jMG8OOJLM8OvHF9~NejfLMGvh.Xf~G7OvhFhXiiFAHfuuhHWFXuWAiiHhWiifiHiHWAuuFWffFWXiWW9hXHiAHFHfXHF99hifHWHFuufFihhuHWF99AHhAif9huFhiuiXXAFuuiFXh9iFhHXuuhAH9hhuh9HFii9hFiFfHuX9fXAhHXFiAuifhWHiufAfAuf9uWFXfhhHH~jMQ7MQNv9.AA~myOfEMGv9.iX~-YjMG8Ov9.9ui~Q7OvAXfiuHFWWf~LEQMGvuH.WX~OQeLvWuH.FH~j1Q7v~%3DVvAFHh~8EvAdc%3D-%20~1GYvu~jM%20Q7QvF~%20GNvu~GO7vuhhhFHWFuu~e8QMGvfWA.h~8QDJkv9~jMuMLzMQ7vF~G8Ov9.9f~LGYM8Ovu~O1LeLvFfX.fW~ejfLMGvH.9X~NGOEv9.9uW~QOvu~875EJM8Ovuh~875EJMmeJLL8OJvKrt~QJjjJLM71yM8OvAXfiuHFWWf~QxEEj5M71yM8OvAXfiuHFWWf~OJ7JN7JOM71yM8Ov~NMj1zyvJz~e8JB1G8j875v9.Au~EmQvA~1NM75EJvu~1OGjUvAXfiuHFWWf~1YEvu~N1LL8JLVOv9~myG8Ov9.9ui999~GkjLv9.9u9~Qx8Ov%3DK4b469EIQ9QZVbO5gayKC3_pL4~O7NvJ1Q7MQN~8QMmL7Gvu~OYYMJLEYvk1jQJ~OYYv1EJ-~GOEN1EOv9~O1jyvOzMuMeAAM1GmeJM%209X~QmGEv~-8OvKrtoExGou9XF9AHWfuFHFfiF~w7Yjvu~OYYMOfWv9o9~ELJO8N7JOMBLv9.99~ONx7vX~OmyGv9ou~OJLEv9.9ui999~O1jyvOzMuMeAAM1GmeJM%209X~JNEMxQJOvGJjmBM%209X~JNEMeJLvOzMuMeAA~JNEME9Xv9.9f~JNEMEu9v9.9f~JNEMEuXv9.9f~JNEMEf9v9.9f~JNEMEfXv9.9f~JNEMEA9v9.9f~JNEMEAXv9.9f~JNEMEH9v9.9f~JNEMEHXv9.9f~JNEMEX9v9.9f~JNEMEXXv9.9f~JNEMEF9v9.9f~JNEMEFXv9.9f~JNEMEh9v9.9f~JNEMEhXv9.9f~JNEMEW9v9.9f~JNEMEWXv9.9f~JNEMEi9v9.9f~JNEMEiXv9.9f~JNEMEiiv9.9f~OYYMQkYvEkOMuhMu~eGLv1YMLmBMQW~OYYMOAWv9~~8GNvu~zQlvu~7yQvAAF-fW9~7Y-vfiF~Y-GU7v9~Y-wYQvHW~Y-wYJv9~kExLJ%20vu%7CQNQeJL%3AAuXA%7Cw8Yyjy%3AC909oa9C9ob9%7CN1NwJMYJ71O171%3A%7B%22UGG%22%23*k1jQJ%7D%7CU1Nm8z7mQQ%3A7LxJ%7CNkxO%3AfH9iuF%7CmE7mx7%3A9%7C5OQEL%3Au%7CjfQwjO%3Au%7C1UN8E%3AuWu.Fu.fHF.fi%7CmLJ%20k%3AmzJ%7CmLJQk%3AmzJ%7CmNw%3A9%7CLJzQ8lJ%3AAAFMfW9%7CQNLMw%3AuuXf%7CQNLMB%3Af9HW%7CLJQOzef%3AuX%7CNmjMQNw%3Aj%7CJN7%3AHy%7CGJ%3A9%7CQQYNLMj1L%3Af&ure=1&kwd_ofl=0
+                        - link [ref=f20e39] [cursor=pointer]:
+                          - /url: https://media.net/adchoices?id=721187154
+                        - generic [ref=f20e41]:
+                          - generic [ref=f20e42]: Ad
+                          - link "Similar Search" [ref=f20e45] [cursor=pointer]:
+                            - /url: https://similarsearch.net
+              - paragraph [ref=e123]:
+                - text: The login feature is essential for secure websites and is commonly used. Automating the testing of various login scenarios, including different edge cases, is crucial to ensure reliability and security.
+                - link "Development Tools" [ref=e124] [cursor=pointer]:
+                  - img [ref=e126]
+                  - text: Development Tools
+              - heading "How Does Form-Based Authentication Work?" [level=3] [ref=e128]
+              - paragraph [ref=e129]: "Take a look at this diagram and review the different steps:"
+              - img "How Does Form-Based Authentication Work" [ref=e130]
+              - list [ref=e131]:
+                - listitem [ref=e132]: "Step 1: A client requests access to a protected resource"
+                - listitem [ref=e133]: "Step 2: If the client is unauthenticated, the server redirects the client to a login page"
+                - listitem [ref=e134]: "Step 3: The client submits the login form to the server"
+                - listitem [ref=e135]: "Step 4: If the login succeeds, the server redirects the client to the resource. If the login fails, the client is redirected to an error page"
+        - generic [ref=e137]:
+          - heading "Login Automation Test Cases" [level=2] [ref=e138]
+          - insertion [ref=e140]:
+            - generic [ref=e143]:
+              - heading "These are topics related to the article that might interest you" [level=2] [ref=e145]: Discover more
+              - link "Playwright Automation Tutorials" [ref=e146] [cursor=pointer]:
+                - generic "Playwright Automation Tutorials" [ref=e147]
+                - img [ref=e149]
+              - link "Login Page Security" [ref=e151] [cursor=pointer]:
+                - generic "Login Page Security" [ref=e152]
+                - img [ref=e154]
+              - link "Login Test Scenarios" [ref=e156] [cursor=pointer]:
+                - generic "Login Test Scenarios" [ref=e157]
+                - img [ref=e159]
+          - paragraph [ref=e161]:
+            - text: Below are the test cases for the login page. These test cases cover both positive and negative scenarios to ensure comprehensive testing of the login functionality.
+            - link "Web Browsers" [ref=e162] [cursor=pointer]:
+              - img [ref=e164]
+              - text: Web Browsers
+          - paragraph [ref=e166]:
+            - text: To perform these tests, please navigate to this
+            - link "page" [ref=e167] [cursor=pointer]:
+              - /url: /login
+          - heading "Login Automation Test Cases" [level=2] [ref=e168]
+          - 'heading "Test Case 1: Successful Login" [level=3] [ref=e169]'
+          - list [ref=e170]:
+            - listitem [ref=e171]: Launch the browser.
+            - listitem [ref=e172]:
+              - text: Navigate to the
+              - link "login" [ref=e173] [cursor=pointer]:
+                - /url: /login
+              - text: page URL.
+            - listitem [ref=e174]: Verify that the login page is displayed successfully.
+            - listitem [ref=e175]:
+              - text: Enter
+              - strong [ref=e176]: Username
+              - text: ":"
+              - code [ref=e177]: practice
+              - text: .
+            - listitem [ref=e178]:
+              - text: Enter
+              - strong [ref=e179]: Password
+              - text: ":"
+              - code [ref=e180]: SuperSecretPassword!
+              - text: .
+            - listitem [ref=e181]:
+              - text: Click the
+              - strong [ref=e182]: Login
+              - text: button.
+            - listitem [ref=e183]:
+              - text: Verify that the user is redirected to the
+              - code [ref=e184]: /secure
+              - text: page.
+            - listitem [ref=e185]: Confirm the success message "You logged into a secure area!" is visible.
+            - listitem [ref=e186]:
+              - text: Verify that a
+              - strong [ref=e187]: Logout
+              - text: button is displayed.
+          - separator [ref=e188]
+          - 'heading "Test Case 2: Invalid Username" [level=3] [ref=e189]'
+          - list [ref=e190]:
+            - listitem [ref=e191]: Launch the browser.
+            - listitem [ref=e192]: Navigate to the login page URL.
+            - listitem [ref=e193]: Verify that the login page is displayed successfully.
+            - listitem [ref=e194]:
+              - text: Enter an incorrect
+              - strong [ref=e195]: Username
+              - text: (e.g.,
+              - code [ref=e196]: wrongUser
+              - text: ).
+            - listitem [ref=e197]:
+              - text: Enter
+              - strong [ref=e198]: Password
+              - text: ":"
+              - code [ref=e199]: SuperSecretPassword!
+              - text: .
+            - listitem [ref=e200]:
+              - text: Click the
+              - strong [ref=e201]: Login
+              - text: button.
+            - listitem [ref=e202]: Verify that an error message "Invalid username." is displayed.
+            - listitem [ref=e203]: Ensure the user remains on the login page.
+          - separator [ref=e204]
+          - 'heading "Test Case 3: Invalid Password" [level=3] [ref=e205]'
+          - list [ref=e206]:
+            - listitem [ref=e207]: Launch the browser.
+            - listitem [ref=e208]: Navigate to the login page URL.
+            - listitem [ref=e209]: Verify that the login page is displayed successfully.
+            - listitem [ref=e210]:
+              - text: Enter
+              - strong [ref=e211]: Username
+              - text: ":"
+              - code [ref=e212]: practice
+              - text: .
+            - listitem [ref=e213]:
+              - text: Enter an incorrect
+              - strong [ref=e214]: Password
+              - text: (e.g.,
+              - code [ref=e215]: WrongPassword
+              - text: ).
+            - listitem [ref=e216]:
+              - text: Click the
+              - strong [ref=e217]: Login
+              - text: button.
+            - listitem [ref=e218]: Verify that an error message "Invalid password." is displayed.
+            - listitem [ref=e219]: Ensure the user remains on the login page.
+    - insertion [ref=e221]:
+      - generic [ref=e224]:
+        - heading "These are topics related to the article that might interest you" [level=2] [ref=e226]: Discover more
+        - link "PMP Certification Guide" [ref=e227] [cursor=pointer]:
+          - generic "PMP Certification Guide" [ref=e228]
+          - img [ref=e230]
+        - link "Automation Testing Course" [ref=e232] [cursor=pointer]:
+          - generic "Automation Testing Course" [ref=e233]
+          - img [ref=e235]
+        - link "Secure Login Solutions" [ref=e237] [cursor=pointer]:
+          - generic "Secure Login Solutions" [ref=e238]
+          - img [ref=e240]
+        - link "ISTQB Exam Prep" [ref=e242] [cursor=pointer]:
+          - generic "ISTQB Exam Prep" [ref=e243]
+          - img [ref=e245]
+        - link "Demos" [ref=e247] [cursor=pointer]:
+          - generic "Demos" [ref=e248]
+          - img [ref=e250]
+        - link "Mock Exams" [ref=e252] [cursor=pointer]:
+          - generic "Mock Exams" [ref=e253]
+          - img [ref=e255]
+        - link "Testing Tools Review" [ref=e257] [cursor=pointer]:
+          - generic "Testing Tools Review" [ref=e258]
+          - img [ref=e260]
+        - link "Login Test Case Template" [ref=e262] [cursor=pointer]:
+          - generic "Login Test Case Template" [ref=e263]
+          - img [ref=e265]
+  - insertion [ref=e268]:
+    - generic [ref=e271]:
+      - heading "These are topics related to the article that might interest you" [level=2] [ref=e273]: Discover more
+      - link "Automation Testing Courses" [ref=e274] [cursor=pointer]:
+        - generic "Automation Testing Courses" [ref=e275]
+        - img [ref=e277]
+      - link "User Authentication Services" [ref=e279] [cursor=pointer]:
+        - generic "User Authentication Services" [ref=e280]
+        - img [ref=e282]
+      - link "Test Case Templates" [ref=e284] [cursor=pointer]:
+        - generic "Test Case Templates" [ref=e285]
+        - img [ref=e287]
+  - contentinfo [ref=e289]:
+    - generic [ref=e294]:
+      - heading "Practice Test Automation WebSite for Web UI and Rest API" [level=4] [ref=e295]
+      - paragraph [ref=e296]:
+        - text: "Version: e64cd80e | Copyright"
+        - link "Expand Testing" [ref=e297] [cursor=pointer]:
+          - /url: https://expandtesting.com/
+        - text: "2026"
+  - img [ref=e299] [cursor=pointer]

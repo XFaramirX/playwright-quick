@@ -1,0 +1,50 @@
+[
+  {
+    "projectKey": "QA",
+    "issueType": "Bug",
+    "summary": "[UI] Elements not rendering responsively",
+    "description": "Severity: Medium\nURL: https://practice.expandtesting.com/login\nSteps:\n1. Open https://practice.expandtesting.com/login\n2. Run playwright-cli show --annotate\n3. Observe annotated area\nExpected: Elements should stay fully visible, aligned, and responsive across viewports.\nActual: Elements not rendering responsively\nImpact: Layout may break on smaller viewports and degrade usability.\nArea: x=1037, y=275, width=167, height=245",
+    "labels": [
+      "ui-regression",
+      "responsive",
+      "playwright-cli"
+    ],
+    "priority": "Medium"
+  },
+  {
+    "projectKey": "QA",
+    "issueType": "Bug",
+    "summary": "[UI] Elements not rendering responsively.",
+    "description": "Severity: Medium\nURL: https://practice.expandtesting.com/login\nSteps:\n1. Open https://practice.expandtesting.com/login\n2. Run playwright-cli show --annotate\n3. Observe annotated area\nExpected: Elements should stay fully visible, aligned, and responsive across viewports.\nActual: Elements not rendering responsively.\nImpact: Layout may break on smaller viewports and degrade usability.\nArea: x=18, y=275, width=175, height=319",
+    "labels": [
+      "ui-regression",
+      "responsive",
+      "playwright-cli"
+    ],
+    "priority": "Medium"
+  },
+  {
+    "projectKey": "QA",
+    "issueType": "Bug",
+    "summary": "[UI] This is neither center or anything",
+    "description": "Severity: Low\nURL: https://practice.expandtesting.com/login\nSteps:\n1. Open https://practice.expandtesting.com/login\n2. Run playwright-cli show --annotate\n3. Observe annotated area\nExpected: Elements should stay fully visible, aligned, and responsive across viewports.\nActual: This is neither center or anything\nImpact: Banner alignment appears visually off-center, reducing UI quality.\nArea: x=455, y=167, width=386, height=50",
+    "labels": [
+      "ui-regression",
+      "responsive",
+      "playwright-cli"
+    ],
+    "priority": "Low"
+  },
+  {
+    "projectKey": "QA",
+    "issueType": "Bug",
+    "summary": "[UI] Spacing here is weird",
+    "description": "Severity: Low\nURL: https://practice.expandtesting.com/login\nSteps:\n1. Open https://practice.expandtesting.com/login\n2. Run playwright-cli show --annotate\n3. Observe annotated area\nExpected: Elements should stay fully visible, aligned, and responsive across viewports.\nActual: Spacing here is weird\nImpact: Element is partially outside viewport and content is clipped.\nArea: x=-25, y=559, width=45, height=139",
+    "labels": [
+      "ui-regression",
+      "responsive",
+      "playwright-cli"
+    ],
+    "priority": "Low"
+  }
+]

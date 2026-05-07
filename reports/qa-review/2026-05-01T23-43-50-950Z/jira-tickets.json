@@ -1,0 +1,26 @@
+[
+  {
+    "projectKey": "QA",
+    "issueType": "Bug",
+    "summary": "[UI] not render",
+    "description": "Severity: Low\nURL: https://practice.expandtesting.com/login\nSteps:\n1. Open https://practice.expandtesting.com/login\n2. Run playwright-cli show --annotate\n3. Observe annotated area\nExpected: Elements should stay fully visible, aligned, and responsive across viewports.\nActual: not render\nImpact: Visual rendering issue impacts UI consistency.\nArea: x=1003, y=209, width=244, height=377",
+    "labels": [
+      "ui-regression",
+      "responsive",
+      "playwright-cli"
+    ],
+    "priority": "Low"
+  },
+  {
+    "projectKey": "QA",
+    "issueType": "Bug",
+    "summary": "[UI] overlap?",
+    "description": "Severity: Low\nURL: https://practice.expandtesting.com/login\nSteps:\n1. Open https://practice.expandtesting.com/login\n2. Run playwright-cli show --annotate\n3. Observe annotated area\nExpected: Elements should stay fully visible, aligned, and responsive across viewports.\nActual: overlap?\nImpact: Visual rendering issue impacts UI consistency.\nArea: x=348, y=411, width=230, height=29",
+    "labels": [
+      "ui-regression",
+      "responsive",
+      "playwright-cli"
+    ],
+    "priority": "Low"
+  }
+]

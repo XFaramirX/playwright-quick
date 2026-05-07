@@ -1,0 +1,21 @@
+{
+  "title": "Annotated QA Copilot Pipeline",
+  "value": "Convert manual UI annotations into instant QA artifacts and executable test drafts in under 2 minutes.",
+  "targetUsers": [
+    "QA engineers",
+    "SDETs",
+    "Developers in PR review"
+  ],
+  "mvpFlow": [
+    "Run playwright-cli goto https://practice.expandtesting.com/login",
+    "Run playwright-cli show --annotate and add issue boxes",
+    "Save annotation metadata as JSON",
+    "Run npm run qa:annotate:review with metadata file",
+    "Use generated bug report, Jira payload, and test draft in sprint workflow"
+  ],
+  "successMetrics": [
+    "Reduce bug triage documentation time by >= 60%",
+    "Increase screenshot-to-test conversion rate",
+    "Standardize bug reporting format across QA team"
+  ]
+}

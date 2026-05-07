@@ -1,0 +1,43 @@
+[
+  {
+    "id": "TC-FUNC-001",
+    "title": "Login with valid credentials",
+    "precondition": "User is on https://practice.expandtesting.com/login",
+    "steps": [
+      "Enter username: practice",
+      "Enter password: SuperSecretPassword!",
+      "Click Login"
+    ],
+    "expected": "User is redirected to secure area and sees success state."
+  },
+  {
+    "id": "TC-FUNC-002",
+    "title": "Login with invalid credentials",
+    "precondition": "User is on https://practice.expandtesting.com/login",
+    "steps": [
+      "Enter invalid username/password",
+      "Click Login"
+    ],
+    "expected": "Error message is displayed and user remains on login page."
+  },
+  {
+    "id": "TC-FUNC-003",
+    "title": "Responsive sidebars do not overlap content",
+    "precondition": "User is on https://practice.expandtesting.com/login",
+    "steps": [
+      "Set viewport to 1280x720",
+      "Observe left and right sidebar panels"
+    ],
+    "expected": "Sidebars stay within viewport bounds and do not clip content."
+  },
+  {
+    "id": "TC-FUNC-004",
+    "title": "Top information banner remains centered",
+    "precondition": "User is on https://practice.expandtesting.com/login",
+    "steps": [
+      "Observe the top prompt/banner section",
+      "Compare horizontal center point against page center"
+    ],
+    "expected": "Banner is centered within parent container."
+  }
+]

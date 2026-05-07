@@ -1,0 +1,44 @@
+[
+  {
+    "id": "BUG-001",
+    "title": "not render",
+    "severity": "Low",
+    "environment": "Desktop web",
+    "url": "https://practice.expandtesting.com/login",
+    "stepsToReproduce": [
+      "Open https://practice.expandtesting.com/login",
+      "Run playwright-cli show --annotate",
+      "Observe annotated area"
+    ],
+    "expected": "Elements should stay fully visible, aligned, and responsive across viewports.",
+    "actual": "not render",
+    "impact": "Visual rendering issue impacts UI consistency.",
+    "area": {
+      "x": 1003,
+      "y": 209,
+      "width": 244,
+      "height": 377
+    }
+  },
+  {
+    "id": "BUG-002",
+    "title": "overlap?",
+    "severity": "Low",
+    "environment": "Desktop web",
+    "url": "https://practice.expandtesting.com/login",
+    "stepsToReproduce": [
+      "Open https://practice.expandtesting.com/login",
+      "Run playwright-cli show --annotate",
+      "Observe annotated area"
+    ],
+    "expected": "Elements should stay fully visible, aligned, and responsive across viewports.",
+    "actual": "overlap?",
+    "impact": "Visual rendering issue impacts UI consistency.",
+    "area": {
+      "x": 348,
+      "y": 411,
+      "width": 230,
+      "height": 29
+    }
+  }
+]

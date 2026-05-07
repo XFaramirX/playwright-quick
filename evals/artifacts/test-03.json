@@ -1,0 +1,97 @@
+{
+  "testCase": {
+    "id": "test-03",
+    "name": "API feature structure and quality",
+    "feature": "api"
+  },
+  "evaluation": {
+    "skillExecution": {
+      "score": 83,
+      "overall_pass": false,
+      "checks": [
+        {
+          "id": "outcome_task_complete",
+          "category": "Outcome",
+          "pass": true,
+          "notes": "All expected files are present"
+        },
+        {
+          "id": "outcome_tests_execute",
+          "category": "Outcome",
+          "pass": true,
+          "notes": "Found 4 test run entries in state.json"
+        },
+        {
+          "id": "process_requirements_analyzed",
+          "category": "Process",
+          "pass": true,
+          "notes": "Skipped: no transcript evidence provided"
+        },
+        {
+          "id": "process_skill_pipeline_used",
+          "category": "Process",
+          "pass": true,
+          "notes": "Skipped: no transcript evidence provided"
+        },
+        {
+          "id": "style_zero_hard_waits",
+          "category": "Style",
+          "pass": true,
+          "notes": "No hard waits found"
+        },
+        {
+          "id": "style_action_verification",
+          "category": "Style",
+          "pass": false,
+          "notes": "No awaited assertions found for action verification"
+        },
+        {
+          "id": "style_schema_and_conventions",
+          "category": "Style",
+          "pass": true,
+          "notes": "Spec follows fixture import and describe conventions"
+        },
+        {
+          "id": "style_no_placeholders",
+          "category": "Style",
+          "pass": true,
+          "notes": "No placeholder text found"
+        },
+        {
+          "id": "style_accessible_locators",
+          "category": "Style",
+          "pass": false,
+          "notes": "No accessible locators found"
+        },
+        {
+          "id": "style_constants_policy",
+          "category": "Style",
+          "pass": true,
+          "notes": "Constants file is optional for this case"
+        },
+        {
+          "id": "style_force_click_documented",
+          "category": "Style",
+          "pass": true,
+          "notes": "No force clicks used"
+        },
+        {
+          "id": "efficiency_no_fallback_thrashing",
+          "category": "Efficiency",
+          "pass": true,
+          "notes": "No transcript provided; no thrashing evidence found"
+        }
+      ],
+      "summary": {
+        "passed": 10,
+        "total": 12,
+        "failed": 2
+      }
+    }
+  },
+  "metadata": {
+    "generatedAt": "2026-03-23T23:51:24.326Z",
+    "transcriptFile": null,
+    "requireTranscript": false
+  }
+}
