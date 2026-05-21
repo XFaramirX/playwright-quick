@@ -644,6 +644,38 @@
         justify-content: flex-start;
       }
     }
+
+    /* ── dotLottie animations ── */
+    dotlottie-wc.hero-lottie {
+      position: absolute;
+      right: -80px;
+      bottom: -80px;
+      width: 240px;
+      height: 240px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+      mix-blend-mode: multiply;
+    }
+
+    .hero-panel .eyebrow,
+    .hero-panel h2,
+    .hero-panel p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-meta {
+      position: relative;
+      z-index: 2;
+    }
+
+    .score-anim {
+      display: block;
+      width: 80px;
+      height: 80px;
+      mix-blend-mode: screen;
+    }
   </style>
   </head>
   <body>
@@ -651,7 +683,14 @@
       <div class="frame">
         <header class="topbar">
           <div class="brand">
-            <div class="brand-mark">PW</div>
+            <div class="brand-mark" style="padding: 0; overflow: hidden;">
+              <dotlottie-wc
+                src="https://lottie.host/4db68bbd-31f6-4cd8-84eb-189de081159a/IGmMCqhzpt.lottie"
+                autoplay
+                loop
+                style="width: 46px; height: 46px; display: block;"
+              ></dotlottie-wc>
+            </div>
             <div class="brand-copy">
               <h1>Playwright Framework</h1>
               <p>System design view for the TypeScript end-to-end test platform.</p>
@@ -666,6 +705,12 @@
 
         <section class="hero">
           <article class="hero-panel">
+            <dotlottie-wc
+              class="hero-lottie"
+              src="https://lottie.host/b2d44b82-fd7e-401f-a4fa-77999147c0be/vqNwJryGBp.lottie"
+              autoplay
+              loop
+            ></dotlottie-wc>
             <span class="eyebrow">System Design</span>
             <h2>Reliable Playwright automation built for daily delivery.</h2>
             <p>
@@ -695,9 +740,13 @@
                 <h3>Architecture Overview</h3>
                 <p>The repository is split by responsibility so ownership is clear and test work stays maintainable.</p>
               </div>
-              <div class="score">
-                <strong>01</strong>
-                <span>Overview</span>
+              <div class="score" style="padding: 0; overflow: hidden;">
+                <dotlottie-wc
+                  class="score-anim"
+                  src="https://lottie.host/e2a24b6f-df7f-4fc5-94ea-30f0846f85dc/1RLOR2g0m3.lottie"
+                  autoplay
+                  loop
+                ></dotlottie-wc>
               </div>
             </div>
 
@@ -964,5 +1013,6 @@
         </footer>
       </div>
     </div>
+    <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"></script>
   </body>
   </html>
