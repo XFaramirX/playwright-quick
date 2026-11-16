@@ -20,10 +20,11 @@ The visual overview is exported from `system-design.html` so GitHub users can se
 
 ## Setup & Installation
 
-Install dependencies from the root directory:
+Use Node.js 22, 24, or 26; CI uses Node.js 26. Install the locked dependencies and Playwright's matching browsers from the root directory:
 
 ```bash
-npm install
+npm ci
+npx playwright install
 ```
 
 ---
