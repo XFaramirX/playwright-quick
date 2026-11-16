@@ -120,5 +120,8 @@
   "[chromium] › api/articles.spec.ts:36:9 › Articles API › PUT /posts/:id replaces an article": 215,
   "[chromium] › api/articles.spec.ts:47:9 › Articles API › PATCH /posts/:id partially updates an article": 162,
   "[chromium] › api/articles.spec.ts:57:9 › Articles API › DELETE /posts/:id removes an article": 149,
-  "[chromium] › api/api.spec.ts:75:9 › API Tests for https://jsonplaceholder.typicode.com › Verify Single API Call Using pwApi.fetch with Default GET Method": 1340
+  "[chromium] › api/api.spec.ts:75:9 › API Tests for https://jsonplaceholder.typicode.com › Verify Single API Call Using pwApi.fetch with Default GET Method": 1340,
+  "[chromium] › screencast-features.spec.ts:33:3 › Screencast - Annotated user flow › records an annotated receipt and captures live frames": 6589,
+  "[chromium] › webmcp.spec.ts:30:3 › WebMCP - Page tools › discovers and invokes a registered tool": 1198,
+  "[chromium] › video-options.spec.ts:25:3 › Video - Fixture recording › records styled actions with the video fixture": 1945
 }
